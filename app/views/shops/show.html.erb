@@ -1,2 +1,21 @@
-<h1>Shops#show</h1>
-<p>Find me in app/views/shops/show.html.erb</p>
+<h1>Shop details:</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <td><%= @shop.name %></td>
+  </tr>
+  <tr>
+    <th>Adress</th>
+    <td><%= @shop.full_address %></td>
+  </tr>
+  <tr>
+    <th>Opening times</th>
+    <td><% @shop.opening_times.each do |opening_time| %>
+      <%= opening_time.day %>
+      <%= opening_time.opening_hour %>
+      <%= opening_time.closing_hour %>
+      <% end %>
+    </td>
+  </tr>
+</table>
