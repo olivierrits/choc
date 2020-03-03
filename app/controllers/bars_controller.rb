@@ -1,8 +1,8 @@
 class BarsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home]
+  skip_before_action :authenticate_user!
 
   def index
-    @bars = Bars.all
+    @bars = Bar.all
   end
 
   def show
