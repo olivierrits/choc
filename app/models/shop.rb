@@ -6,4 +6,9 @@ class Shop < ApplicationRecord
   has_many :shop_reviews, through: :shop_users,
   has_many :visits, through: :shop_users,
   validates :name, presence: true
+
+  def full_address
+    "#{address.street}, #{address.number}, #{address.postcode}, #{address.city}, #{address.country}"
+  end
+
 end
