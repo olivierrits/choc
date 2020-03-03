@@ -18,5 +18,6 @@ class OpeningTime < ApplicationRecord
       'Saturday'
     when 7
       'Sunday'
+    end
   end
 end
