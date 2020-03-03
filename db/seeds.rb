@@ -5,3 +5,53 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'csv'
+
+filepath = "Seeding_Shops.csv"
+
+csv_options = { col_sep: ';', headers: :first_row }
+CSV.foreach(filepath, csv_options) do |row|
+  # Here, row is an array of columns
+  a = Shop.create(name: row[0])
+  b = Address.create(street: row[1], number: row[2], postcode: row[3], city: row[4], country: row[5])
+  a.address = b
+  7.times do |day|
+    if (day == 1) || (day == 7)
+      a.openings_times << OpeningTime.new(day: day, open: false)
+    elsif (day == 2)
+      a.openings_times << OpeningTime.new(day: day, open: true, opening_hour: Time.parse("13:30"), closing_hour: Time.parse("18:00"))
+    else
+      a.openings_times << OpeningTime.new(day: day, open: true, opening_hour: Time.parse("8:30"), closing_hour: Time.parse("12:00"))
+      a.openings_times << OpeningTime.new(day: day, open: true, opening_hour: Time.parse("13:30"), closing_hour: Time.parse("18:00"))
+    end
+  end
+  a.save!
+  puts "#{row[0]} | #{row[1]} | #{row[2]} | #{row[3]} | #{row[4]} | #{row[5]}"
+end
+
+# csv_options = { col_sep: ',', quote_char: '"', headers: :first_row }
+# filepath    = 'beers.csv'
+
+# CSV.foreach(filepath, csv_options) do |row|
+#   puts "#{row['Name']}, a #{row['Appearance']} beer from #{row['Origin']}"
+# end
+
+filepath = "Seeding_Bars.csv"
+
+csv_options = { col_sep: ';', headers: :first_row }
+CSV.foreach(filepath, csv_options) do |row|
+  Here, row is an array of columns
+  a = Bar.create(name: row[0], brand: row[1], origin: row[2], percentage: row[3], beans: row[4])
+  a.save!
+  puts "#{row[0]} | #{row[1]} | #{row[2]} | #{row[3]} | #{row[4]}"
+end
+
+Bar.all.each do |bar|
+  Shop.all.each do |shop|
+    a = rand(0..1)
+    if a == 1
+      shop.bars << bar
+  end
+end
+
