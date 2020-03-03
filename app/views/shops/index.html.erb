@@ -1,8 +1,17 @@
-<h1>Shops#index</h1>
-<p>Find me in app/views/shops/index.html.erb</p>
+<h1>Chocolate Shops!</h1>
 
-
-
-
-
+<div >
+  <% @shops.each do |shop| %>
+    <div style="display: flex; justify-content: space-around; align-items: center; margin: 20px; border: 1px solid #2A2922; width: 800px;">
+      <div style="width: 200px; height: 200px; background-color: #7D5642; border: 1px solid #506D2F">
+      </div>
+      <div style="width: 200px; height: 200px; background-color: #F3EBDD; border: 1px solid #506D2F">
+        <h4><%= link_to shop.name, shop_path(shop) %></h4>
+      </div>
+      <div style="width: 200px; height: 200px; background-color: #F3EBDD; border: 1px solid #506D2F">
+        <h3><%= "#{shop.address.street} #{shop.address.number}, #{shop.address.postcode} #{shop.address.city}, #{shop.address.country} %"%></h3>
+      </div>
+    </div>
+  <% end %>
+</div>
 

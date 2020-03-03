@@ -1,2 +1,17 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>Choc!</h1>
+<div style="display: flex; justify-content: space-around; align-items: center;">
+  <div style="background-color: #F3EBDD;">
+    <p><%= link_to "look for a shop near me", shops_path %></p>
+  </div>
+  <div style="background-color: #F3EBDD;">
+    <p><%= link_to "search for chocs", bars_path %></p>
+  </div>
+</div>
+<div style="display: flex; justify-content: space-around; align-items: center;">
+  <div style="background-color: #F3EBDD;">
+    <p><%= link_to "choc me!", bar_path(rand(1..10)) %></p>
+  </div>
+  <div style="background-color: #F3EBDD;">
+    <p><%= link_to "become a choc pro", root_path %></p>
+  </div>
+</div>
