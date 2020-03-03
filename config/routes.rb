@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'bars/index'
+  get 'bars/show'
+  get 'shops/index'
+  get 'shops/show'
   devise_for :users
   root to: 'pages#home'
   resources :bars, only: [ :index, :show ]
