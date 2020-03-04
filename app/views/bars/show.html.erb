@@ -1,2 +1,18 @@
-<h1>Bars#show</h1>
-<p>Find me in app/views/bars/show.html.erb</p>
+<h1>@bar.name</h1>
+
+<div>
+  <div style="margin: 20px auto; border: 1px solid #2A2922; width: 800px; background-color: #506D2F;">
+    <div style="width: 200px; height: 200px; background-color: #F3EBDD; border: 1px solid #506D2F">
+      <h4><%= @bar.name %></h4>
+    </div>
+    <div style="width: 200px; height: 200px; background-color: #F3EBDD; border: 1px solid #506D2F">
+      <h4><%= @bar.brand %></h4>
+    </div>
+    <div style="width: 200px; height: 200px; background-color: #F3EBDD; border: 1px solid #506D2F">
+      <h3><%= "#{@bar.percentage} %"%></h3>
+    </div>
+    <div style="width: 200px; height: 200px; background-color: #F3EBDD; border: 1px solid #506D2F">
+      <h5><%= @bar.beans %></h5>
+    </div>
+  </div>
+</div>

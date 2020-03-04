@@ -1,28 +1,20 @@
-<h1>Bars#index</h1>
-<p>Find me in app/views/bars/index.html.erb</p>
-<table>
-  <tr>
-    <th>Bar name</th>
-    <td><%= @bar.name %></td>
-  </tr>
-  <tr>
-    <th>Brand</th>
-    <td><%= @bar.brand %></td>
-  </tr>
-  <tr>
-    <th>Beans</th>
-    <td><%= @bar.beans %></td>
-  </tr>
-  <tr>
-    <th>Percentage</th>
-    <td><%= @bar.percentage %></td>
-  </tr>
-  <tr>
-    <th>Origin</th>
-    <td><%= @bar.origin %></td>
-  </tr>
-  <tr>
-    <th>Price range</th>
-    <td><%= @bar.price_range %></td>
-  </tr>
-</table>
+<h1>Chocolate Bars!</h1>
+
+<div >
+  <% @bars.each do |bar| %>
+    <div style="display: flex; justify-content: space-around; align-items: center; margin: 20px; border: 1px solid #2A2922; width: 800px;">
+      <div style="width: 200px; height: 200px; background-color: #7D5642; border: 1px solid #506D2F">
+      </div>
+      <div style="width: 200px; height: 200px; background-color: #F3EBDD; border: 1px solid #506D2F">
+        <h4><%= link_to bar.name, bar_path(bar) %></h4>
+      </div>
+      <div style="width: 200px; height: 200px; background-color: #F3EBDD; border: 1px solid #506D2F">
+        <h3><%= "#{bar.percentage} %"%></h3>
+      </div>
+      <div style="width: 200px; height: 200px; background-color: #F3EBDD; border: 1px solid #506D2F">
+        <h5><%= bar.origin %></h5>
+      </div>
+    </div>
+  <% end %>
+</div>
+
