@@ -1,0 +1,47 @@
+.page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  vertical-align: center;
+}
+
+.form-background {
+  background: -webkit-gradient(linear, left bottom, left top, from(#DDBC95), to(#B38867));
+  background: -webkit-linear-gradient(bottom, #DDBC95 0%, #B38867 100%);
+  background: -moz-linear-gradient(bottom, #DDBC95 0%, #B38867 100%);
+  background: -o-linear-gradient(bottom, #DDBC95 0%, #B38867 100%);
+  background: linear-gradient(to top, #DDBC95 0%, #B38867 100%);
+}
+
+.p-t-100 {
+  padding-top: 100px;
+}
+
+.p-b-100 {
+  padding-bottom: 100px;
+}
+
+.sign-in-wrapper {
+  margin: 0 auto;
+  background: url("choc_form_3.jpg") top left/cover no-repeat;
+  width: 600px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.wrapper--w780 {
+  max-width: 600px;
+}
+
+.card-form {
+  width: 50%;
+  padding: 50px 50px;
+  background-color: white;
+  opacity: 0.7;
+  width: 300px;
+  border-radius: 0 10px 10px 0;
+}
+
+
+

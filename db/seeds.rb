@@ -7,10 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'csv'
+require 'faker'
+
+# 1. seeding the shops to the database
 
 filepath = "db/Seeding_Shops.csv"
 
 csv_options = { col_sep: ';', headers: :first_row }
+Time.zone = "Brussels"
 CSV.foreach(filepath, csv_options) do |row|
   # Here, row is an array of columns
   a = Shop.create(name: row[0])
@@ -30,12 +34,7 @@ CSV.foreach(filepath, csv_options) do |row|
   puts "#{row[0]} | #{row[1]} | #{row[2]} | #{row[3]} | #{row[4]} | #{row[5]}"
 end
 
-# csv_options = { col_sep: ',', quote_char: '"', headers: :first_row }
-# filepath    = 'beers.csv'
-
-# CSV.foreach(filepath, csv_options) do |row|
-#   puts "#{row['Name']}, a #{row['Appearance']} beer from #{row['Origin']}"
-# end
+# 2. seeding the chocolate bars to the database
 
 filepath = "db/Seeding_Bars.csv"
 
@@ -47,6 +46,8 @@ CSV.foreach(filepath, csv_options) do |row|
   puts "#{row[0]} | #{row[1]} | #{row[2]} | #{row[3]} | #{row[4]}"
 end
 
+# 3. seeding the shops-bars database with random associations
+
 Bar.all.each do |bar|
   Shop.all.each do |shop|
     a = rand(0..1)
@@ -55,4 +56,23 @@ Bar.all.each do |bar|
     end
   end
 end
+
+# 4. seeding the users to the database
+
+User.destroy_all
+
+puts 'Creating 100 fake user with password "password"...'
+i = 0
+10.times do
+  i += 1
+  user = User.new(
+    { email:    "user#{i}.test@test.be",
+    password: "password",
+    password_confirmation: "password",
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name })
+  user.save!
+end
+
+
 
