@@ -8,9 +8,5 @@ class ShopsController < ApplicationController
 
   def show
     @shop = Shop.find(params[:id])
-    @marker = {
-        lat: @shop.latitude,
-        lng: @shop.longitude
-      }
   end
 end
