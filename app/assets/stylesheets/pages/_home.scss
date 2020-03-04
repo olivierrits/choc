@@ -1,4 +1,8 @@
 // Specific CSS for your home-page
+body {
+  background: #F3EBDD;
+}
+
 .banner {
   background-size: cover;
   background-position: center;
@@ -26,5 +30,87 @@
 }
 
 a:hover {
-  color: brown;
+  color: #7D5642;
+  text-decoration: underline;
 }
+
+.search-bar {
+  padding-right: 700px;
+  padding-left: 180px;
+}
+
+
+.content {
+  display: flex;
+}
+.cards {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  padding: 16px;
+}
+
+#map {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+/*Media Queries*/
+
+/*Smallest device*/
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  #map {
+    display: none;
+  }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  #map {
+    display: none;
+  }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  #map {
+    display: block;
+  }
+}
+
+.card {
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  border-radius: 1px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 22px;
+  color: white;
+  font-weight: bolder;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+.content {
+  background: #F3EBDD;
+}
+
+.question {
+  background-color: #F3EBDD;
+}
+
+
+
