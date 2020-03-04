@@ -23,3 +23,14 @@ $border-radius-lg: 2px;
 $border-radius-sm: 2px;
 
 // Override other variables below!
+
+// Our colors for CHOC
+$leaves: #506D2F;
+$bark: #2A2922;
+$marble: #F3EBDD;
+$brownstone: #7D5642;
+
+// Font
+@import url('https://fonts.googleapis.com/css?family=Dosis:400,700&display=swap');
+$header-font:'Dosis', sans-serif;
+$body-font:'Dosis', sans-serif;

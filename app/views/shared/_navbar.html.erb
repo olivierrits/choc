@@ -1,3 +1,4 @@
+<div class="navbars">
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to "#", class: "navbar-brand" do %>
     <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
@@ -30,6 +31,33 @@
           <%= link_to "Login", new_user_session_path, class: "nav-link" %>
         </li>
       <% end %>
+    </ul>
+  </div>
+</div>
+    <div class="nav">
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link" href="/shops"><i class="fas fa-store"></i>All shops</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="/bars"><i class="fas fa-border-all"></i>All bars</a></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-map-marker-alt"></i>Bars by origin</a>
+          <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Vietnam</a>
+          <a class="dropdown-item" href="#">Other</a>
+          <a class="dropdown-item" href="#">Other</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-percentage"></i>Bars by percentage</a>
+               <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">70-74 %</a>
+          <a class="dropdown-item" href="#">75-79 %</a>
+          <a class="dropdown-item" href="#">80-84 %</a>
+        </div>
+      </li>
     </ul>
   </div>
 </div>

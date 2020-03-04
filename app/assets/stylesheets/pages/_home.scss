@@ -3,6 +3,7 @@
   background-size: cover;
   background-position: center;
   padding: 150px 0;
+  font-family: Dosis;
 }
 
 .banner h1 {
@@ -20,92 +21,10 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-
-
-@media(max-width: 992px) {
-  .cards {
-    grid-template-columns: 1fr 1fr;
-  }
+.links {
+  font-weight: 900;
 }
 
-@media(max-width: 768px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media(min-width: 992px) {
-  .cards {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-}
-
-.cards {
-  display: grid;
-  grid-gap: 16px;
-
-}
-
-.card {
-  overflow: hidden;
-  height: 250px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
-  margin: 20px;
-  a {
-    text-decoration: none;
-    color: #525349;
-    &:hover{
-      color: #988f7a;
-      text-decoration: none;
-    }
-  }
-}
-
-.card > img {
-  height: 65%;
-  width: 100%;
-  object-fit: cover;
-}
-
-.card h2 {
-  font-size: 16px;
-  font-weight: bold;
-  text-align: left;
-  margin: 0;
-}
-
-.card p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
-}
-
-.card .card-infos {
-  padding: 8px 16px
-}
-
-.card .card-infos > img {
-  height: 45px;
-  width: 45px;
-  align-items: left;
-}
-
-.card-infos .card-user {
-  position: absolute;
-  right: 20px;
-  top: 138px;
-  width: 40px;
-}
-
-.card-infos .card-pricing {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  width: 60px;
-  font-size: 1.2rem;
-  text-align: center;
+a:hover {
+  color: brown;
 }
