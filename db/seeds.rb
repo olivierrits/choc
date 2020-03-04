@@ -20,10 +20,10 @@ CSV.foreach(filepath, csv_options) do |row|
     if (day == 1) || (day == 7)
       a.opening_times << OpeningTime.new(day: day, open: false)
     elsif (day == 2)
-      a.opening_times << OpeningTime.new(day: day, open: true, opening_hour: Time.parse("13:30"), closing_hour: Time.parse("18:00"))
+      a.opening_times << OpeningTime.new(day: day, open: true, opening_hour: ActiveSupport::TimeZone["Brussels"].parse("13:30"), closing_hour: ActiveSupport::TimeZone["Brussels"].parse("18:00"))
     else
-      a.opening_times << OpeningTime.new(day: day, open: true, opening_hour: Time.parse("8:30"), closing_hour: Time.parse("12:00"))
-      a.opening_times << OpeningTime.new(day: day, open: true, opening_hour: Time.parse("13:30"), closing_hour: Time.parse("18:00"))
+      a.opening_times << OpeningTime.new(day: day, open: true, opening_hour: ActiveSupport::TimeZone["Brussels"].parse("8:30"), closing_hour: ActiveSupport::TimeZone["Brussels"].parse("12:00"))
+      a.opening_times << OpeningTime.new(day: day, open: true, opening_hour: ActiveSupport::TimeZone["Brussels"].parse("13:30"), closing_hour: ActiveSupport::TimeZone["Brussels"].parse("18:00"))
     end
   end
   a.save!
