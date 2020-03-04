@@ -9,13 +9,29 @@
     <th>Address</th>
     <td><%= @shop.full_address %></td>
   </tr>
-  <tr>
-    <th>Opening times</th>
-    <td><% @shop.opening_times.each do |opening_time| %>
-      <%= opening_time.day %>
-      <%= opening_time.opening_hour %>
-      <%= opening_time.closing_hour %>
-      <% end %>
-    </td>
-  </tr>
 </table>
+
+  <div>
+    <div>
+      <h3>Opening times</h2>
+    </div>
+    <div>
+      <% @shop.opening_times.each do |opening_time| %>
+        <div style="display: flex; justify-content: left; align-items: center; margin: 20px; border: 1px solid #2A2922; width: 400px;">
+          <div style="width: 100px; margin-right: 20px;">
+            <h5><%= opening_time.actual_day %></h5>
+          </div>
+          <div style="width: 200px">
+            <% if opening_time.open %>
+              <% b = opening_time.opening_hour %>
+              <% c = opening_time.closing_hour %>
+              <%= "#{b.hour}:#{b.min} - #{c.hour}:#{c.min}" %>
+            <% else %>
+              <%= "closed" %>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
