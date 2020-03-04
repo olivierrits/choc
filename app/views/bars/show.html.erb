@@ -1,17 +1,34 @@
 <h1><%= @bar.name %></h1>
 <div>
-  <div style="margin: 20px auto; border: 1px solid #2A2922; width: 800px; background-color: #506D2F;">
-    <div style="width: 200px; height: 200px; background-color: #F3EBDD; border: 1px solid #506D2F">
-      <h4><%= @bar.name %></h4>
+  <div style="display: flex;justify-content: space-around; align-items: center;">
+    <div style="margin: 20px auto; border: 1px solid #2A2922; width: 300px; background-color: #506D2F;">
+      <div style="width: 200px; height: 300px; background-color: #F3EBDD; border: 1px solid #506D2F">
+        <h4><%= @bar.name %></h4>
+      </div>
+      <div style="width: 200px; height: 300px; background-color: #F3EBDD; border: 1px solid #506D2F">
+        <h4><%= @bar.brand %></h4>
+      </div>
+      <div style="width: 200px; height: 300px; background-color: #F3EBDD; border: 1px solid #506D2F">
+        <h3><%= "#{@bar.percentage} %"%></h3>
+      </div>
+      <div style="width: 200px; height: 300px; background-color: #F3EBDD; border: 1px solid #506D2F">
+        <h5><%= @bar.beans %></h5>
+      </div>
     </div>
-    <div style="width: 200px; height: 200px; background-color: #F3EBDD; border: 1px solid #506D2F">
-      <h4><%= @bar.brand %></h4>
-    </div>
-    <div style="width: 200px; height: 200px; background-color: #F3EBDD; border: 1px solid #506D2F">
-      <h3><%= "#{@bar.percentage} %"%></h3>
-    </div>
-    <div style="width: 200px; height: 200px; background-color: #F3EBDD; border: 1px solid #506D2F">
-      <h5><%= @bar.beans %></h5>
+    <div style="margin: 20px auto; border: 1px solid #2A2922; width: 300px; background-color: #506D2F;">
+      <% @bar.shops.each do |shop| %>
+        <div class="card-shop">
+          <div class="">
+            <img src="https://pierreplas.be/wp-content/uploads/2019/09/Coffret_Panachable-Pierre_Plas-1024x681.jpg" />
+          </div>
+          <div class="card-shop-infos">
+            <h2><%= link_to shop.name, shop_path(shop) %></h2>
+          </div>
+          <div class="card-shop-infos">
+            <p><%= "#{shop.address.street} #{shop.address.number}, #{shop.address.postcode} #{shop.address.city}, #{shop.address.country} %"%></p>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
