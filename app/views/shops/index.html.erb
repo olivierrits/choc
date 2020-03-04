@@ -1,17 +1,24 @@
-<h1>Chocolate Shops!</h1>
-
-<div >
-  <% @shops.each do |shop| %>
-    <div style="display: flex; justify-content: space-around; align-items: center; margin: 20px; border: 1px solid #2A2922; width: 800px;">
-      <div style="width: 200px; height: 200px; background-color: #7D5642; border: 1px solid #506D2F">
-      </div>
-      <div style="width: 200px; height: 200px; background-color: #F3EBDD; border: 1px solid #506D2F">
-        <h4><%= link_to shop.name, shop_path(shop) %></h4>
-      </div>
-      <div style="width: 200px; height: 200px; background-color: #F3EBDD; border: 1px solid #506D2F">
-        <h3><%= "#{shop.address.street} #{shop.address.number}, #{shop.address.postcode} #{shop.address.city}, #{shop.address.country} %"%></h3>
-      </div>
-    </div>
-  <% end %>
+<div class="shop-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://pierreplas.be/wp-content/uploads/2019/09/Pierre_Plas_Chocolatier.jpg);">
+  <div class="container shop-index">
+    <h1>Chocolate Shops</h1>
+  </div>
 </div>
 
+
+<div class="container shop-index">
+  <div class="cards">
+    <% @shops.each do |shop| %>
+      <div class="card-shop">
+        <div class="">
+          <img src="https://pierreplas.be/wp-content/uploads/2019/09/Coffret_Panachable-Pierre_Plas-1024x681.jpg" />
+        </div>
+        <div class="card-shop-infos">
+          <h2><%= link_to shop.name, shop_path(shop) %></h2>
+        </div>
+        <div class="card-shop-infos">
+          <p><%= "#{shop.address.street} #{shop.address.number}, #{shop.address.postcode} #{shop.address.city}, #{shop.address.country} %"%></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
