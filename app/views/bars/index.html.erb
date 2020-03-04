@@ -1,20 +1,28 @@
-<h1>Chocolate Bars!</h1>
-
-<div >
-  <% @bars.each do |bar| %>
-    <div style="display: flex; justify-content: space-around; align-items: center; margin: 20px; border: 1px solid #2A2922; width: 800px;">
-      <div style="width: 200px; height: 200px; background-color: #7D5642; border: 1px solid #506D2F">
-      </div>
-      <div style="width: 200px; height: 200px; background-color: #F3EBDD; border: 1px solid #506D2F">
-        <h4><%= link_to bar.name, bar_path(bar) %></h4>
-      </div>
-      <div style="width: 200px; height: 200px; background-color: #F3EBDD; border: 1px solid #506D2F">
-        <h3><%= "#{bar.percentage} %"%></h3>
-      </div>
-      <div style="width: 200px; height: 200px; background-color: #F3EBDD; border: 1px solid #506D2F">
-        <h5><%= bar.origin %></h5>
-      </div>
-    </div>
-  <% end %>
+<div class="bar-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/9/7/0/8/498079-1-eng-GB/Bean-to-bar-chocolate-rises-in-US-Can-multinationals-join-in.jpg);">
+  <div class="container bar-index">
+    <h1>Chocolate bars</h1>
+  </div>
 </div>
 
+<div class="container shop-index">
+  <div class="cards">
+    <% @bars.each do |bar| %>
+      <%= link_to bar_path(bar) do %>
+        <div class="card-bar">
+          <div>
+            <img src="https://media.gettyimages.com/photos/cocoa-beans-and-chocolate-bars-sit-on-display-at-the-auro-chocolate-picture-id1133456655" />
+          </div>
+          <div class="card-bar-infos">
+            <h2><%=  bar.name%></h2>
+          </div>
+          <div class="card-bar-infos">
+            <p><%= "#{bar.percentage} %"%></p>
+          </div>
+          <div class="card-bar-infos">
+            <p><%= bar.origin %></p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
