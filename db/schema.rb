@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_03_100209) do
+ActiveRecord::Schema.define(version: 2020_03_05_124406) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,21 +30,12 @@ ActiveRecord::Schema.define(version: 2020_03_03_100209) do
   end
 
   create_table "bar_reviews", force: :cascade do |t|
-    t.bigint "bar_user_id"
     t.string "content"
     t.integer "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["bar_user_id"], name: "index_bar_reviews_on_bar_user_id"
-  end
-
-  create_table "bar_users", force: :cascade do |t|
-    t.bigint "bar_id"
-    t.bigint "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["bar_id"], name: "index_bar_users_on_bar_id"
-    t.index ["user_id"], name: "index_bar_users_on_user_id"
+    t.bigint "taste_id"
+    t.index ["taste_id"], name: "index_bar_reviews_on_taste_id"
   end
 
   create_table "bars", force: :cascade do |t|
@@ -79,21 +70,12 @@ ActiveRecord::Schema.define(version: 2020_03_03_100209) do
   end
 
   create_table "shop_reviews", force: :cascade do |t|
-    t.bigint "shop_user_id"
     t.string "content"
     t.integer "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["shop_user_id"], name: "index_shop_reviews_on_shop_user_id"
-  end
-
-  create_table "shop_users", force: :cascade do |t|
-    t.bigint "shop_id"
-    t.bigint "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["shop_id"], name: "index_shop_users_on_shop_id"
-    t.index ["user_id"], name: "index_shop_users_on_user_id"
+    t.bigint "visit_id"
+    t.index ["visit_id"], name: "index_shop_reviews_on_visit_id"
   end
 
   create_table "shops", force: :cascade do |t|
@@ -103,11 +85,13 @@ ActiveRecord::Schema.define(version: 2020_03_03_100209) do
   end
 
   create_table "tastes", force: :cascade do |t|
-    t.bigint "bar_user_id"
-    t.boolean "favourite"
+    t.bigint "bar_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["bar_user_id"], name: "index_tastes_on_bar_user_id"
+    t.boolean "favourite"
+    t.index ["bar_id"], name: "index_tastes_on_bar_id"
+    t.index ["user_id"], name: "index_tastes_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -125,23 +109,23 @@ ActiveRecord::Schema.define(version: 2020_03_03_100209) do
   end
 
   create_table "visits", force: :cascade do |t|
-    t.bigint "shop_user_id"
-    t.boolean "favourite"
+    t.bigint "shop_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["shop_user_id"], name: "index_visits_on_shop_user_id"
+    t.boolean "favourite"
+    t.index ["shop_id"], name: "index_visits_on_shop_id"
+    t.index ["user_id"], name: "index_visits_on_user_id"
   end
 
   add_foreign_key "addresses", "shops"
-  add_foreign_key "bar_reviews", "bar_users"
-  add_foreign_key "bar_users", "bars"
-  add_foreign_key "bar_users", "users"
+  add_foreign_key "bar_reviews", "tastes"
   add_foreign_key "opening_times", "shops"
   add_foreign_key "shop_bars", "bars"
   add_foreign_key "shop_bars", "shops"
-  add_foreign_key "shop_reviews", "shop_users"
-  add_foreign_key "shop_users", "shops"
-  add_foreign_key "shop_users", "users"
-  add_foreign_key "tastes", "bar_users"
-  add_foreign_key "visits", "shop_users"
+  add_foreign_key "shop_reviews", "visits"
+  add_foreign_key "tastes", "bars"
+  add_foreign_key "tastes", "users"
+  add_foreign_key "visits", "shops"
+  add_foreign_key "visits", "users"
 end

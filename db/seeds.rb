@@ -9,7 +9,10 @@
 require 'csv'
 require 'faker'
 
-# 1. seeding the shops to the database
+# ==============================================================================
+
+puts "1. seeding the shops to the database"
+puts "===================================="
 
 filepath = "db/Seeding_Shops.csv"
 
@@ -34,7 +37,10 @@ CSV.foreach(filepath, csv_options) do |row|
   puts "#{row[0]} | #{row[1]} | #{row[2]} | #{row[3]} | #{row[4]} | #{row[5]}"
 end
 
-# 2. seeding the chocolate bars to the database
+# ==============================================================================
+
+puts "2.seeding the chocolate bars to the database"
+puts "============================================"
 
 filepath = "db/Seeding_Bars.csv"
 
@@ -46,22 +52,27 @@ CSV.foreach(filepath, csv_options) do |row|
   puts "#{row[0]} | #{row[1]} | #{row[2]} | #{row[3]} | #{row[4]}"
 end
 
-# 3. seeding the shops-bars database with random associations
+puts "3. seeding the shops-bars database with random associations"
+puts "==========================================================="
+
+# ==============================================================================
 
 Bar.all.each do |bar|
   Shop.all.each do |shop|
-    a = rand(0..1)
+    a = rand(0..2)
     if a == 1
       shop.bars << bar
     end
   end
 end
 
-# 4. seeding the users to the database
+# ==============================================================================
+
+puts "4. seeding the users to the database"
+puts "===================================="
 
 User.destroy_all
 
-puts 'Creating 100 fake user with password "password"...'
 i = 0
 10.times do
   i += 1
@@ -73,6 +84,61 @@ i = 0
     last_name: Faker::Name.last_name })
   user.save!
 end
+
+# ==============================================================================
+
+puts "5. seeding the users-bars database with random associations"
+puts "==========================================================="
+
+Bar.all.each do |bar|
+  User.all.each do |user|
+    a = rand(0..4)
+    if a == 1
+      bar.users << user
+    end
+  end
+end
+
+# ==============================================================================
+
+puts "6. seeding the users-shops database with random associations"
+puts "============================================================"
+
+Shop.all.each do |shop|
+  User.all.each do |user|
+    a = rand(0..4)
+    if a == 1
+      shop.users << user
+    end
+  end
+end
+
+# ==============================================================================
+
+puts "7. seeding the barreviews database with random content"
+puts "======================================================"
+
+
+Taste.all.each do |taste|
+  bar_review = BarReview.new(content: Faker::Coffee.notes, rating: rand(1..5))
+  bar_review.taste = taste
+  bar_review.save!
+end
+
+# ==============================================================================
+
+puts "8. seeding the barreviews database with random content"
+puts "======================================================"
+
+Visit.all.each do |visit|
+  shop_review = ShopReview.new(content: Faker::Restaurant.review, rating: rand(1..5))
+  shop_review.visit = visit
+  shop_review.save!
+end
+
+
+
+
 
 
 
