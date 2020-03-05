@@ -99,10 +99,11 @@ Bar.all.each do |bar|
     if a == 1
       bar.users << user
       taste = Taste.new(bar: bar, user: user)
-      b = rand(0..4)
+      b = rand(0..1)
       if b == 1
         taste.favourite = true
       end
+      taste.save!
     end
   end
 end
@@ -118,10 +119,11 @@ Shop.all.each do |shop|
     if a == 1
       shop.users << user
       visit = Visit.new(shop: shop, user: user)
-      b = rand(0..4)
+      b = rand(0..1)
       if b == 1
         visit.favourite = true
       end
+      visit.save!
     end
   end
 end

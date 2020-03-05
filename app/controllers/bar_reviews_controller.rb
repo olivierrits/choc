@@ -24,7 +24,7 @@ class BarReviewsController < ApplicationController
     @bar_review = BarReview.find(params[:id])
   end
 
-  def review_params
+  def bar_review_params
     params.require(:bar_review).permit(:content, :rating)
   end
 end
