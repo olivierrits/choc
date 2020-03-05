@@ -9,6 +9,7 @@ class ShopsController < ApplicationController
   def show
     @shop = Shop.find(params[:id])
     @opening_times = arrange(@shop.opening_times)
+    @shop_reviews = @shop.shop_reviews
   end
 
   private
