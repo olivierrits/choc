@@ -10,6 +10,10 @@ class ShopsController < ApplicationController
     @shop = Shop.find(params[:id])
     @opening_times = arrange(@shop.opening_times)
     @shop_reviews = @shop.shop_reviews
+    if (Visit.where(user: current_user, shop: @shop) != [])
+      @visit = Visit.new(shop: @shop, user: current_user)
+      @visit.save!
+    end
   end
 
   private
