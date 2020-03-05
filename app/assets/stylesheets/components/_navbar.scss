@@ -22,10 +22,43 @@
   color: #2A2922;
 }
 
+a.nav-link:active {
+  background: #2A2922;
+}
+
 i {
   margin-left: 10px;
 }
 
 .navbars {
   justify-content: flex-start;
+}
+
+.dropshops {
+  position: relative;
+}
+
+.dropbars {
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.choc {
+  margin-bottom: -8px;
+}
+
+.show > .customButton:focus{
+  background: #2A2922 !important;
+  color: #F3EBDD !important;
+  box-shadow:none !important;
+  border: none !important;
+}
+
+.customButton{
+  box-shadow:none !important;
+  border: none !important;
 }

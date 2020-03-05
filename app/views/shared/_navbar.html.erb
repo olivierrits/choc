@@ -3,22 +3,22 @@
   <%= link_to "/", class: "navbar-brand" do %>
     <div class="logo">
     <img src="https://img.icons8.com/ios/50/000000/chocolate-bar.png">
-    <p>CHOC</p>
+    <p class="choc">CHOC</p>
     </div>
     <% end %>
 
-<div class="nav">
+<div class="nav" style = "position:absolute; left:80px;">
     <ul class="nav nav-pills">
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Find a shop!<i class="fas fa-store"></i></a>
+      <li class="dropshops">
+        <a class="nav-link customButton" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Find a shop!<i class="fas fa-store"></i></a>
           <div class="dropdown-menu">
           <a class="dropdown-item" href="/shops">All shops</a>
           <a class="dropdown-item" href="#">Option1</a>
           <a class="dropdown-item" href="#">Option2</a>
         </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Find a chocolate bar!<i class="fas fa-border-all"></i></a>
+      <li class="dropbars">
+        <a class="nav-link customButton" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Find a chocolate bar!<i class="fas fa-border-all"></i></a>
                <div class="dropdown-menu">
           <a class="dropdown-item" href="/bars">All bars</a>
           <a class="dropdown-item" href="#">By type of bean</a>
@@ -38,7 +38,7 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item active">
-          <%= link_to "Home", "#", class: "nav-link" %>
+          <%= link_to "Home", "/", class: "nav-link" %>
         </li>
         <li class="nav-item">
           <%= link_to "Messages", "#", class: "nav-link" %>
@@ -46,18 +46,19 @@
         <li class="nav-item dropdown">
           <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Action", "#", class: "dropdown-item" %>
-            <%= link_to "Another action", "#", class: "dropdown-item" %>
+            <%= link_to "My Dashboard", user_dashboard_path, class: "dropdown-item" %>
+            <%= link_to "Account info", edit_user_registration_path, class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
       <% else %>
+        <li class="nav-item">
+          <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>
+        </li>
         <li class="nav-item">
           <%= link_to "Login", new_user_session_path, class: "nav-link" %>
         </li>
       <% end %>
     </ul>
   </div>
-</div>
-
 </div>
