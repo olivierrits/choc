@@ -15,6 +15,7 @@
   justify-content: space-between;
   background: #F3EBDD;
   font-family: Dosis;
+  justify-content: flex-start
 }
 
 .nav-link {
@@ -22,5 +23,9 @@
 }
 
 i {
-  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.navbars {
+  justify-content: flex-start;
 }

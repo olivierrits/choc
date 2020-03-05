@@ -2,9 +2,32 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to "/", class: "navbar-brand" do %>
     <div class="logo">
-    <%= image_tag "https://darcis.com/eshop/img/logo-darcis.svg" %>
+    <img src="https://img.icons8.com/ios/50/000000/chocolate-bar.png">
+    <p>CHOC</p>
     </div>
     <% end %>
+
+<div class="nav">
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Find a shop!<i class="fas fa-store"></i></a>
+          <div class="dropdown-menu">
+          <a class="dropdown-item" href="/shops">All shops</a>
+          <a class="dropdown-item" href="#">Option1</a>
+          <a class="dropdown-item" href="#">Option2</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Find a chocolate bar!<i class="fas fa-border-all"></i></a>
+               <div class="dropdown-menu">
+          <a class="dropdown-item" href="/bars">All bars</a>
+          <a class="dropdown-item" href="#">By type of bean</a>
+          <a class="dropdown-item" href="#">By percentage</a>
+          <a class="dropdown-item" href="#">By country of origin</a>
+        </div>
+      </li>
+    </ul>
+  </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -36,30 +59,5 @@
     </ul>
   </div>
 </div>
-    <div class="nav">
-    <ul class="nav nav-pills">
-      <li class="nav-item">
-        <a class="nav-link" href="/shops"><i class="fas fa-store"></i>All shops</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link" href="/bars"><i class="fas fa-border-all"></i>All bars</a></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-map-marker-alt"></i>Bars by origin</a>
-          <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Vietnam</a>
-          <a class="dropdown-item" href="#">Other</a>
-          <a class="dropdown-item" href="#">Other</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-percentage"></i>Bars by percentage</a>
-               <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">70-74 %</a>
-          <a class="dropdown-item" href="#">75-79 %</a>
-          <a class="dropdown-item" href="#">80-84 %</a>
-        </div>
-      </li>
-    </ul>
-  </div>
+
 </div>
