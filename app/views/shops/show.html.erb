@@ -1,10 +1,12 @@
 <div>
-  <div class="shop-index-banner">
-    <h1><%= @shop.name %></h1>
-    <p><%= @shop.full_address %></p>
+  <div class="shop-index-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://1dc3f33f6d-3.optimicdn.com/gaultmillau.com/photos/6ae3dc3d9e75d53137d88c78c009140d2bde73fe/detail.jpg?1568828009);">
+    <div class="banner-text-background">
+      <h1><%= @shop.name %></h1>
+      <p><%= @shop.full_address %></p>
+    </div>
   </div>
   <div style="display: flex; justify-content: space-around; align-items: center; margin: 20px; border: 1px solid #2A2922;">
-    <div>
+    <div class="chocolate-offering">
       <div>
         <h3>Chocolate Oferring</h3>
       </div>
@@ -26,7 +28,7 @@
         <% end %>
       </div>
     </div>
-    <div>
+    <div class="opening-times">
       <div>
         <h3>Opening times</h2>
       </div>

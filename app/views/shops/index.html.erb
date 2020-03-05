@@ -5,8 +5,8 @@
 </div>
 
 
-<div class="container shop-index">
-  <div class="cards">
+<div class="shop-index">
+  <div class="container cards">
     <% @shops.each do |shop| %>
       <%= link_to shop_path(shop) do %>
         <div class="card-shop">
@@ -15,12 +15,13 @@
           </div>
           <div class="card-shop-infos">
             <h2><%= shop.name %></h2>
-          </div>
-          <div class="card-shop-address">
-            <p><%= "#{shop.address.street} #{shop.address.number}, #{shop.address.postcode} #{shop.address.city}, #{shop.address.country} %"%></p>
+            <p><%= "#{shop.address.street} #{shop.address.number}, #{shop.address.postcode} #{shop.address.city}, #{shop.address.country} %"%> <i class="fas fa-map-marker-alt"></i></p>
+            <p>Open now<i class="fas fa-check-circle"></i></p>
+            <p>Review 5 stars</p>
           </div>
         </div>
       <% end %>
     <% end %>
   </div>
+  <img id="map" src="https://raw.githubusercontent.com/lewagon/layouts-demo/gh-pages/images/mapbox.png">
 </div>
