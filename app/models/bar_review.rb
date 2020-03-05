@@ -1,3 +1,3 @@
 class BarReview < ApplicationRecord
-  belongs_to :baruser
+  belongs_to :taste
 end

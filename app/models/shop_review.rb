@@ -1,3 +1,3 @@
 class ShopReview < ApplicationRecord
-  belongs_to :shopuser
+  belongs_to :visit
 end
