@@ -1,17 +1,17 @@
 class ShopReviewsController < ApplicationController
-  before_action :set_review, only: :show
+  before_action :set_shop_review, only: :show
 
   def new
-    @review = Review.new
+    @shop_review = ShopReview.new
     @shop = Shop.find(params[:shop_id])
   end
 
   def create
-    @shop = Car.find(params[:shop_id])
-    @review = Review.new(review_params)
-    @review.shop = @shop
-    @review.user = current_user
-    if @review.save
+    @shop = Shop.find(params[:shop_id])
+    @shop_review = ShopReview.new(review_params)
+    @shop_review.shop = @shop
+    @shop_review.user = current_user
+    if @shop_review.save
       redirect_to shop_path(@shop)
     else
       render 'shops/show'
@@ -20,11 +20,11 @@ class ShopReviewsController < ApplicationController
 
   private
 
-  def set_review
-    @review = Review.find(params[:id])
+  def set_shop_review
+    @shop_review = ShopReview.find(params[:id])
   end
 
   def review_params
-    params.require(:review).permit(:content, :rating)
+    params.require(:shop_review).permit(:content, :rating)
   end
 end
