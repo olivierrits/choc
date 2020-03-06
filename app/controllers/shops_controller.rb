@@ -14,6 +14,11 @@ class ShopsController < ApplicationController
       @visit = Visit.new(shop: @shop, user: current_user)
       @visit.save!
     end
+    @rating = 0
+    @shop.shop_reviews.each do |shop_review|
+      @rating += shop_review.rating
+    end
+    @rating /= @shop.shop_reviews.length
   end
 
   private
