@@ -1,0 +1,79 @@
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.dash-column-1 {
+  display: grid;
+}
+
+.dash-column-2 {
+  display: grid;
+}
+
+.review {
+  display : grid;
+  grid-template-columns: 1fr 10fr;
+  margin: 20px;
+  background-color: white;
+  border-radius: 5px;
+  #review-content {
+    display: grid;
+    padding: 5px 0px 5px 5px;
+  }
+  #review-rating {
+    display: grid;
+    padding: 5px 2px 5px 2px;
+    text-align: center;
+  }
+  p {
+    margin: 0px;
+  }
+}
+
+@media (min-width: 100px) and (max-width: 1000px) {
+  .dashboard-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card-trip {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 10px 50px 15px 0px;
+}
+
+.card-trip > img {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-trip h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-trip p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-trip .card-trip-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-trip-infos .card-trip-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}

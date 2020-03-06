@@ -17,17 +17,14 @@
       <div class="chocolate-offering">
           <h3>Chocolate Oferring</h3>
           <% @shop.bars.each do |bar| %>
-            <div style="display: flex; justify-content: space-around; align-items: center; margin: 20px; border: 1px solid #2A2922;">
-              <div style="width: 100px; height: 100px; background-color: #7D5642; border: 1px solid #506D2F">
+            <div class="card-trip">
+              <img src="https://mediad.publicbroadcasting.net/p/shared/npr/styles/x_large/nprshared/201805/171939372.jpg" >
+              <div class="card-trip-infos">
+                <h2><%= link_to bar.name, bar_path(bar) %></h2>
+                <p><%= bar.origin %></p>
               </div>
-              <div style="width: 100px; height: 100px; background-color: #F3EBDD; border: 1px solid #506D2F">
-                <h4><%= link_to bar.name, bar_path(bar) %></h4>
-              </div>
-              <div style="width: 100px; height: 100px; background-color: #F3EBDD; border: 1px solid #506D2F">
-                <h3><%= "#{bar.percentage} %"%></h3>
-              </div>
-              <div style="width: 100px; height: 100px; background-color: #F3EBDD; border: 1px solid #506D2F">
-                <h5><%= bar.origin %></h5>
+              <div >
+                <h2 class="card-trip-pricing"><%= "#{bar.percentage} %"%></h2>
               </div>
             </div>
           <% end %>
