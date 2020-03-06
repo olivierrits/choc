@@ -47,12 +47,18 @@
 </div>
 </div>
 
-<div class="bar-reviews">
+        <div class="bar-reviews">
         <h3>Bar Reviews</h3>
+        <%= link_to "Write a Review", new_bar_bar_review_path(@bar) %>
+          <% if @bar_reviews.blank? %>
+          <h3>There are no reviews for this chocolate bar yet, would you like to add the first one?</h3>
+          <%= link_to "Write a Review", new_bar_bar_review_path(@bar), class: "btn btn-danger" %>
+        <% else %>
         <% @bar_reviews.each do |bar_review| %>
           <hr>
           <p style="color: brown;"><%= "*" * bar_review.rating %></p>
           <p><%= bar_review.content %></p>
+          <% end %>
         <% end %>
       </div>
-
+    </div>
