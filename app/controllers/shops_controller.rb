@@ -10,15 +10,18 @@ class ShopsController < ApplicationController
     @shop = Shop.find(params[:id])
     @opening_times = arrange(@shop.opening_times)
     @shop_reviews = @shop.shop_reviews
-    if (Visit.where(user: current_user, shop: @shop) != [])
-      @visit = Visit.new(shop: @shop, user: current_user)
+    user_signed_in? ? @user = current_user : @user = User.where(first_name: "anonymous").first
+    if (Visit.where(user: @user, shop: @shop) == [])
+      @visit = Visit.new(shop: @shop, user: @user)
       @visit.save!
     end
     @rating = 0
-    @shop.shop_reviews.each do |shop_review|
-      @rating += shop_review.rating
+    if @shop_reviews.length != 0
+      @shop_reviews.each do |shop_review|
+        @rating += shop_review.rating
+      end
+      @rating /= @shop_reviews.length
     end
-    @rating /= @shop.shop_reviews.length
   end
 
   private
