@@ -10,7 +10,7 @@ class ShopReviewsController < ApplicationController
   def create
     @shop_review = ShopReview.new(shop_review_params)
     visit = Visit.where(user: current_user, shop: @shop)
-    @shop_review.visit = visit
+    @shop_review.visit = @visit
     if @shop_review.save
       redirect_to shop_path(@shop)
     else
