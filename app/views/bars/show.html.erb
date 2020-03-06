@@ -1,5 +1,9 @@
-<h1><%= @bar.name %></h1>
 <div>
+    <div class="shop-index-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://1dc3f33f6d-3.optimicdn.com/gaultmillau.com/photos/6ae3dc3d9e75d53137d88c78c009140d2bde73fe/detail.jpg?1568828009);">
+    <div class="banner-text-background">
+      <h1><%= @bar.name %></h1>
+    </div>
+  </div>
   <div style="display: flex;justify-content: space-around; align-items: center;">
     <div style="margin: 20px auto; border: 1px solid #2A2922; width: 300px; background-color: #506D2F;">
       <div style="width: 200px; height: 300px; background-color: #F3EBDD; border: 1px solid #506D2F">
@@ -18,39 +22,27 @@
         <h5><%= "*" * @rating  %></h5>
       </div>
     </div>
-    <div style="margin: 20px auto; border: 1px solid #2A2922; width: 300px; background-color: #506D2F;">
-      <% @bar.shops.each do |shop| %>
-        <div class="card-shop">
-          <div class="">
-            <img src="https://pierreplas.be/wp-content/uploads/2019/09/Coffret_Panachable-Pierre_Plas-1024x681.jpg" />
+
+          <div class="whereto">
+            <h4>Where can I find this chocolate bar?</h4>
+            <% @bar.shops.each do |shop| %>
+            <div class="card-product">
+              <div class="">
+            <img src="https://www.krondc.com/wp-content/uploads/2016/02/Kron_Chocolate-House_DCN9263-1.jpg" />
           </div>
-          <div class="card-shop-infos">
+              <div class="card-product-infos">
+                <div class="singlecard">
             <h2><%= link_to shop.name, shop_path(shop) %></h2>
           </div>
-          <div class="card-shop-infos">
-            <p><%= "#{shop.address.street} #{shop.address.number}, #{shop.address.postcode} #{shop.address.city}, #{shop.address.country} %"%></p>
+          <div class="singlecard">
+            <p><%= "#{shop.address.street} #{shop.address.number}, #{shop.address.postcode} #{shop.address.city}, #{shop.address.country}"%></p>
           </div>
-        </div>
-      <% end %>
-    </div>
-  </div>
-</div>
+              </div>
+            </div>
+            <% end %>
+          </div>
 
-<div class="cards-list">
 
-<div class="card 1">
-  <div class="card_image"> <img src="https://i.redd.it/b3esnz5ra34y.jpg" /> </div>
-  <div class="card_title title-white">
-    <p>Card Title</p>
-  </div>
-</div>
-
-  <div class="card 2">
-  <div class="card_image">
-    <img src="https://cdn.blackmilkclothing.com/media/wysiwyg/Wallpapers/PhoneWallpapers_FloralCoral.jpg" />
-    </div>
-  <div class="card_title title-white">
-    <p>Card Title</p>
   </div>
 </div>
 </div>
@@ -63,3 +55,4 @@
           <p><%= bar_review.content %></p>
         <% end %>
       </div>
+
