@@ -1,14 +1,16 @@
-<div class="background-form">
-  <div class="form-square">
-    <div class="form-title" style="padding:15px; text-align:center;">
-      <h1>How was your experience at this shop?</h1>
-      <p>Please leave a comment and click "Submit your review". </p>
+  <div class="page-wrapper form-background p-t-100 p-b-100">
+    <div class="bar-review-wrapper wrapper-w780">
+      <div class="form-title" style="padding:15px; text-align:center;">
+        <h1>How was your experience at this shop?</h1>
+        <p>Please leave a comment and click "Submit your review". </p>
+      </div>
+      <%= simple_form_for [@shop, @shop_review] do |f| %>
+        <%= f.label :rating %>
+        <%= f.select :rating, options_for_select([["Please select one", ""], 5, 4, 3, 2, 1]) %>
+        <%= f.input :content, placeholder:"Please enter your comment here" %>
+        <div class="form-actions">
+        <%= link_to 'Submit your review', shop_path(@shop) %>
+        </div>
+      <% end %>
     </div>
-    <%= simple_form_for [@shop, @shop_review] do |f| %>
-      <%= f.label :rating %>
-      <%= f.select :rating, options_for_select([["Please select one", ""], 5, 4, 3, 2, 1]) %>
-      <%= f.input :content, placeholder:"Please enter your comment here" %>
-      <%= f.submit "Submit your review", class: "btn btn-warning" %>
-    <% end %>
   </div>
-</div>
