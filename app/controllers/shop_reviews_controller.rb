@@ -1,5 +1,5 @@
 class ShopReviewsController < ApplicationController
-  before_action :set_shop_review, only: :show
+  before_action :set_shop_review, only: :show, :authenticate_user!
 
   def new
     @shop_review = ShopReview.new
@@ -8,7 +8,7 @@ class ShopReviewsController < ApplicationController
 
   def create
     @shop = Shop.find(params[:shop_id])
-    @shop_review = ShopReview.new(review_params)
+    @shop_review = ShopReview.new(shop_review_params)
     @shop_review.shop = @shop
     @shop_review.user = current_user
     if @shop_review.save
@@ -24,7 +24,7 @@ class ShopReviewsController < ApplicationController
     @shop_review = ShopReview.find(params[:id])
   end
 
-  def review_params
+  def shop_review_params
     params.require(:shop_review).permit(:content, :rating)
   end
 end

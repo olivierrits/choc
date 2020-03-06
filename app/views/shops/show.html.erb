@@ -1,6 +1,9 @@
 <div class="shop-index-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://1dc3f33f6d-3.optimicdn.com/gaultmillau.com/photos/6ae3dc3d9e75d53137d88c78c009140d2bde73fe/detail.jpg?1568828009);">
   <div class="banner-text-background">
-    <h1><%= @shop.name %></h1>
+    <div style="display:flex; justify-content: left; align-items: center;">
+      <div><h1><%= @shop.name %></h1></div>
+      <div style="color: white;"><%= "*" * @rating %></div>
+    </div>
     <p><%= @shop.full_address %></p>
   </div>
 </div>
@@ -9,11 +12,7 @@
     <div class="shop-column-1">
       <div class="shop-description">
         <h3>Shop Description</h3>
-        <p>Sixième du nom, Roel Dom grandit dans la pâtisserie de ses parents à Mortsel où il apprit son métier. Très rapidement, il lui fallut d'autres défis et il les trouva dans la transformation du chocolat.
-        Il profita de l’affaire de ses parents pour lancer une chocolaterie, accumulant ainsi plus de 25 ans d'expérience. Depuis 2008, il produit des pralines, confiseries et biscuits artisanaux dans son atelier de Pulle.
-        Sa philosophie se définit par des goûts et des finitions raffinées et équilibrées. Les saveurs classiques sont le principe directeur de sa gamme et sont très appréciées par les clients.
-        Mais sa créativité s’envole avec, par exemple, une nouvelle gamme de quatre pralines dont la 'Sparkling pink', une ganache de chocolat ruby au caramel de raifort japonais et praliné de cacahuètes, et aussi la 'Blue sparkle', fourrée d'une compote d'abricot et ganache à la lavande.
-        </p>
+        <p><%= @shop.description %> </p>
       </div>
       <div class="chocolate-offering">
           <h3>Chocolate Oferring</h3>
@@ -36,8 +35,9 @@
       <div class="shop-reviews">
         <h3>Shop Reviews</h3>
         <% @shop_reviews.each do |shop_review| %>
+          <hr>
+          <p style="color: brown;"><%= "*" * shop_review.rating %></p>
           <p><%= shop_review.content %></p>
-          <p><%= shop_review.rating %></p>
         <% end %>
       </div>
     </div>
