@@ -1,70 +1,81 @@
-<h1><%= "Hi #{@user.first_name} #{@user.last_name}!" %></h1>
-
-<h2>Your favourite chocolate bars!</h2>
-<div style="display:flex; justify-content: space-between">
+<div class="shop-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://blog.vaninicioccolato.com/wp-content/uploads/2018/09/fave-di-cacao-vanini-750x400.jpg);">
   <div class="container shop-index">
-    <div class="cards">
-      <% @tastes.each do |taste| %>
-        <%= link_to bar_path(taste.bar) do %>
-          <div class="card-bar">
-            <div>
-              <img src="https://media.gettyimages.com/photos/cocoa-beans-and-chocolate-bars-sit-on-display-at-the-auro-chocolate-picture-id1133456655" />
-            </div>
-            <div class="card-bar-infos">
-              <h2><%=  taste.bar.name%></h2>
-            </div>
-            <div class="card-bar-infos">
-              <p><%= "#{taste.bar.percentage} %"%></p>
-            </div>
-            <div class="card-bar-infos">
-              <p><%= taste.bar.origin %></p>
-            </div>
-          </div>
-        <% end %>
-      <% end %>
-    </div>
-  </div>
-  <div style="background-color: lightblue;">
-    <% @bar_reviews.each do |bar_review| %>
-      <div>
-        <p><%= bar_review.content %> </p>
-      </div>
-      <div>
-        <h5><%= bar_review.rating %> </h5>
-      </div>
-    <% end %>
+    <h1><%= "Hi #{@user.first_name} #{@user.last_name}!" %></h1>
   </div>
 </div>
 
-<h2>Your favourite chocolate shops!</h2>
-<div style="display:flex; justify-content: space-between">
-  <div class="shop-index">
-    <div class="container cards">
-      <% @visits.each do |visit| %>
-        <%= link_to shop_path(visit.shop) do %>
-          <div class="card-shop">
-            <div>
-              <img src="https://pierreplas.be/wp-content/uploads/2019/09/Coffret_Panachable-Pierre_Plas-1024x681.jpg" />
-            </div>
-            <div class="card-shop-infos">
-              <h2><%= visit.shop.name %></h2>
-              <p><%= "#{visit.shop.address.street} #{visit.shop.address.number}, #{visit.shop.address.postcode} #{visit.shop.address.city}, #{visit.shop.address.country} %"%> <i class="fas fa-map-marker-alt"></i></p>
-              <p>Open now<i class="fas fa-check-circle"></i></p>
-              <p>Review 5 stars</p>
-            </div>
+<div class="container">
+  <div class="dashboard-container">
+    <div class="dash-column-1">
+      <div class="fav-bars">
+        <h2>Your favourite chocolate bars!</h2>
+          <div class="cards">
+            <% @tastes.each do |taste| %>
+              <%= link_to bar_path(taste.bar) do %>
+                <div class="card-bar">
+                  <div>
+                    <img src="https://media.gettyimages.com/photos/cocoa-beans-and-chocolate-bars-sit-on-display-at-the-auro-chocolate-picture-id1133456655" />
+                  </div>
+                  <div class="card-bar-infos">
+                    <h2><%=  taste.bar.name%></h2>
+                  </div>
+                  <div class="card-bar-infos">
+                    <p><%= "#{taste.bar.percentage} %"%></p>
+                  </div>
+                  <div class="card-bar-infos">
+                    <p><%= taste.bar.origin %></p>
+                  </div>
+                </div>
+              <% end %>
+            <% end %>
           </div>
-        <% end %>
-      <% end %>
+      </div>
+      <div class="bar-reviews">
+        <h2>Reviews of bars you wrote</h2>
+        <div>
+          <% @bar_reviews.each do |bar_review| %>
+            <div class="review">
+              <p id="review-rating"><%= bar_review.rating %> </p>
+              <p id="review-content"><%= bar_review.content %> </p>
+            </div>
+          <% end %>
+        </div>
+      </div>
     </div>
-  </div>
-  <div style="background-color: lightblue;">
-    <% @shop_reviews.each do |shop_review| %>
-      <div>
-        <p><%= shop_review.content %> </p>
+    <div class="dash-column-2">
+      <div class="fav-shops">
+        <h2>Your favourite chocolate shops!</h2>
+        <div class="shop-index">
+          <div class="container cards">
+            <% @visits.each do |visit| %>
+              <%= link_to shop_path(visit.shop) do %>
+                <div class="card-shop">
+                  <div>
+                    <img src="https://pierreplas.be/wp-content/uploads/2019/09/Coffret_Panachable-Pierre_Plas-1024x681.jpg" />
+                  </div>
+                  <div class="card-shop-infos">
+                    <h2><%= visit.shop.name %></h2>
+                    <p><%= "#{visit.shop.address.street} #{visit.shop.address.number}, #{visit.shop.address.postcode} #{visit.shop.address.city}, #{visit.shop.address.country} %"%> <i class="fas fa-map-marker-alt"></i></p>
+                    <p>Open now<i class="fas fa-check-circle"></i></p>
+                    <p>Review 5 stars</p>
+                  </div>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
       </div>
-      <div>
-        <h5><%= shop_review.rating %> </h5>
+      <div class="shop-reviews">
+        <h2>Reviews of shops you wrote</h2>
+        <div>
+          <% @shop_reviews.each do |shop_review| %>
+            <div class="review">
+              <p id="review-rating"><%= shop_review.rating %> </p>
+              <p id="review-content"><%= shop_review.content %> </p>
+            </div>
+          <% end %>
+        </div>
       </div>
-    <% end %>
+    </div>
   </div>
 </div>
