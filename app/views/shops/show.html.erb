@@ -1,64 +1,85 @@
-<div>
-  <div class="shop-index-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://1dc3f33f6d-3.optimicdn.com/gaultmillau.com/photos/6ae3dc3d9e75d53137d88c78c009140d2bde73fe/detail.jpg?1568828009);">
-    <div class="banner-text-background">
-      <h1><%= @shop.name %></h1>
-      <p><%= @shop.full_address %></p>
+<div class="shop-index-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://1dc3f33f6d-3.optimicdn.com/gaultmillau.com/photos/6ae3dc3d9e75d53137d88c78c009140d2bde73fe/detail.jpg?1568828009);">
+  <div class="banner-text-background">
+    <div style="display:flex; justify-content: left; align-items: center;">
+      <div><h1><%= @shop.name %></h1></div>
+      <div style="color: white;"><%= "*" * @rating %></div>
     </div>
+    <p><%= @shop.full_address %></p>
   </div>
-  <div style="display: flex; justify-content: space-around; align-items: center; margin: 20px; border: 1px solid #2A2922;">
-    <div class="chocolate-offering">
-      <div>
-        <h3>Chocolate Oferring</h3>
+</div>
+<div class="container">
+  <div class="shop-container">
+    <div class="shop-column-1">
+      <div class="shop-description">
+        <h3>Shop Description</h3>
+        <p><%= @shop.description %> </p>
       </div>
-      <div>
-        <% @shop.bars.each do |bar| %>
-          <div style="display: flex; justify-content: space-around; align-items: center; margin: 20px; border: 1px solid #2A2922; width: 600px;">
-            <div style="width: 100px; height: 100px; background-color: #7D5642; border: 1px solid #506D2F">
+      <div class="chocolate-offering">
+          <h3>Chocolate Oferring</h3>
+          <% @shop.bars.each do |bar| %>
+            <div style="display: flex; justify-content: space-around; align-items: center; margin: 20px; border: 1px solid #2A2922;">
+              <div style="width: 100px; height: 100px; background-color: #7D5642; border: 1px solid #506D2F">
+              </div>
+              <div style="width: 100px; height: 100px; background-color: #F3EBDD; border: 1px solid #506D2F">
+                <h4><%= link_to bar.name, bar_path(bar) %></h4>
+              </div>
+              <div style="width: 100px; height: 100px; background-color: #F3EBDD; border: 1px solid #506D2F">
+                <h3><%= "#{bar.percentage} %"%></h3>
+              </div>
+              <div style="width: 100px; height: 100px; background-color: #F3EBDD; border: 1px solid #506D2F">
+                <h5><%= bar.origin %></h5>
+              </div>
             </div>
-            <div style="width: 100px; height: 100px; background-color: #F3EBDD; border: 1px solid #506D2F">
-              <h4><%= link_to bar.name, bar_path(bar) %></h4>
-            </div>
-            <div style="width: 100px; height: 100px; background-color: #F3EBDD; border: 1px solid #506D2F">
-              <h3><%= "#{bar.percentage} %"%></h3>
-            </div>
-            <div style="width: 100px; height: 100px; background-color: #F3EBDD; border: 1px solid #506D2F">
-              <h5><%= bar.origin %></h5>
-            </div>
-          </div>
+          <% end %>
+      </div>
+      <div class="shop-reviews">
+        <h3>Shop Reviews</h3>
+        <% @shop_reviews.each do |shop_review| %>
+          <hr>
+          <p style="color: brown;"><%= "*" * shop_review.rating %></p>
+          <p><%= shop_review.content %></p>
         <% end %>
       </div>
     </div>
-    <div class="opening-times">
-      <div>
-        <h3>Opening times</h2>
-      </div>
-      <div>
-        <% @opening_times.each do |key, val| %>
-          <div style="display: flex; justify-content: left; align-items: center; margin: 20px; border: 1px solid #2A2922; width: 400px;">
-            <div style="width: 100px; margin-right: 20px;">
-              <h5><%= key %></h5>
-            </div>
-            <div style="width: 400px">
-              <% if val["open"] %>
-                <% open_string = "" %>
-                <% val["openings"].each_with_index do |opening_time, index| %>
-                  <% open_hour = opening_time[0].hour.to_s %>
-                  <% open_min = opening_time[0].min.to_s %>
-                  <% close_hour = opening_time[1].hour.to_s %>
-                  <% close_min = opening_time[1].min.to_s %>
-                  <% if (open_min.length == 1) then open_min = "0" + open_min end %>
-                  <% if (close_min.length == 1) then close_min = "0" + close_min end %>
-                  <% if index == 1 %>
-                    <br>
+    <div class="shop-column-2">
+      <div class="shop-informations">
+        <div class="shop-infos">
+          <h3><%= @shop.name %></h3>
+          <p><%= @shop.full_address %></p>
+          <p>Tel : +32 477 34 98 78</p>
+        </div>
+        <div class="opening-hours">
+          <h3>Opening times</h3>
+          <% @opening_times.each do |key, val| %>
+            <div class="day-container">
+              <div class="days">
+                <h5><%= key %></h5>
+              </div>
+              <div class="hours">
+                <% if val["open"] %>
+                  <% open_string = "" %>
+                  <% val["openings"].each_with_index do |opening_time, index| %>
+                    <% open_hour = opening_time[0].hour.to_s %>
+                    <% open_min = opening_time[0].min.to_s %>
+                    <% close_hour = opening_time[1].hour.to_s %>
+                    <% close_min = opening_time[1].min.to_s %>
+                    <% if (open_min.length == 1) then open_min = "0" + open_min end %>
+                    <% if (close_min.length == 1) then close_min = "0" + close_min end %>
+                    <% if index == 1 %>
+                      <br>
+                    <% end %>
+                    <%= "#{open_hour}:#{open_min} - #{close_hour}:#{close_min}" %>
                   <% end %>
-                  <%= "#{open_hour}:#{open_min} - #{close_hour}:#{close_min}" %>
+                <% else %>
+                  <%= "closed" %>
                 <% end %>
-              <% else %>
-                <%= "closed" %>
-              <% end %>
+              </div>
             </div>
-          </div>
-        <% end %>
+          <% end %>
+        </div>
+      </div>
+      <div class="shop-map">
+        <img src="https://raw.githubusercontent.com/lewagon/layouts-demo/gh-pages/images/mapbox.png">
       </div>
     </div>
   </div>

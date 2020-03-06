@@ -33,6 +33,9 @@ CSV.foreach(filepath, csv_options) do |row|
       a.opening_times << OpeningTime.new(day: day, open: true, opening_hour: ActiveSupport::TimeZone["Brussels"].parse("13:30"), closing_hour: ActiveSupport::TimeZone["Brussels"].parse("18:00"))
     end
   end
+  a.website = Faker::TvShows::SiliconValley.url
+  a.phone_number = Faker::PhoneNumber.phone_number
+  a.description = Faker::Restaurant.description
   a.save!
   puts "#{row[0]} | #{row[1]} | #{row[2]} | #{row[3]} | #{row[4]} | #{row[5]}"
 end
@@ -87,7 +90,7 @@ end
 
 # ==============================================================================
 
-puts "5. seeding the users-bars database with random associations"
+puts "5. seeding the tastes database with random associations"
 puts "==========================================================="
 
 Bar.all.each do |bar|
@@ -95,13 +98,19 @@ Bar.all.each do |bar|
     a = rand(0..4)
     if a == 1
       bar.users << user
+      taste = Taste.new(bar: bar, user: user)
+      b = rand(0..1)
+      if b == 1
+        taste.favourite = true
+      end
+      taste.save!
     end
   end
 end
 
 # ==============================================================================
 
-puts "6. seeding the users-shops database with random associations"
+puts "6. seeding the visits database with random associations"
 puts "============================================================"
 
 Shop.all.each do |shop|
@@ -109,6 +118,12 @@ Shop.all.each do |shop|
     a = rand(0..4)
     if a == 1
       shop.users << user
+      visit = Visit.new(shop: shop, user: user)
+      b = rand(0..1)
+      if b == 1
+        visit.favourite = true
+      end
+      visit.save!
     end
   end
 end
@@ -135,10 +150,3 @@ Visit.all.each do |visit|
   shop_review.visit = visit
   shop_review.save!
 end
-
-
-
-
-
-
-

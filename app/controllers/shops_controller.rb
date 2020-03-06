@@ -9,6 +9,16 @@ class ShopsController < ApplicationController
   def show
     @shop = Shop.find(params[:id])
     @opening_times = arrange(@shop.opening_times)
+    @shop_reviews = @shop.shop_reviews
+    if (Visit.where(user: current_user, shop: @shop) != [])
+      @visit = Visit.new(shop: @shop, user: current_user)
+      @visit.save!
+    end
+    @rating = 0
+    @shop.shop_reviews.each do |shop_review|
+      @rating += shop_review.rating
+    end
+    @rating /= @shop.shop_reviews.length
   end
 
   private

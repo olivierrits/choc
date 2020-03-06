@@ -1,5 +1,5 @@
 class BarReviewsController < ApplicationController
-  before_action :set_bar_review, only: :show
+  before_action :set_bar_review, only: :show, :authenticate_user!
 
   def new
     @bar_review = BarReview.new
@@ -24,7 +24,7 @@ class BarReviewsController < ApplicationController
     @bar_review = BarReview.find(params[:id])
   end
 
-  def review_params
+  def bar_review_params
     params.require(:bar_review).permit(:content, :rating)
   end
 end
