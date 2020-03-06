@@ -13,7 +13,21 @@
             <img src="https://pierreplas.be/wp-content/uploads/2019/09/Coffret_Panachable-Pierre_Plas-1024x681.jpg" />
           </div>
           <div class="card-shop-infos">
-            <h2><%= shop.name %></h2>
+            <div style="display:flex; justify-content: left; align-items: center;">
+              <div><h2><%= shop.name %></h2></div>
+              <div style="color: brown; margin-left: 30px;">
+                <% if shop.shop_reviews.length == 0 %>
+                  <p style="font-style: italic; color: brown;">no rating yet</p>
+                <% else %>
+                  <% rating = 0 %>
+                  <% shop.shop_reviews.each do |shop_review| %>
+                    <% rating += shop_review.rating %>
+                  <% end %>
+                  <% rating /= shop.shop_reviews.length %>
+                  <p style="color: brown;"><%= "*" * rating %></p>
+                <% end %>
+              </div>
+            </div>
             <p><%= "#{shop.address.street} #{shop.address.number}, #{shop.address.postcode} #{shop.address.city}, #{shop.address.country} %"%> <i class="fas fa-map-marker-alt"></i></p>
             <p>Open now<i class="fas fa-check-circle"></i></p>
             <p>Review 5 stars</p>

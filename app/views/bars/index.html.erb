@@ -22,6 +22,18 @@
           <div class="card-bar-infos">
             <p><%= bar.origin %></p>
           </div>
+          <div class="card-bar-infos">
+            <% if bar.bar_reviews.length == 0 %>
+              <p style="font-style: italic; color: gray;">no rating yet</p>
+            <% else %>
+              <% rating = 0 %>
+                <% bar.bar_reviews.each do |bar_review| %>
+                  <% rating += bar_review.rating %>
+                <% end %>
+                <% rating /= bar.bar_reviews.length %>
+                <p style="font-style: italic; color: brown;"><%= "*" * rating %></p>
+            <% end %>
+          </div>
         </div>
       <% end %>
     <% end %>

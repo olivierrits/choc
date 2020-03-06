@@ -76,6 +76,15 @@ puts "===================================="
 
 User.destroy_all
 
+puts "first seeding the anonymous user"
+
+User.create(
+  { first_name: "anonymous",
+    last_name: "anonymous",
+    email: "test@test.be",
+    password: "password",
+    password_confirmation: "password" })
+
 i = 0
 10.times do
   i += 1
