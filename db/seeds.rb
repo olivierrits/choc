@@ -111,6 +111,7 @@ Bar.all.each do |bar|
       b = rand(0..1)
       if b == 1
         taste.favourite = true
+        taste.count = rand(2..50)
       end
       taste.save!
     end
@@ -131,6 +132,7 @@ Shop.all.each do |shop|
       b = rand(0..1)
       if b == 1
         visit.favourite = true
+        visit.count = rand(2..50)
       end
       visit.save!
     end
@@ -146,6 +148,10 @@ puts "======================================================"
 Taste.all.each do |taste|
   bar_review = BarReview.new(content: Faker::Coffee.notes, rating: rand(1..5))
   bar_review.taste = taste
+  puts "bar_review.content = #{bar_review.content}"
+  puts "bar_review.rating = #{bar_review.rating}"
+  puts "taste.user = #{taste.user}"
+  puts "taste.bar = #{taste.bar}"
   bar_review.save!
 end
 
