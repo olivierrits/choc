@@ -44,4 +44,4 @@ function dragElement(elmnt) {
   }
 };
 
-export { dragElement };
+// export { dragElement };
