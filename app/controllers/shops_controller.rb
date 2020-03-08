@@ -15,7 +15,7 @@ class ShopsController < ApplicationController
       @visit = Visit.new(shop: @shop, user: @user)
       @visit.save!
     else
-      @visit = Visit.where(user: @user, bar: @bar).last
+      @visit = Visit.where(user: @user, shop: @shop).last
       @visit.count += 1
       @visit.save!
     end
