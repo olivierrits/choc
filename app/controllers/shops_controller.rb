@@ -14,6 +14,10 @@ class ShopsController < ApplicationController
     if (Visit.where(user: @user, shop: @shop) == [])
       @visit = Visit.new(shop: @shop, user: @user)
       @visit.save!
+    else
+      @visit = Visit.where(user: @user, bar: @bar).last
+      @visit.count += 1
+      @visit.save!
     end
     @rating = 0
     if @shop_reviews.length != 0
