@@ -1,0 +1,299 @@
+Company;Name;Bean Type;Company Location;Origin;percentage;Description;# ingredients;Beans;Sugar;Cacao Butter;Vanilla;Lecithin;Salt
+Soma;Three Amigos(Chuao, Wild Bolivia, D.R.);0;Canada;Blend;70;strawberry, cocoa, nutty;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Soma;Tien Giang, Black S., batch VIT60420.0;Trinitario;Canada;Vietnam;70;creamy, honey, blackberry;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Somerville;Hawaiian, Big Island;0;U.S.A.;U.S.A.- Hawaii;70;intense, tannic, choco, earthy;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Somerville;Nicaragua;0;U.S.A.;Nicaragua;70;earthy, dried fruit, complex;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Soul;Dominican Republic;0;Canada;Dominican Republic;70;few grits, sweet, cocoa;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Soul;Ecuador;0;Canada;Ecuador;75;dry, floral, earthy;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Soul;Madagascar;0;Canada;Madagascar;70;tart, sour, basic;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Soul;Papua New Guinea;0;Canada;Papua New Guinea;77;sandy, smokey, fruit, sour;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Soul;Tanzania;0;Canada;Tanzania;80;sticky, mild fruit, brownie;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Soul;Venezuela;0;Canada;Venezuela;75;dry, earthy, roasty;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Spagnvola;AgroCriso Plantation;0;U.S.A.;Dominican Republic;80;fatty, muted strawberry;Cacao beans, Sugar, Cacao Butter, Vanilla;TRUE;TRUE;TRUE;TRUE;FALSE;FALSE
+Spagnvola;AgroCriso Plantation;0;U.S.A.;Dominican Republic;70;oily, floral, dairy;Cacao beans, Sugar, Cacao Butter, Vanilla;TRUE;TRUE;TRUE;TRUE;FALSE;FALSE
+Spagnvola;AgroCriso Plantation;0;U.S.A.;Dominican Republic;75;oily, floral;Cacao beans, Sugar, Cacao Butter, Vanilla;TRUE;TRUE;TRUE;TRUE;FALSE;FALSE
+Spencer;Dominican Republic;0;U.S.A.;Dominican Republic;70;sandy, robust, grapes, malt;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Spencer;Dominican Republic, lot D82R;0;Australia;Dominican Republic;70;spicy, chocolatey;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Spencer;Ecuador;0;U.S.A.;Ecuador;70;floral, astringent;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Spencer;Ecuador, lot E432314L;0;Australia;Ecuador;70;floral, sandy;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Spencer;Madagascar, lot M0403R;0;Australia;Madagascar;70;powdery, cherry, astringent;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Spencer;Malekula Island;Trinitario;Australia;Vanuatu;72;bready, sour milk, fatty;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Spencer;Peru;Trinitario;U.S.A.;Peru;70;floral, earthy, burnt rubber;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Sprungli (Felchlin);Alto Beni;Criollo;Switzerland;Bolivia;70;fatty, mild fruit, off note;Cacao beans, Sugar, Cacao Butter, Lecithin;TRUE;TRUE;TRUE;FALSE;TRUE;FALSE
+SRSLY;Dominican Republic;0;U.S.A.;Dominican Republic;70;unrefined, sweet, mild coffee;Cacao beans, Sugar, Lecithin;TRUE;TRUE;FALSE;FALSE;TRUE;FALSE
+SRSLY;Dominican Republic;0;U.S.A.;Dominican Republic;84;gritty,intense coffee, metallic;Cacao beans, Sugar, Lecithin;TRUE;TRUE;FALSE;FALSE;TRUE;FALSE
+Starchild;Bolivar, Arriba;Nacional;U.S.A.;Ecuador;70;coconut, mild vanilla;Cacao beans, Sugar, Cacao Butter, Vanilla;TRUE;TRUE;TRUE;TRUE;FALSE;FALSE
+Starchild;Cacao Verapaz;0;U.S.A.;Guatemala;70;dried fruit, coconut, few grits;Cacao beans, Sugar, Cacao Butter, Vanilla;TRUE;TRUE;TRUE;TRUE;FALSE;FALSE
+Starchild;Hispaniola;0;U.S.A.;Dominican Republic;70;coconut, cocoa, few grits;Cacao beans, Sugar, Cacao Butter, Vanilla;TRUE;TRUE;TRUE;TRUE;FALSE;FALSE
+Starchild;Rio Tuma;Trinitario;U.S.A.;Nicaragua;70;brownie, few grits, sandy;Cacao beans, Sugar, Cacao Butter, Vanilla;TRUE;TRUE;TRUE;TRUE;FALSE;FALSE
+Starchild;Sambirano Valley;Trinitario;U.S.A.;Madagascar;70;red fruit, coconut;Cacao beans, Sugar, Cacao Butter, Vanilla;TRUE;TRUE;TRUE;TRUE;FALSE;FALSE
+Stella (aka Bernrain);Bahia, Agri-Forestal Plantation, 2010;Trinitario;Switzerland;Brazil;68;creamy, vanilla, moldy;Cacao beans, Sugar, Cacao Butter, Vanilla;TRUE;TRUE;TRUE;TRUE;FALSE;FALSE
+Stella (aka Bernrain);India;0;Switzerland;India;72;peanut butter,vanilla,artificial;Cacao beans, Sugar, Cacao Butter, Vanilla;TRUE;TRUE;TRUE;TRUE;FALSE;FALSE
+Stone Grindz;Ecuador, Midnight Dark, batch 600414;0;U.S.A.;Ecuador;84;floral, hints of fruit;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Stone Grindz;Ecuador, Twilght Dark, batch 500414;0;U.S.A.;Ecuador;70;oily surface, floral, earthy;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Stone Grindz;Wild Bolivia, batch 260;0;U.S.A.;Bolivia;70;fatty, rubber, off notes;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+StRita Supreme;Samar, East Visayas region;0;U.S.A.;Philippines;65;vanilla, sweet;Cacao beans, Sugar, Cacao Butter, Vanilla;TRUE;TRUE;TRUE;TRUE;FALSE;FALSE
+StRita Supreme;Samar, East Visayas region;0;U.S.A.;Philippines;70;dry, sweet, vanilla(n);Cacao beans, Sugar, Cacao Butter, Vanilla;TRUE;TRUE;TRUE;TRUE;FALSE;FALSE
+StRita Supreme;Samar, East Visayas region;0;U.S.A.;Philippines;75;bland, earthy;Cacao beans, Sugar, Cacao Butter, Vanilla;TRUE;TRUE;TRUE;TRUE;FALSE;FALSE
+Sublime Origins;Moho Valley;Trinitario;U.S.A.;Belize;78;intense, rich, dark berry;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Sublime Origins;Sambirano;Trinitario;U.S.A.;Madagascar;67;molasses, sour, astringent;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Summerbird;Peru;Blend;Denmark;Peru;61;sandy, sweet, vanilla;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Summerbird;Peru;Blend;Denmark;Peru;71;powdery, vanilla, earthy;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Suruca Chocolate;Venezuela;0;Venezuela;Venezuela;70;sticy, nutty, roasty, off notes;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Suruca Chocolate;Venezuela;0;Venezuela;Venezuela;60;sticky, sweet, nutty, roasty;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Svenska Kakaobolaget;Sri Lanka;Blend;Sweden;Sri Lanka;70;ham, sour, intense;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Sweet Escalier;Amazonas, Wild Cacao;Blend;Japan;Brazil;70;cardboard, cheesy;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Sweet Escalier;Belize;Blend;Japan;Belize;70;buttery, cheesy;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Sweet Escalier;Chuao;Blend;Japan;Venezuela;75;acidic, cocoa, dried fruit;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Sweet Escalier;San Martin;Blend;Japan;Peru;70;pungent, molasses, sour;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Sweet Escalier;Tanzania;Blend;Japan;Tanzania;75;fatty, sour, off notes;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Szanto Tibor;Ambolikapiky;Trinitario;Hungary;Madagascar;70;sour orange, fatty;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Szanto Tibor;Autumn, Primary Harvest, 2012;Criollo;Hungary;Madagascar;70;light color, sandy, fruity;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Szanto Tibor;"Ayacucho, ""El Guinacho""";0;Hungary;Peru;70;sweet, spicy;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Szanto Tibor;Baracoa;Trinitario;Hungary;Cuba;70;sandy, banana;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Szanto Tibor;Baracoa;Trinitario;Hungary;Cuba;88;rustic, spicy, earthy;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Szanto Tibor;Ben Tre, Mekong Delta;Trinitario;Hungary;Vietnam;70;smokey, mild citrus;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Szanto Tibor;Cacao Blanco;0;Hungary;Nicaragua;70;sour milk, hot cocoa;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Szanto Tibor;Crudo;0;Hungary;Venezuela;70;rustic, sugar dominates;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Szanto Tibor;Fazenda Sempre Firme, Bahia;Forastero;Hungary;Brazil;70;rustic, earthy, tea;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Szanto Tibor;Millot Plantation;0;Hungary;Madagascar;70;rustic, bright fruit;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Szanto Tibor;Nacional;0;Hungary;Ecuador;70;sweet, brownie, sour;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Szanto Tibor;Porcelana;Criollo;Hungary;Venezuela;70;sandy, earthy, spice, nutty;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Szanto Tibor;Santo Domingo;0;Hungary;Dominican Republic;70;rustic, large unground pieces;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Szanto Tibor;Spring, Secondary Harvest, 2012;Criollo;Hungary;Madagascar;70;dark color, sandy, fruity;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Szanto Tibor;Winak, Sumaco;Nacional;Hungary;Ecuador;70;coarse, spicy cinnamon;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Tabal;Chiapas, Lacandon Jungle, batch 95;0;U.S.A.;Mexico;70;vanilla, fuel, earthy;Cacao beans, Sugar, Cacao Butter, Vanilla;TRUE;TRUE;TRUE;TRUE;FALSE;FALSE
+Tabal;Costa Rica, batch 83;0;U.S.A.;Costa Rica;70;licorice, dried fruit, burnt fuel;Cacao beans, Sugar, Cacao Butter, Vanilla;TRUE;TRUE;TRUE;TRUE;FALSE;FALSE
+Tabal;Dominican Republic;0;U.S.A.;Dominican Republic;70;oily, cardboard, sour;Cacao beans, Sugar, Cacao Butter, Vanilla;TRUE;TRUE;TRUE;TRUE;FALSE;FALSE
+Tabal;Peru, batch 96;0;U.S.A.;Peru;70;vanilla, fatty, vegetal, mint;Cacao beans, Sugar, Cacao Butter, Vanilla;TRUE;TRUE;TRUE;TRUE;FALSE;FALSE
+Tablette (aka Vanillabeans);Colombia;0;Japan;Colombia;70;flat, smoke, marshmallow;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Tablette (aka Vanillabeans);Papua;0;Japan;Papua New Guinea;62;creamy, smoke, ham;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Tablette (aka Vanillabeans);Trinidad;Trinitario;Japan;Trinidad;77;intense, grassy, smokey;Cacao beans, Sugar, Cacao Butter, Lecithin;TRUE;TRUE;TRUE;FALSE;TRUE;FALSE
+Tablette (aka Vanillabeans);Vietnam;Trinitario;Japan;Vietnam;60;vanilla, butter, caramel;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Tala;Vietnam;Trinitario;Vietnam;Vietnam;75;intense cocoa, fatty, sticky;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Tala;Vietnam;Trinitario;Vietnam;Vietnam;70;cocoa,sweet,fatty, cardboard;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Tan Ban Skrati;Paramaribo, batch 20160043-01;Trinitario;Suriname;Suriname;70;earthy, floral, dry;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Taste Artisan;Amazonas;Trinitario;U.S.A.;Peru;75;blackberry, dirt, high roast;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Taste Artisan;Chuao, batch 20170714C;Trinitario;U.S.A.;Venezuela;75;vanilla, fatty;Cacao beans, Sugar, Cacao Butter, Vanilla;TRUE;TRUE;TRUE;TRUE;FALSE;FALSE
+Taste Artisan;Piura;Trinitario;U.S.A.;Peru;75;fig;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Taucherli;Mexico;Trinitario;Switzerland;Mexico;70;nutty, fruit, sour, floral;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Taucherli;Nicaragua;Trinitario;Switzerland;Nicaragua;72;nutty, off, roasty, fatty;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Taza;Alto Beni;0;U.S.A.;Bolivia;87;grainy, blueberries, bitter;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Taza;Belize;Trinitario;U.S.A.;Belize;68;coarse, watering, sweet;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Taza;Chiapan;0;U.S.A.;Mexico;75;rustic, sweet, earthy;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Taza;Dark, Stone Ground;0;U.S.A.;Dominican Republic;70;sandy, sour banana, sweet;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+TCHO;Chocolatey-beta;Forastero;U.S.A.;Ghana;70;gritty,sweet,swiss miss,vanilla;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+TCHO;Citrus-beta;0;U.S.A.;Madagascar;70;dry, red berry, off note;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+TCHO;Fruity-beta;0;U.S.A.;Peru;70;tangy, off, musty, sour;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+TCHO;Nutty-beta;0;U.S.A.;Peru;70;dry, musty, flat;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+TCHO;Peru, Ecuador;0;U.S.A.;Blend;99;spicy, ginger, bitter;;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+TCHO;TCHOPro 60.5;0;U.S.A.;Blend;60;tea, sweet, astringent;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+TCHO;TCHOPro 68;0;U.S.A.;Blend;68;nutty, candy-like;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+TCHO;West Africa;Forastero;U.S.A.;Blend;62;strong vanilla, sweet, fatty;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Tejas;Aranama;0;U.S.A.;Papua New Guinea;70;molasses, caramel, fruity;Cacao beans, Sugar, Cacao Butter, Vanilla;TRUE;TRUE;TRUE;TRUE;FALSE;FALSE
+Tejas;Bahia, Floresta Azul,Good Friends Reserve#3;Forastero;U.S.A.;Brazil;70;honey, pepper, charcoal;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Tejas;Bayou Blend, Ecuador, Mad., PNG;Blend;U.S.A.;Blend;70;molasses, caramel, spice;Cacao beans, Sugar, Cacao Butter, Vanilla;TRUE;TRUE;TRUE;TRUE;FALSE;FALSE
+Tejas;Capistrano;0;U.S.A.;Peru;70;perfume, chemical, soapy;Cacao beans, Sugar, Cacao Butter, Vanilla;TRUE;TRUE;TRUE;TRUE;FALSE;FALSE
+Tejas;Capistrano*;0;U.S.A.;Madagascar;70;sticky, caramel;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Tejas;Concepcion;0;U.S.A.;Madagascar;70;molasses, off notes;Cacao beans, Sugar, Cacao Butter, Vanilla;TRUE;TRUE;TRUE;TRUE;FALSE;FALSE
+Tejas;Concepcion*;0;U.S.A.;Venezuela;80;earthy, savory, hammy;Cacao beans, Sugar, Cacao Butter, Vanilla;TRUE;TRUE;TRUE;TRUE;FALSE;FALSE
+Tejas;Espada;0;U.S.A.;Mexico;70;molasses, caramel;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Tejas;Espada;0;U.S.A.;Brazil;70;flat, cardboard, metallic;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Tejas;La Bahia, w/ cane juice;0;U.S.A.;Ecuador;70;gritty, rum, molasses;Cacao beans, Sugar, Cacao Butter, Vanilla;TRUE;TRUE;TRUE;TRUE;FALSE;FALSE
+Tejas;La Bahia, w/ cane sugar;0;U.S.A.;Ecuador;70;molasses, fruit, floral;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Tejas;Presidio;0;U.S.A.;Dominican Republic;70;molasses, caramel;Cacao beans, Sugar, Cacao Butter, Vanilla;TRUE;TRUE;TRUE;TRUE;FALSE;FALSE
+Tejas;San Jose;0;U.S.A.;Bolivia;70;candy,peanut butter,caramel;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Tejas;San Jose;0;U.S.A.;Bolivia;67;green apple, sweet;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Terroir;Alto Beni;0;U.S.A.;Bolivia;77;muted, roasted banana;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Terroir;Belize;Trinitario;U.S.A.;Belize;70;nutty, raspberry, metallic;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Terroir;Ecuador;0;U.S.A.;Ecuador;70;floral, earthy, bourbon;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Terroir;Ecuador, batch 6-5-15;0;U.S.A.;Ecuador;77;intense, mild coffee and rum;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Terroir;Guatemala;Trinitario;U.S.A.;Guatemala;70;walnuts, cocoa, easy melt;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Terroir;Haiti;Trinitario;U.S.A.;Haiti;72;harsh, tobacco;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Terroir;Madagascar;Trinitario;U.S.A.;Madagascar;70;bright fruit, mild sour;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Terroir;Madagascar, batch 6-5-15;Trinitario;U.S.A.;Madagascar;67;sweet, rich, tannic, fruity;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Terroir;Maya Mountain;Trinitario;U.S.A.;Belize;77;berries, licorice, cocoa,bitter;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Terroir;Oko Caribe;0;U.S.A.;Dominican Republic;70;spicy, black pepper, bold;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Terroir;Peru;0;U.S.A.;Peru;70;spicy, black pepper, intense;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Terroir;Uganda, batch 6-3-15;Forastero;U.S.A.;Uganda;73;creamy, almond, butter;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+The Barn;Peru;0;Sweden;Peru;70;sandy, sweet, raisins;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Theo;Congo w/ nibs;Forastero;U.S.A.;Congo;65;sweet, vanilla, cocoa;Cacao beans, Sugar, Cacao Butter, Vanilla;TRUE;TRUE;TRUE;TRUE;FALSE;FALSE
+Theo;Ghana, Kumasi;Forastero;U.S.A.;Ghana;84;dry, slightly tart, bitter;Cacao beans, Sugar, Cacao Butter, Vanilla;TRUE;TRUE;TRUE;TRUE;FALSE;FALSE
+Theo;Ghana, Panama, Ecuador;Blend;U.S.A.;Blend;75;sandy, sweet, fruity;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Theo;Ivory Coast;0;U.S.A.;Ivory Coast;75;dry, gritty, hint of fruit, sour;Cacao beans, Sugar, Cacao Butter, Vanilla;TRUE;TRUE;TRUE;TRUE;FALSE;FALSE
+Theo;Madagascar;Trinitario;U.S.A.;Madagascar;65;sandy, sweet, blueberry;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Theo;"Venezuela; Barinos, Merida, Tachron";Blend;U.S.A.;Venezuela;91;dry, very bland, mild bitter;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Theobroma;Piura Select, Cacao Blanc;0;Japan;Peru;70;peanut butter, sour milk;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Thistle & Rose aka Aggie USU;Costa Esmeraldas, 2017 h., batch 28;0;U.S.A.;Ecuador;70;pure, bold, floral;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Tibito;Meta, lot 052;0;Colombia;Colombia;70;floral, vegetal;Cacao beans, Sugar, Lecithin;TRUE;TRUE;FALSE;FALSE;TRUE;FALSE
+Tibito;Putumayo, lot 021;0;Colombia;Colombia;70;spicy, marshmallow;Cacao beans, Sugar, Lecithin;TRUE;TRUE;FALSE;FALSE;TRUE;FALSE
+Timo A. Meyer;Belize, med roast;Trinitario;Germany;Belize;72;bright fruit, cashew;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Tiny House;Kokoa Kamili;Trinitario;U.S.A.;Tanzania;71;bland, mild honey, sour;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+To'ak (Ecuatoriana);Manabi;Nacional;Ecuador;Ecuador;81;waxy, mild fruit, floral;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Tobago Estate (Pralus);Roxborough, Tobago;Trinitario;France;Tobago;70;smooth, wild berries;;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Tocoti;Dominican Republic;0;U.S.A.;Dominican Republic;74;pronounced fruit, sour;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Tocoti;Venezuela;0;U.S.A.;Venezuela;72;peanut butter, soapy;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Tocoti;Wild Bolivian, Jungle Love;Criollo;U.S.A.;Bolivia;77;sandy, sweet;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Tosier;Acul du Nard;Criollo;U.K.;Haiti;70;metallic, astringent;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Tosier;Alto Beni, 2016;Criollo;U.K.;Bolivia;70;spicy, cocoa, sweet;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Tosier;Maya Mtn.;Criollo;U.K.;Belize;70;honey, caramel;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Tosier;Tumaco;Criollo;U.K.;Colombia;70;dull, chewy, sweet;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Treehouse;Conacado;0;U.S.A.;Dominican Republic;72;baked, roasty, coffee;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Tree to Bar;Ecuador;0;South Korea;Ecuador;70;nutty, floral;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Tribar;Piura, Gran Chilique;0;Peru;Peru;70;sweet, pungent grape, acidic;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Tribar;Ucayali;0;Peru;Peru;73;powdery, complex, rubber;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Tsara (Cinagra);Ambanja, Tsara Valley;0;Madagascar;Madagascar;72;cocoa, mild fruit;;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+twenty-four blackbirds;Cedeno, lot 271;0;U.S.A.;Ecuador;75;intense, floral;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+twenty-four blackbirds;Dominican Republic;0;U.S.A.;Dominican Republic;73;roasty, woody, rubber off;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+twenty-four blackbirds;Dominican Republic, batch 85;0;U.S.A.;Dominican Republic;68;roasty, sligt burnt, red fruit;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+twenty-four blackbirds;Kokoa Kamili;0;U.S.A.;Tanzania;75;dry, floral, woody;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+twenty-four blackbirds;Madagascar, lot 137;Trinitario;U.S.A.;Madagascar;75;intense, red berry;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+twenty-four blackbirds;Oko Caribe;0;U.S.A.;Dominican Republic;75;spicy, sour, off note;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+twenty-four blackbirds;Palos Blancos, batch 97;0;U.S.A.;Bolivia;75;roasty, bitter, caramel, dairy;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Two Ravens;Peru;Criollo;U.S.A.;Peru;60;coarse, sweet, lemon;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Uncouth;Dominican Republic;Criollo;Canada;Dominican Republic;75;dry, coarse, hay, off;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Uncouth;Guatemala;Criollo;Canada;Guatemala;75;dry, coarse, sour;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Uncouth;Tanzania;Criollo;Canada;Tanzania;75;dry, coarse, sweet, earthy;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Un Dimanche A Paris;Dominican Republic;0;France;Dominican Republic;63;spicy and rich;;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Undone;Matagalpa;0;U.S.A.;Nicaragua;74;creamy, woody,green, rubber;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Undone;San Francisco de Macoris, Nourish;0;U.S.A.;Dominican Republic;70;tart, tangy, mild cocoa;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Upchurch;Madagascar, Sassy Bar;Trinitario;U.S.A.;Madagascar;72;sweet, acidic, tart;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Upchurch;Tanzania, Party Bar;0;U.S.A.;Tanzania;72;sandy, sweet, peach;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Urzi;Sur del Lago, Merida;Trinitario;Italy;Venezuela;65;intense, nutty, mild rubber;Cacao beans, Sugar, Cacao Butter, Vanilla;TRUE;TRUE;TRUE;TRUE;FALSE;FALSE
+Utopick;Nugo;Trinitario;Spain;Nicaragua;70;roasty cocoa;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Utopick;Sierra Nevada, Tutu Iku;Trinitario;Spain;Colombia;70;spice, melon, nutty;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Valrhona;Abinao, West Africa;Forastero;France;Blend;85;berries, tart, bitter;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Valrhona;Alpaco;0;France;Ecuador;66;rich cocoa, hot spice;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Valrhona;Andoa, Grand Cru blend;0;France;Blend;70;yogurt, lemon, licorice;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Valrhona;Araguani, Venezuela, Carribean;Blend;France;Blend;72;creamy, rich, licorice;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Valrhona;Caraque;0;France;Blend;56;intense sweet, nut, orange;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Valrhona;Carribean, Caraibe;0;France;Blend;66;slight bitter, woody;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Valrhona;Chuao 2002 P.;Trinitario;France;Venezuela;65;sandy, vegetal, cocoa;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Valrhona;Gran Couva 2005 P.;Trinitario;France;Trinidad;64;nutty, vegetal, sweet;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Valrhona;Guanaja, South America;Blend;France;Blend;70;subtle, smooth, earthy, long;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Valrhona;Le Noir Amer, West Africa;Forastero;France;Blend;71;nutty and bitter dominate;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Valrhona;Le Noir Extra Amer;0;France;Blend;85;creamy, fatty, very bitter;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Valrhona;Loma Sotavento, 2013;0;France;Dominican Republic;64;complex, herbs, fruit, dairy;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Valrhona;Manjari;Blend;France;Madagascar;64;creamy, blueberry, raspberry;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Valrhona;Nyangbo;Forastero;France;Ghana;68;creamy, cocoa, bread;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Valrhona;Oriado, Peru, Dom. Rep;Forastero;France;Blend;60;intense, rich, sweet;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Valrhona;Otucan, Grand Cru;0;France;Venezuela;69;green,unripened fruit,banana;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Valrhona;Piura, Illanka, Quemazon;0;France;Peru;63;intense, dark berry, grapes;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Valrhona;Porcelana, Maracaibo, Palmira P. 2005;Criollo;France;Venezuela;64;modest, creamy, cocoa;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Valrhona;Porcelana, Maracaibo, Palmira P. 2006;Criollo;France;Venezuela;64;creamy, cherry;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Valrhona;Porcelana, Pedegral;Criollo;France;Venezuela;64;creamy, honey,peanut butter;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Valrhona;Sambirano, Ampamakia 2005, Millot P.;Trinitario;France;Madagascar;64;red berry, rich cocoa;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Valrhona;Tainori;0;France;Dominican Republic;64;cocoa dominates, woodsy;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Vanleer (Barry Callebaut);Manhattan;Forastero;U.S.A.;Ghana;72;sour vanila, heavy roast;;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Vanleer (Barry Callebaut);Napa;Forastero;U.S.A.;Ghana;65;"oily, caramel ""rolo"", sweet";;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Vao Vao (Chocolaterie Robert);Madagascar;Trinitario;Madagascar;Madagascar;80;fatty, bitter, sour;Cacao beans, Sugar, Cacao Butter, Vanilla;TRUE;TRUE;TRUE;TRUE;FALSE;FALSE
+Vao Vao (Chocolaterie Robert);Madagascar;Trinitario;Madagascar;Madagascar;76;fatty, sour, spoiled;Cacao beans, Sugar, Cacao Butter, Vanilla;TRUE;TRUE;TRUE;TRUE;FALSE;FALSE
+Vao Vao (Chocolaterie Robert);Madagascar;Trinitario;Madagascar;Madagascar;72;fatty, bland, very astringent;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Vao Vao (Chocolaterie Robert);Madagascar;Trinitario;Madagascar;Madagascar;70;oily, fatty, citrus;;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Vao Vao (Chocolaterie Robert);Madagascar;Trinitario;Madagascar;Madagascar;64;sandy, mild citrus, sweet;;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Vao Vao (Chocolaterie Robert);Madagascar w/ nibs;Trinitario;Madagascar;Madagascar;68;oily, nutty, fatty;;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Vicuna;Alta Verapaz;Trinitario;U.S.A.;Guatemala;70;earthy, sour, intense;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Vicuna;Palos Blancos;0;U.S.A.;Bolivia;70;peanut butter, coffee, mint;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Vicuna;Palos Blancos;0;U.S.A.;Bolivia;70;smokey, earthy, nutty;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Vicuna;Palos Blancos + nibs;0;U.S.A.;Bolivia;70;complex, nibs too soft;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Vicuna;San Francisco de Macoris;0;U.S.A.;Dominican Republic;70;dark berry, roasty;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Videri;Classic, Central and S. America;0;U.S.A.;Blend;70;sweet, fruity, heavy roast;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Videri;Dark, Central and S. America;0;U.S.A.;Blend;90;mellow fruit, tart, mild bitter;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Videri;Dominican Republic;0;U.S.A.;Dominican Republic;90;intense, cocoa, spicy, fruit;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Videri;Mindo;0;U.S.A.;Ecuador;75;spicy, nutmeg, brownie;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Videri;Trinidad;Trinitario;U.S.A.;Trinidad;75;spicy, roasty, acidic, dairy;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Vietcacao (A. Morin);Ben Tre, Mekong Delta, MoCay;Trinitario;France;Vietnam;70;spicy, dairy;Cacao beans, Sugar, Cacao Butter, Lecithin;TRUE;TRUE;TRUE;FALSE;TRUE;FALSE
+Vintage Plantations;San Martin;0;U.S.A.;Peru;75;sandy, sweet, nutty;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Vintage Plantations (Tulicorp);Los Rios, Rancho Grande 2004/2007;Nacional;U.S.A.;Ecuador;90;some fruit, strong bitter;;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Vintage Plantations (Tulicorp);Los Rios, Rancho Grande 2004/2007;Nacional;U.S.A.;Ecuador;100;bland, mild fruit, strong bitter;;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Vintage Plantations (Tulicorp);Los Rios, Rancho Grande 2004/2007;Nacional;U.S.A.;Ecuador;75;cocoa,earthy,very astringent;;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Vintage Plantations (Tulicorp);Los Rios, Rancho Grande 2007;Nacional;U.S.A.;Ecuador;65;sticky, cocoa, earthy;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Violet Sky;Cahabon;Trinitario;U.S.A.;Guatemala;77;creamy, cocoa, pungent;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Violet Sky;Cuyagua;Criollo;U.S.A.;Venezuela;77;intense, mild bitter, roasty;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Violet Sky;Moho River Valley;Blend;U.S.A.;Belize;77;mild metallic, brownie, earth;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Violet Sky;Peru;Blend;U.S.A.;Peru;77;chalky, peach, bland;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Violet Sky;Sambirano Valley;Trinitario;U.S.A.;Madagascar;77;intense, tart, sour, raisin;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Vivra;Alto Beni;Trinitario;U.S.A.;Bolivia;70;earthy, vanilla;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Vivra;Dominican Republic;0;U.S.A.;Dominican Republic;70;sweet, simple, cocoa;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Vivra;Ocumare;0;U.S.A.;Venezuela;70;nutty, off notes;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Vivra;Peru;0;U.S.A.;Peru;70;pungent, metallic;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Vivra;Pisa, Adul de Nord;0;U.S.A.;Haiti;70;vanilla, late cocoa notes;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Wellington Chocolate Factory;Conacado;Trinitario;New Zealand;Dominican Republic;70;dry, rich, roasty;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Wellington Chocolate Factory;Piura Blanco, Norandino;0;New Zealand;Peru;70;grapes, pungent;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Wellington Chocolate Factory;Samoa;0;New Zealand;Samoa;77;earthy, roasty;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+White Label;Alto Beni;0;U.S.A.;Bolivia;72;creamy, fruit, poor aftertaste;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+White Label;Kokoa Kamili;0;U.S.A.;Tanzania;68;nuts, fruit, poor aftertaste;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Whittakers;Ghana;Forastero;New Zealand;Ghana;72;sticky, dry, vanilla dominates;;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Wilkie's Organic;Amazonas;Criollo;Ireland;Peru;75;light color, grit, metallic;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Wilkie's Organic;Amazonas;Criollo;Ireland;Peru;89;slow develop, bitter, metallic;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Wilkie's Organic;Amazonas w/ nibs;Criollo;Ireland;Peru;75;mild, metallic;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Wilkie's Organic;Tumbes;Criollo;Ireland;Peru;75;sandy, sweet, coffee;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Willie's Cacao;Hacienda Las Trincheras;0;U.K.;Venezuela;72;dry, nutty, cocoa;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Willie's Cacao;Java;0;U.K.;Indonesia;69;smokey, fruity, sour;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Willie's Cacao;Java, Indonesian Black;0;U.K.;Indonesia;100;fruit, strong smoke, bitter;;FALSE;FALSE;FALSE;FALSE;FALSE;FALSE
+Willie's Cacao;Los Llanos;0;U.K.;Colombia;88;mild nutty and fruit, savory;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Willie's Cacao;Los Llanos;0;U.K.;Colombia;70;rich cocoa, spicy, cinamon;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Willie's Cacao;Rio Caribe;Trinitario;U.K.;Venezuela;72;creamy, earthy, nutty;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Willie's Cacao;Sambirano;Trinitario;U.K.;Madagascar;71;dry, mild fruit;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Willie's Cacao;San Martin;0;U.K.;Peru;70;sandy, rich, earthy;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Wm;Ghana, 2013, batch 129;0;U.S.A.;Ghana;75;strong malt, choco pudding;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Wm;Guasare, Zulia Prov., 2015, batch 124;0;U.S.A.;Venezuela;74;nutty, rubber;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Wm;Maya Mountain, 2017, batch 255;0;U.S.A.;Belize;68;flat, molasses, creamy;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Wm;Porcelana;0;U.S.A.;Venezuela;70;intense, creamy, nutty;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Wm;Wild Beniano, 2016, batch 128, Heirloom;0;U.S.A.;Bolivia;76;nutty, fig, short length;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Woodblock;Camino Verde P., Balao, Guayas, batch 1;0;U.S.A.;Ecuador;70;intense, bourbon;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Woodblock;Costa Rica;0;U.S.A.;Costa Rica;70;roasty, metallic, coffee;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Woodblock;Ecuador;0;U.S.A.;Ecuador;70;mild fruit, chemical off;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Woodblock;Gran Couva, batch 1;Trinitario;U.S.A.;Trinidad;70;creamy, woody, mild metallic;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Woodblock;La Red;0;U.S.A.;Dominican Republic;70;brownie, fruit, fudge;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Woodblock;Maranon, Cajamarca;Nacional;U.S.A.;Peru;70;sandy, intense, mild nutty;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Woodblock;Ocumare;0;U.S.A.;Venezuela;70;nutty, tart, coffee;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Woodblock;Sambirano, batch 1;Trinitario;U.S.A.;Madagascar;70;melon;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Xocolat;Hispaniola;0;Dominican Republic;Dominican Republic;66;salt noticeable, vanilla;Cacao beans, Sugar, Cacao Butter, Lecithin, Salt;TRUE;TRUE;TRUE;FALSE;TRUE;TRUE
+Xocolatisimo;Hacienda San Jose;0;El Salvador;El Salvador;70;nutty, basic cocoa;Cacao beans, Sugar, Cacao Butter, Lecithin;TRUE;TRUE;TRUE;FALSE;TRUE;FALSE
+Xocolatisimo;Hacienda San Jose;0;El Salvador;El Salvador;65;overly sweet, dirty;Cacao beans, Sugar, Cacao Butter, Lecithin;TRUE;TRUE;TRUE;FALSE;TRUE;FALSE
+Xocolatisimo;Hacienda San Jose;0;El Salvador;El Salvador;75;coarse, sweet, candy, licorice;Cacao beans, Sugar, Cacao Butter, Lecithin;TRUE;TRUE;TRUE;FALSE;TRUE;FALSE
+Xocolla;Hispaniola, batch 170104;0;U.S.A.;Dominican Republic;70;spciy, cardamom, off flavor;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Xocolla;Sambirano, batch 170102;0;U.S.A.;Madagascar;70;sour milk, molasses, sweet;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Zak's;Belize, Batch 2;Trinitario;U.S.A.;Belize;70;rich base cocoa, sweet;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Zak's;Dominican Republic, Batch D2;0;U.S.A.;Dominican Republic;70;nutty, earthy, hammy;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Zak's;House Blend, Batch 2;0;U.S.A.;Blend;60;very sweet, heavy roast, nuts;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Zak's;Madagascar, Batch 2;Trinitario;U.S.A.;Madagascar;70;sandy, mild sour, mild fruit;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Zak's;Papua New Guinea, Batch 2;0;U.S.A.;Papua New Guinea;70;heavy smoke, fruit, ham;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Zak's;Peru, Batch 1;0;U.S.A.;Peru;70;sandy, nutty, mocha;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Zart Pralinen;Kakao Kamili, Kilombero Valley;Blend;Austria;Tanzania;85;melon, mild tart, bitter, fatty;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Zart Pralinen;Kakao Kamili, Kilombero Valley;Blend;Austria;Tanzania;70;smoke, tart, burnt cocoa;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Zart Pralinen;Millot P., Ambanja;Blend;Austria;Madagascar;70;sticky, mellow choco, dairy;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Zart Pralinen;San Juan Estate;Trinitario;Austria;Trinidad;85;sticky, strong bitter, spice;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Zart Pralinen;San Juan Estate, Gran Couva;Trinitario;Austria;Trinidad;78;tobacco, over roasted;Cacao beans, Sugar;TRUE;TRUE;FALSE;FALSE;FALSE;FALSE
+Zart Pralinen;UNOCACE;Nacional;Austria;Ecuador;70;sticky, off notes of rubber;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Zokoko;Alto Beni;0;Australia;Bolivia;68;oily, honey, light rum;Cacao beans, Sugar, Cacao Butter, Lecithin;TRUE;TRUE;TRUE;FALSE;TRUE;FALSE
+Zokoko;Goddess Blend;0;Australia;Blend;65;oily, sweet, choco, nutty;Cacao beans, Sugar, Cacao Butter, Vanilla, Lecithin;TRUE;TRUE;TRUE;TRUE;TRUE;FALSE
+Zokoko;Guadalcanal;0;Australia;Solomon Islands;78;smokey, dried fruit, balanced;Cacao beans, Sugar, Cacao Butter, Lecithin;TRUE;TRUE;TRUE;FALSE;TRUE;FALSE
+Zokoko;Tokiala;Trinitario;Australia;Papua New Guinea;66;toffee, caramel, butterscotch;Cacao beans, Sugar, Cacao Butter, Lecithin;TRUE;TRUE;TRUE;FALSE;TRUE;FALSE
+Zokoko;Tranquilidad, Baures;0;Australia;Bolivia;72;intense prune and berry;Cacao beans, Sugar, Cacao Butter, Lecithin;TRUE;TRUE;TRUE;FALSE;TRUE;FALSE
+Zoto (Chocolatoa);El Castillero, batch ca1705, 3 turns;0;Belgium;Nicaragua;70;large grits, sweet, dried fruit;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Zoto (Chocolatoa);Jeru Antiguo, batch jan705, 2 turns;0;Belgium;Nicaragua;72;intense earthy;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Zoto (Chocolatoa);Kilimamwenza, Ituri Province;0;Belgium;DR Congo;68;fatty, herbal, earthy;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Zoto (Chocolatoa);Rugoso;0;Belgium;Nicaragua;75;sandy, basic cocoa;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Zotter;Amazonas Frucht;0;Austria;Blend;65;dairy, burnt caramel, coffee;Cacao beans, Sugar, Cacao Butter, Salt;TRUE;TRUE;TRUE;FALSE;FALSE;TRUE
+Zotter;APROCAFA, Acandi;0;Austria;Colombia;75;strong nutty, marshmallow;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Zotter;Bocas del Toro, Cocabo Co-op;0;Austria;Panama;72;oily, earthy, caramel, salty;Cacao beans, Sugar, Cacao Butter, Salt;TRUE;TRUE;TRUE;FALSE;FALSE;TRUE
+Zotter;Brazil, Mitzi Blue;0;Austria;Brazil;65;woody, butterscotch;Cacao beans, Sugar, Cacao Butter, Salt;TRUE;TRUE;TRUE;FALSE;FALSE;TRUE
+Zotter;Congo;Forastero;Austria;Congo;65;dairy, salt, caramel;Cacao beans, Sugar, Cacao Butter, Salt;TRUE;TRUE;TRUE;FALSE;FALSE;TRUE
+Zotter;Dry Aged, 30 yr Anniversary bar;Forastero;Austria;blend;75;fatty, earthy, cocoa;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Zotter;El Ceibo Coop;0;Austria;Bolivia;90;smooth, intense blueberry;Cacao beans, Sugar, Cacao Butter, Salt;TRUE;TRUE;TRUE;FALSE;FALSE;TRUE
+Zotter;El Oro;Nacional;Austria;Ecuador;75;creamy, nutty, bready;Cacao beans, Sugar, Cacao Butter, Salt;TRUE;TRUE;TRUE;FALSE;FALSE;TRUE
+Zotter;Huiwani Coop;Blend;Austria;Papua New Guinea;75;hint of smoke, fruit;Cacao beans, Sugar, Cacao Butter, Salt;TRUE;TRUE;TRUE;FALSE;FALSE;TRUE
+Zotter;Indianer, Raw;0;Austria;Blend;58;smooth, spicy, floral;Cacao beans, Sugar, Cacao Butter, Salt;TRUE;TRUE;TRUE;FALSE;FALSE;TRUE
+Zotter;Kerala State;0;Austria;India;65;creamy, masculine, earthy;Cacao beans, Sugar, Cacao Butter, Salt;TRUE;TRUE;TRUE;FALSE;FALSE;TRUE
+Zotter;Kerala State;0;Austria;India;62;oily, subdued, caramel, salt;Cacao beans, Sugar, Cacao Butter, Salt;TRUE;TRUE;TRUE;FALSE;FALSE;TRUE
+Zotter;Kongo, Highlands;Forastero;Austria;Congo;68;creamy, caramel, salt, sweet;Cacao beans, Sugar, Cacao Butter, Salt;TRUE;TRUE;TRUE;FALSE;FALSE;TRUE
+Zotter;Loma Los Pinos, Yacao region, D.R.;0;Austria;Dominican Republic;62;spice, caramel, toffee, salty;Cacao beans, Sugar, Cacao Butter, Salt;TRUE;TRUE;TRUE;FALSE;FALSE;TRUE
+Zotter;Maya Mtn;0;Austria;Belize;72;muted, roasty, accessible;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Zotter;Mountains of the Moon;0;Austria;Congo;70;fatty, mild nuts, mild fruit;Cacao beans, Sugar, Cacao Butter;TRUE;TRUE;TRUE;FALSE;FALSE;FALSE
+Zotter;Peru;0;Austria;Peru;70;creamy, fatty, mild nutty;Cacao beans, Sugar, Cacao Butter, Salt;TRUE;TRUE;TRUE;FALSE;FALSE;TRUE
+Zotter;Raw;0;Austria;Blend;80;waxy, cloying, vegetal;Cacao beans, Sugar, Cacao Butter, Salt;TRUE;TRUE;TRUE;FALSE;FALSE;TRUE
+Zotter;Santo Domingo;0;Austria;Dominican Republic;70;strawberry, Cadbury egg;Cacao beans, Sugar, Cacao Butter, Salt;TRUE;TRUE;TRUE;FALSE;FALSE;TRUE
+Zotter;Satipo Pangoa region, 16hr conche;Criollo;Austria;Peru;70;woody, toast, pepper;Cacao beans, Sugar, Cacao Butter, Salt;TRUE;TRUE;TRUE;FALSE;FALSE;TRUE
+Zotter;Satipo Pangoa region, 20hr conche;Criollo;Austria;Peru;70;butterscotch, pepper;Cacao beans, Sugar, Cacao Butter, Salt;TRUE;TRUE;TRUE;FALSE;FALSE;TRUE

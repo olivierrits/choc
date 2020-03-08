@@ -14,30 +14,33 @@ require 'faker'
 puts "1. seeding the shops to the database"
 puts "===================================="
 
-filepath = "db/Seeding_Shops.csv"
+filepath = "db/Seeding_shops_final_mini.csv"
 
 csv_options = { col_sep: ';', headers: :first_row }
 Time.zone = "Brussels"
+i = 0
 CSV.foreach(filepath, csv_options) do |row|
+  i += 1
   # Here, row is an array of columns
-  a = Shop.create(name: row[0])
+  #a = Shop.create(name: row[0])
+  a = Shop.create(name: Faker::Restaurant.name)
+  puts "a = #{a}"
   b = Address.create(street: row[1], number: row[2], postcode: row[3], city: row[4], country: row[5])
   a.address = b
   (1..7).each do |day|
     if (day == 1) || (day == 7)
       a.opening_times << OpeningTime.new(day: day, open: false)
     elsif (day == 2)
-      a.opening_times << OpeningTime.new(day: day, open: true, opening_hour: ActiveSupport::TimeZone["Brussels"].parse("13:30"), closing_hour: ActiveSupport::TimeZone["Brussels"].parse("18:00"))
+      a.opening_times << OpeningTime.new(day: day, open: true, opening_hour: ActiveSupport::TimeZone["Brussels"].parse("14:30"), closing_hour: ActiveSupport::TimeZone["Brussels"].parse("19:00"))
     else
-      a.opening_times << OpeningTime.new(day: day, open: true, opening_hour: ActiveSupport::TimeZone["Brussels"].parse("8:30"), closing_hour: ActiveSupport::TimeZone["Brussels"].parse("12:00"))
-      a.opening_times << OpeningTime.new(day: day, open: true, opening_hour: ActiveSupport::TimeZone["Brussels"].parse("13:30"), closing_hour: ActiveSupport::TimeZone["Brussels"].parse("18:00"))
+      a.opening_times << OpeningTime.new(day: day, open: true, opening_hour: ActiveSupport::TimeZone["Brussels"].parse("9:30"), closing_hour: ActiveSupport::TimeZone["Brussels"].parse("13:00"))
+      a.opening_times << OpeningTime.new(day: day, open: true, opening_hour: ActiveSupport::TimeZone["Brussels"].parse("14:30"), closing_hour: ActiveSupport::TimeZone["Brussels"].parse("19:00"))
     end
   end
   a.website = Faker::TvShows::SiliconValley.url
   a.phone_number = Faker::PhoneNumber.phone_number
   a.description = Faker::Restaurant.description
   a.save!
-  puts "#{row[0]} | #{row[1]} | #{row[2]} | #{row[3]} | #{row[4]} | #{row[5]}"
 end
 
 # ==============================================================================
@@ -45,14 +48,23 @@ end
 puts "2.seeding the chocolate bars to the database"
 puts "============================================"
 
-filepath = "db/Seeding_Bars.csv"
+filepath = "db/Seeding_bars_final_mini.csv"
 
 csv_options = { col_sep: ';', headers: :first_row }
 CSV.foreach(filepath, csv_options) do |row|
 #  Here, row is an array of columns
-  a = Bar.create(name: row[0], brand: row[1], origin: row[2], percentage: row[3], beans: row[4])
+  a = Bar.create({
+    brand: row[0],
+    name: row[1],
+    beans: row[2],
+    production: row[3],
+    origin: row[4],
+    percentage: row[5].to_i,
+    description: row[6],
+    ingredients: row[7]
+  })
+  a.beans = ""if (a.beans == 0)
   a.save!
-  puts "#{row[0]} | #{row[1]} | #{row[2]} | #{row[3]} | #{row[4]}"
 end
 
 puts "3. seeding the shops-bars database with random associations"
@@ -148,10 +160,6 @@ puts "======================================================"
 Taste.all.each do |taste|
   bar_review = BarReview.new(content: Faker::Coffee.notes, rating: rand(1..5))
   bar_review.taste = taste
-  puts "bar_review.content = #{bar_review.content}"
-  puts "bar_review.rating = #{bar_review.rating}"
-  puts "taste.user = #{taste.user}"
-  puts "taste.bar = #{taste.bar}"
   bar_review.save!
 end
 

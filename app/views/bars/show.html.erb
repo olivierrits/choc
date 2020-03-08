@@ -1,4 +1,23 @@
 <div>
+  <ul>
+    <li><%= "Name: #{@bar.name.downcase.capitalize}" %></li>
+    <li><%= "Brand: #{@bar.brand.downcase.capitalize}" %></li>
+    <li>
+      <% if @bar.beans = 0 %>
+      <%= "Cacao Bean: /" %>
+    <% else %>
+      <%= "Cacao Bean: #{@bar.beans.downcase.capitalize}" %>
+    <% end %>
+    </li>
+    <li><%= "Origin: #{@bar.origin.downcase.capitalize}" %></li>
+    <li><%= "Percentage: #{@bar.percentage} %" %></li>
+    <li><%= "Ingredients: #{@bar.ingredients.downcase.capitalize}" %></li>
+    <li><%= "Description: #{@bar.description.downcase}" %></li>
+    <li><%= "Country of Production: #{@bar.production}" %></li>
+  </ul>
+</div>
+
+<div>
     <div class="shop-index-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://1dc3f33f6d-3.optimicdn.com/gaultmillau.com/photos/6ae3dc3d9e75d53137d88c78c009140d2bde73fe/detail.jpg?1568828009);">
     <div class="banner-text-background">
       <h1><%= @bar.name %></h1>
