@@ -11,10 +11,12 @@ class ShopReviewsController < ApplicationController
     @shop_review = ShopReview.new(shop_review_params)
     visit = Visit.where(user: current_user, shop: @shop)
     @shop_review.visit = @visit
+    @shop_review.user_id = current_user.id
+    @shop_review.shop_id = @shop.id
     if @shop_review.save
       redirect_to shop_path(@shop)
     else
-      render 'new'
+      render 'shops/show'
     end
   end
 

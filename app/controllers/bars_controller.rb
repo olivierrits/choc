@@ -21,4 +21,13 @@ class BarsController < ApplicationController
       @rating /= @bar_reviews.length
     end
   end
+
+  def search
+    if params[:search].blank?
+      redirect_to(bars_path, alert: "Empty field!") and return
+    else
+      @parameter = params[:search].downcase
+      @results = Bar.all.where("lower(name) LIKE :search", search: "%#{@parameter}%")
+    end
+  end
 end

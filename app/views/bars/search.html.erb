@@ -1,0 +1,10 @@
+<div class="shop-index-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.cambridgechocolates.co.uk/ekmps/shops/228e84/images/question-mark-lolly-18-p.jpg);">
+  <div class="banner-text-background">
+    <h1> Search Results</h1>
+  </div>
+</div>
+
+<% @results.each do |result| %>
+  <h4><%= result.name %></h4><br>
+<% end %>
+

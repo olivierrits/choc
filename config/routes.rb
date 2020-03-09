@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get 'dashboard', to: 'users#dashboard', as: 'user_dashboard'
   devise_for :users
   root to: 'pages#home'
+  get '/search' => 'bars#search', :as => 'search_bar'
+  get '/search' => 'shops#search', :as => 'search_shop'
   resources :bars, only: [ :index, :show ] do
     resources :bar_reviews, only: [ :new, :create ]
   end

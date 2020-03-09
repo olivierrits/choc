@@ -11,10 +11,12 @@ class BarReviewsController < ApplicationController
     @bar_review = BarReview.new(bar_review_params)
     taste = Taste.where(user: current_user, bar: @bar)
     @bar_review.taste = @taste
+    @bar_review.user_id = current_user.id
+    @bar_review.bar_id = @bar.id
     if @bar_review.save
       redirect_to bar_path(@bar)
     else
-      render 'new'
+      render 'bars/show'
     end
   end
 
