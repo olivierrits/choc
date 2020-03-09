@@ -1,24 +1,37 @@
 .dashboard-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
 }
 
 .dash-column-1 {
-  display: grid;
+  width: 50%;
+  flex-wrap: wrap;
 }
 
 .dash-column-2 {
-  display: grid;
+  width: 50%;
+  flex-wrap: wrap;
+}
+
+.dash-cards {
+  max-height: 50vh;
+  overflow-y: scroll;
+}
+
+.dash-cards{
+  a {
+    color: #7D5642;
+  }
+  a:hover {
+    color: #506D2F;
+    text-decoration: none;
+  }
 }
 
 .review {
-  display : grid;
-  grid-template-columns: 1fr 10fr;
   margin: 20px;
   background-color: white;
   border-radius: 5px;
   #review-content {
-    display: grid;
     padding: 5px 0px 5px 5px;
   }
   #review-rating {
@@ -28,12 +41,6 @@
   }
   p {
     margin: 0px;
-  }
-}
-
-@media (min-width: 100px) and (max-width: 1000px) {
-  .dashboard-container {
-    grid-template-columns: 1fr;
   }
 }
 

@@ -9,7 +9,7 @@
     <div class="dash-column-1">
       <div class="fav-bars">
         <h2>Your favourite chocolate bars!</h2>
-          <div class="cards">
+          <div class="dash-cards">
             <% @tastes.each do |taste| %>
               <%= link_to bar_path(taste.bar) do %>
                 <div class="card-bar">
@@ -45,24 +45,22 @@
     <div class="dash-column-2">
       <div class="fav-shops">
         <h2>Your favourite chocolate shops!</h2>
-        <div class="shop-index">
-          <div class="container cards">
-            <% @visits.each do |visit| %>
-              <%= link_to shop_path(visit.shop) do %>
-                <div class="card-shop">
-                  <div>
-                    <img src="https://pierreplas.be/wp-content/uploads/2019/09/Coffret_Panachable-Pierre_Plas-1024x681.jpg" />
-                  </div>
-                  <div class="card-shop-infos">
-                    <h2><%= visit.shop.name %></h2>
-                    <p><%= "#{visit.shop.address.street} #{visit.shop.address.number}, #{visit.shop.address.postcode} #{visit.shop.address.city}, #{visit.shop.address.country} %"%> <i class="fas fa-map-marker-alt"></i></p>
-                    <p>Open now<i class="fas fa-check-circle"></i></p>
-                    <p>Review 5 stars</p>
-                  </div>
+        <div class="dash-cards">
+          <% @visits.each do |visit| %>
+            <%= link_to shop_path(visit.shop) do %>
+              <div class="card-shop">
+                <div>
+                  <img src="https://pierreplas.be/wp-content/uploads/2019/09/Coffret_Panachable-Pierre_Plas-1024x681.jpg" />
                 </div>
-              <% end %>
+                <div class="card-shop-infos">
+                  <h2><%= visit.shop.name %></h2>
+                  <p><%= "#{visit.shop.address.street} #{visit.shop.address.number}, #{visit.shop.address.postcode} #{visit.shop.address.city}, #{visit.shop.address.country} %"%> <i class="fas fa-map-marker-alt"></i></p>
+                  <p>Open now<i class="fas fa-check-circle"></i></p>
+                  <p>Review 5 stars</p>
+                </div>
+              </div>
             <% end %>
-          </div>
+          <% end %>
         </div>
       </div>
       <div class="shop-reviews">
