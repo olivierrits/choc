@@ -3,6 +3,7 @@ class BarsController < ApplicationController
 
   def index
     @bars = Bar.all
+    user_signed_in? ? @user = current_user : @user = User.where(first_name: "anonymous").first
   end
 
   def show
@@ -30,8 +31,9 @@ class BarsController < ApplicationController
     if params[:search].blank?
       redirect_to(bars_path, alert: "Empty field!") and return
     else
+      sql_query = "name ILIKE :search OR origin ILIKE :search OR brand ILIKE :search OR ingredients ILIKE :search OR production ILIKE :search"
       @parameter = params[:search].downcase
-      @results = Bar.all.where("lower(name) LIKE :search", search: "%#{@parameter}%")
+      @results = Bar.where(sql_query, search: "%#{@parameter}%")
     end
   end
 end

@@ -5,40 +5,51 @@
 </div>
 
 <div class="input-group">
-  <%= form_tag(search_bar_path, :method => "get", id: "search-form") do %>
-    <%= text_field_tag :search, params[:search], placeholder: "Search", class: 'form-control' %>
-    <span class="input-group-btn">
-      <%= button_tag "Go!", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>
-    </span>
+  <%= form_tag(search_bars_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search" %>
+    <%= button_tag "Go!", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>
   <% end %>
 </div>
 
-<div class="container shop-index">
-  <div class="container cards">
+<div class="container">
+  <div class="bar-cards">
     <% @bars.each do |bar| %>
       <%= link_to bar_path(bar) do %>
         <div class="card-bar">
-          <div>
-            <img src="https://media.gettyimages.com/photos/cocoa-beans-and-chocolate-bars-sit-on-display-at-the-auro-chocolate-picture-id1133456655" />
-          </div>
-          <div class="card-bar-infos">
-            <div style="display:flex; justify-content: left; align-items: center;">
-              <div><h2><%=bar.name%></h2></div>
-              <div style="color: brown; margin-left: 30px;">
-                <% if bar.bar_reviews.length == 0 %>
-                  <p style="font-style: italic; color: brown;">no rating yet</p>
-                <% else %>
-                  <% rating = 0 %>
-                    <% bar.bar_reviews.each do |bar_review| %>
-                      <% rating += bar_review.rating %>
-                    <% end %>
-                    <% rating /= bar.bar_reviews.length %>
-                    <p style="color: brown;"><%= "*" * rating %></p>
+          <% if Taste.where(user: @user, bar: bar) != [] %>
+            <% if Taste.where(user: @user, bar: bar).last.favourite %>
+              <div class="favourite-true"></div>
+            <% else %>
+               <div class="favourite-false"></div>
+            <% end %>
+          <% else %>
+            <div class="favourite-false"></div>
+          <% end %>
+          <div class="card-bar-name">
+            <h2><%=bar.name%></h2>
+            <div class="card-bar-rating">
+              <% if bar.bar_reviews.length == 0 %>
+                <p style="font-style: italic; color: gold;">no rating yet</p>
+              <% else %>
+                <% rating = 0 %>
+                <% bar.bar_reviews.each do |bar_review| %>
+                  <% rating += bar_review.rating %>
                 <% end %>
-              </div>
+                <% rating /= bar.bar_reviews.length %>
+                <p style="color: gold;"><%= "*" * rating %></p>
+              <% end %>
             </div>
-            <p><%= "#{bar.percentage} %"%></p>
-            <p><%= bar.origin %></p>
+          </div>
+          <div class="card-bar-info">
+            <div class="card-bar-grid">
+              <div class="card-bar-item card-bar-item-bean-logo"><%= image_tag 'bar-logo-bean.png' %></div>
+              <div class="card-bar-item card-bar-item-bean-content"><%= "#{bar.beans}"%></div>
+              <div class="card-bar-item card-bar-item-perc-logo"><%= image_tag 'bar-logo-perc.png' %></i></div>
+              <div class="card-bar-item card-bar-item-perc-content"><%= "#{bar.percentage} %"%></div>
+              <div class="card-bar-item card-bar-item-origin-logo"><%= image_tag 'bar-logo-world.png' %></i></div>
+              <div class="card-bar-item card-bar-item-origin-content"><%= "#{bar.origin}"%></div>
+            </div>
+            <div class="card-bar-pict" style="background-image: asset-url('logo_1.png')"></div>
           </div>
         </div>
       <% end %>
