@@ -2,6 +2,47 @@
     <div class="shop-index-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1511381939415-e44015466834?ixlib=rb-1.2.1&auto=format&fit=crop&w=2038&q=80);">
       <div class="banner-text-background">
        <h1><%= @bar.name %></h1>
+
+  <ul>
+    <li><%= "Name: #{@bar.name.downcase.capitalize}" %></li>
+    <li><%= "Brand: #{@bar.brand.downcase.capitalize}" %></li>
+    <li>
+      <% if @bar.beans = 0 %>
+      <%= "Cacao Bean: /" %>
+    <% else %>
+      <%= "Cacao Bean: #{@bar.beans.downcase.capitalize}" %>
+    <% end %>
+    </li>
+    <li><%= "Origin: #{@bar.origin.downcase.capitalize}" %></li>
+    <li><%= "Percentage: #{@bar.percentage} %" %></li>
+    <li><%= "Ingredients: #{@bar.ingredients.downcase.capitalize}" %></li>
+    <li><%= "Description: #{@bar.description.downcase}" %></li>
+    <li><%= "Country of Production: #{@bar.production}" %></li>
+  </ul>
+</div>
+
+<div>
+    <div class="shop-index-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://1dc3f33f6d-3.optimicdn.com/gaultmillau.com/photos/6ae3dc3d9e75d53137d88c78c009140d2bde73fe/detail.jpg?1568828009);">
+    <div class="banner-text-background">
+      <h1><%= @bar.name %></h1>
+    </div>
+  </div>
+  <div style="display: flex;justify-content: space-around; align-items: center;">
+    <div style="margin: 20px auto; border: 1px solid #2A2922; width: 300px; background-color: #506D2F;">
+      <div style="width: 200px; height: 300px; background-color: #F3EBDD; border: 1px solid #506D2F">
+        <h4><%= @bar.name %></h4>
+      </div>
+      <div style="width: 200px; height: 300px; background-color: #F3EBDD; border: 1px solid #506D2F">
+        <h4><%= @bar.brand %></h4>
+      </div>
+      <div style="width: 200px; height: 300px; background-color: #F3EBDD; border: 1px solid #506D2F">
+        <h3><%= "#{@bar.percentage} %"%></h3>
+      </div>
+      <div style="width: 200px; height: 300px; background-color: #F3EBDD; border: 1px solid #506D2F">
+        <h5><%= @bar.beans %></h5>
+      </div>
+      <div style="width: 200px; height: 300px; background-color: #F3EBDD; border: 1px solid #506D2F">
+        <h5><%= "*" * @rating  %></h5>
       </div>
     </div>
 

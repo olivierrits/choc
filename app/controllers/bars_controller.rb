@@ -9,8 +9,12 @@ class BarsController < ApplicationController
     @bar = Bar.find(params[:id])
     @bar_reviews = @bar.bar_reviews
     user_signed_in? ? @user = current_user : @user = User.where(first_name: "anonymous").first
-    if (Taste.where(user: @user, bar: @bar) != [])
+    if (Taste.where(user: @user, bar: @bar) == [])
       @taste = Taste.new(bar: @bar, user: @user)
+      @taste.save!
+    else
+      @taste = Taste.where(user: @user, bar: @bar).last
+      @taste.count += 1
       @taste.save!
     end
     @rating = 0
