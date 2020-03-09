@@ -52,11 +52,12 @@
 .card-shop {
   overflow: hidden;
   border-radius: 5px;
-  height: 150px;
+  height: 125px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  margin: 16px;
 }
 
 .card-shop img {
@@ -100,11 +101,12 @@
 .card-bar {
   overflow: hidden;
   border-radius: 5px;
-  height: 150px;
+  height: 125px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  margin: 16px;
 }
 
 .card-bar img {
@@ -247,9 +249,7 @@
 
 
 .bar-reviews {
-  padding-left: 180px;
-  padding-right: 180px;
-  padding-top: 75px;
+  padding-top: 50px;
 }
 
 .bar-reviews h4 {
@@ -258,9 +258,7 @@
 }
 
 .shop-reviews {
-  padding-left: 180px;
-  padding-right: 180px;
-  padding-top: 75px;
+  padding-top: 50px;
 }
 
 .shop-reviews h4 {

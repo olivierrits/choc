@@ -33,8 +33,14 @@ class ShopsController < ApplicationController
       redirect_to(shops_path, alert: "Empty field!") and return
     else
       @parameter = params[:search].downcase
-      @results = Shop.all.where("lower(name) LIKE :search", search: "%#{@parameter}%")
+      @results = Shop.all.where("lower(name) ILIKE :search OR description ILIKE :search", search: "%#{@parameter}%")
     end
+
+
+
+
+
+
   end
 
   private
