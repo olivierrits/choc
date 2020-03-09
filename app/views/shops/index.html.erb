@@ -4,6 +4,13 @@
   </div>
 </div>
 
+<div class="input-group">
+  <%= form_tag(search_shop_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search", class: 'form-control' %>
+    <%= button_tag "Go!", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>
+  <% end %>
+</div>
+
 <div class="shop-index">
   <div class="container cards">
     <% @shops.each do |shop| %>
@@ -28,9 +35,8 @@
                 <% end %>
               </div>
             </div>
-            <p><%= "#{shop.address.street} #{shop.address.number}, #{shop.address.postcode} #{shop.address.city}, #{shop.address.country} %"%> <i class="fas fa-map-marker-alt"></i></p>
+            <p><%= "#{shop.address.street} #{shop.address.number}, #{shop.address.postcode} #{shop.address.city}, #{shop.address.country}"%> <i class="fas fa-map-marker-alt"></i></p>
             <p>Open now<i class="fas fa-check-circle"></i></p>
-            <p>Review 5 stars</p>
           </div>
         </div>
       <% end %>

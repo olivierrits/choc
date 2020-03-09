@@ -2,11 +2,19 @@
   <div class="container bar-index">
     <h1>Chocolate bars</h1>
   </div>
+</div>
 
+<div class="input-group">
+  <%= form_tag(search_bar_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search", class: 'form-control' %>
+    <span class="input-group-btn">
+      <%= button_tag "Go!", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>
+    </span>
+  <% end %>
 </div>
 
 <div class="container shop-index">
-  <div class="cards">
+  <div class="container cards">
     <% @bars.each do |bar| %>
       <%= link_to bar_path(bar) do %>
         <div class="card-bar">
@@ -14,25 +22,23 @@
             <img src="https://media.gettyimages.com/photos/cocoa-beans-and-chocolate-bars-sit-on-display-at-the-auro-chocolate-picture-id1133456655" />
           </div>
           <div class="card-bar-infos">
-            <h2><%=  bar.name%></h2>
-          </div>
-          <div class="card-bar-infos">
-            <p><%= "#{bar.percentage} %"%></p>
-          </div>
-          <div class="card-bar-infos">
-            <p><%= bar.origin %></p>
-          </div>
-          <div class="card-bar-infos">
-            <% if bar.bar_reviews.length == 0 %>
-              <p style="font-style: italic; color: gray;">no rating yet</p>
-            <% else %>
-              <% rating = 0 %>
-                <% bar.bar_reviews.each do |bar_review| %>
-                  <% rating += bar_review.rating %>
+            <div style="display:flex; justify-content: left; align-items: center;">
+              <div><h2><%=bar.name%></h2></div>
+              <div style="color: brown; margin-left: 30px;">
+                <% if bar.bar_reviews.length == 0 %>
+                  <p style="font-style: italic; color: brown;">no rating yet</p>
+                <% else %>
+                  <% rating = 0 %>
+                    <% bar.bar_reviews.each do |bar_review| %>
+                      <% rating += bar_review.rating %>
+                    <% end %>
+                    <% rating /= bar.bar_reviews.length %>
+                    <p style="color: brown;"><%= "*" * rating %></p>
                 <% end %>
-                <% rating /= bar.bar_reviews.length %>
-                <p style="font-style: italic; color: brown;"><%= "*" * rating %></p>
-            <% end %>
+              </div>
+            </div>
+            <p><%= "#{bar.percentage} %"%></p>
+            <p><%= bar.origin %></p>
           </div>
         </div>
       <% end %>

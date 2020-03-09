@@ -100,7 +100,7 @@
 .card-bar {
   overflow: hidden;
   border-radius: 5px;
-  height: 80px;
+  height: 150px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -112,11 +112,11 @@
   width: 100px;
   object-fit: cover;
   padding-left: 5px;
-  border-radius: 10px;
+  margin-left: 10px;
 }
 
 .card-bar h2 {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   margin: 0;
 }
@@ -147,7 +147,7 @@
 
 .card-product {
   overflow: hidden;
-  height: 120px;
+  height: 50px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -183,11 +183,25 @@
 
 .card-product .card-product-infos {
   padding: 16px;
+  margin-left: 75px;
 }
 
 .whereto {
   margin-right: 150px;
-  margin-top: -200px;
+  position: relative;
+  a {
+    color: #7D5642;
+  }
+  a:hover {
+    color: #506D2F;
+    text-decoration: none;
+  }
+  text-align: center;
+}
+
+.whereto h4 {
+  color: #506D2F;
+  margin-bottom: 25px;
 }
 
 .card {
@@ -204,3 +218,52 @@
   transition: 0.4s;
 }
 
+.table-striped {
+  width: 500px;
+  border-style: solid;
+  border-color: #7D5642;
+  text-align: center;
+  margin-left: 100px;
+}
+
+.table-striped h5 {
+  color: #2A2922;
+  padding-top: 25px;
+}
+
+.table-striped p {
+  color: #2A2922;
+  padding-top: 25px;
+}
+
+.table-row {
+  height: 100px;
+}
+
+.containerinfos {
+  display: flex;
+  padding-top: 75px;
+}
+
+
+.bar-reviews {
+  padding-left: 180px;
+  padding-right: 180px;
+  padding-top: 75px;
+}
+
+.bar-reviews h4 {
+  color: #506D2F;
+  margin-bottom: 25px;
+}
+
+.shop-reviews {
+  padding-left: 180px;
+  padding-right: 180px;
+  padding-top: 75px;
+}
+
+.shop-reviews h4 {
+  color: #506D2F;
+  margin-bottom: 25px;
+}
