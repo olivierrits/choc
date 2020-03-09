@@ -3,6 +3,7 @@ class BarsController < ApplicationController
 
   def index
     @bars = Bar.all
+    user_signed_in? ? @user = current_user : @user = User.where(first_name: "anonymous").first
   end
 
   def show
