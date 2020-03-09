@@ -45,7 +45,7 @@
 @media (min-width: 1200px) {
   .shop-index {
     .cards {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
       grid-auto-rows: 150px;
     }
     #map {
@@ -74,10 +74,15 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  margin: 16px;
 }
 
 .card-shop img {
-  width: 20vh;
+  height: 30%;
+  width: 100px;
+  object-fit: cover;
+  padding-left: 5px;
+  border-radius: 10px;
 }
 
 .card-shop h2 {
@@ -115,12 +120,6 @@
   width: 270px;
   background: #2A2922;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
-}
-
-.card-bar img {
-  width: 20vh;
   padding: 50px 0 0;
 }
 
