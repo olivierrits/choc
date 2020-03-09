@@ -5,11 +5,9 @@
 </div>
 
 <div class="input-group">
-  <%= form_tag(search_bar_path, :method => "get", id: "search-form") do %>
-    <%= text_field_tag :search, params[:search], placeholder: "Search", class: 'form-control' %>
-    <span class="input-group-btn">
-      <%= button_tag "Go!", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>
-    </span>
+  <%= form_tag(search_bars_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search" %>
+    <%= button_tag "Go!", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>
   <% end %>
 </div>
 

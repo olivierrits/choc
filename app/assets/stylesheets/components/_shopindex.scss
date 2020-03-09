@@ -1,13 +1,27 @@
 .shop-container {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
+  display: flex;
 }
 
 .shop-column-1 {
-  display: grid;
-  //grid-template-columns: 2fr  1fr;
+  width: 75%;
   .shop-description {
-    width: 100%;
+    width: 95%;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+  }
+  .shop-description h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+  }
+  .shop-description p {
+    font-size: 14px;
+    line-height: 1.4;
+    opacity: .7;
+    margin-bottom: 0;
+    margin-top: 8px;
   }
    .shop-informations {
     width: 100%;
@@ -15,8 +29,7 @@
 }
 
 .shop-column-2 {
-  display: grid;
-  //grid-template-columns: 1fr  2fr;
+  width: 25%;
   img {
     width: 100%;
   }
@@ -26,29 +39,46 @@
   background-color: #506D2F;
   padding: 10px;
   border-top: 5px;
+  max-height: 60vh;
   opacity: 0.9;
   h3 {
     text-align: right;
     color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
   }
   p {
     text-align: right;
     color: white;
+    font-size: 14px;
+    line-height: 1.4;
+    opacity: .7;
+    margin-bottom: 0;
+    margin-top: 8px;
   }
   h5 {
     text-align: right;
     color: white;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0;
   }
   .day-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+    display: flex;
   }
   .days {
-    display: grid;
+    width: 25%;
+    opacity: .7;
   }
   .hours {
-    display: grid;
+    width: 75%;
     text-align: center;
     color: white;
+    font-size: 14px;
+    line-height: 1.4;
+    opacity: .7;
+    margin-bottom: 0;
+    margin-top: 8px;
   }
 }
