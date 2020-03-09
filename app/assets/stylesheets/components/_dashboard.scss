@@ -1,5 +1,11 @@
 .dashboard-container {
   display: flex;
+  .card-shop {
+    margin: 16px;
+  }
+  .card-bar {
+    margin: 16px;
+  }
 }
 
 .dash-column-1 {
@@ -31,16 +37,14 @@
   margin: 20px;
   background-color: white;
   border-radius: 5px;
+  display: flex;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   #review-content {
-    padding: 5px 0px 5px 5px;
+    width: 75%;
   }
   #review-rating {
-    display: grid;
-    padding: 5px 2px 5px 2px;
+    width: 15%;
     text-align: center;
-  }
-  p {
-    margin: 0px;
   }
 }
 
