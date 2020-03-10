@@ -1,0 +1,12 @@
+// Here you generate *JavaScript* that would be executed in the browser
+toggleFavourite = () => {
+  let element = document.getElementById("bar-<%= @bar.id %>");
+  console.log(element)
+
+  if (element) {
+    element.classList.toggle("favourite-true");
+    element.classList.toggle("favourite-false");
+  }
+}
+
+toggleFavourite();

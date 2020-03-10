@@ -52,6 +52,10 @@ class BarsController < ApplicationController
     else
       flash.alert = "You need to be signed in to add to favourites"
     end
-    redirect_to bars_path
+    # redirect_to bars_path
+    respond_to do |format|
+      format.html { redirect_to bars_path }
+      format.js  # <-- will render `app/views/bars/favourite.js.erb`
+    end
   end
 end
