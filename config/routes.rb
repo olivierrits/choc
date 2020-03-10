@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'about', to: 'pages#about', as: :about
+  get 'blog', to: 'pages#blog', as: :blog
   get 'dashboard', to: 'users#dashboard', as: 'user_dashboard'
   devise_for :users
   root to: 'pages#home'
