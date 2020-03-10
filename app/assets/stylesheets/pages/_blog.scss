@@ -1,0 +1,179 @@
+.header {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-bottom: 25px;
+}
+
+
+.header h1 {
+  color: #506D2F;
+  font-family: Dosis;
+  font-size: 50px;
+}
+
+.container-blog {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1rem;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.tile {
+  position: relative;
+  text-align: center;
+  color: white;
+  border-style: solid;
+  border-color: #506D2F;
+  color: #7D5642;
+}
+
+.tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tile:nth-child(1){
+    grid-column: span 4;
+    grid-row: span 2;
+}
+
+.tile:nth-child(2),
+.tile:nth-child(3){
+    grid-column: span 2;
+}
+
+.tile:nth-child(4),
+.tile:nth-child(5){
+    grid-column: span 3;
+}
+
+@media screen and (max-width: 650px){
+    .container{
+        display: block;
+    }
+    .tile{
+        margin-bottom: 1rem;
+    }
+}
+
+.text1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.carousel-inner {
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-bottom: 25px;
+}
+
+.view img {
+  display: block;
+  margin: 0 auto;
+  opacity: 90%;
+  object-fit: cover;
+  width:1000px;
+  height:560px;
+}
+
+#carousel-example-2 {
+  width:1000px;
+  height:560px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.carousel-caption {
+  position: absolute;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
+
+.btn-outline-secondary:hover {
+  background: #F3EBDD;
+  color: #506D2F;
+}
+
+.question {
+  padding-top: 40px;
+  text-align: center;
+  color: #506D2F;
+}
+
+.card {
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  border-radius: 1px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 22px;
+  color: #F3EBDD;
+  font-weight: bolder;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+}
+
+.content {
+  display: flex;
+  background-color: transparent;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+
+/* This container is needed to position the front and back side */
+.cards {
+  display: grid;
+  grid-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  padding: 16px;
+  position: relative;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  flex-grow: 1;
+  height: 200px;
+  width: 400px;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.content:hover .cards {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.card, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+
+/* Style the back side */
+.flip-card-back {
+  color: white;
+  transform: rotateY(180deg);
+}

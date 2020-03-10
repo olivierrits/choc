@@ -35,12 +35,6 @@ class ShopsController < ApplicationController
       @parameter = params[:search].downcase
       @results = Shop.all.where("lower(name) ILIKE :search OR description ILIKE :search", search: "%#{@parameter}%")
     end
-
-
-
-
-
-
   end
 
   private
