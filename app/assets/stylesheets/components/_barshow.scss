@@ -2,6 +2,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 60px;
+  margin-top: 60px;
 }
 
 .beige-background {
@@ -10,15 +12,78 @@
   background-color: #F3EBDD;
 }
 
-.white-background {
-  width: 75%;
+.band-background {
+  width: 25%;
+  display: flex;
   height: 50vh;
+  background-color: #506D2F;
+}
+
+.white-band {
   background-color: white;
-  padding: 30px 10px 30px 80px;
-  h2 {
-    font-size: 16px;
-    font-weight: bold;
+  width: 50%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  text-align: center;
+  padding-top: 15vh;
+  .percentage {
+    font-size: 5vh;
+    font-family: 'Bellota Text';
     margin: 0;
+    color: #7D5642;
+    font-weight: bold;
+  }
+  .rating {
+    font-size: 3vh;
+    font-family: 'Bellota Text';
+    margin: 0;
+    color: #7D5642;
+    font-weight: bold;
+  }
+}
+
+.white-background {
+  width: 50%;
+  height: 50vh;
+  background-color: #506D2F;
+  padding: 35px 100px 25px 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 190px 0px 0px 190px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  h2 {
+    font-size: 6vh;
+    font-family: 'Bellota Text';
+    font-weight: normal;
+    margin: 0;
+    color: white;
+  }
+  p {
+    font-size: 2vh;
+    line-height: 1.4;
+    opacity: .8;
+    color: white;
+  }
+  .beans {
+    display: flex;
+    .type-of-beans {
+      margin-left: 15px;
+    }
+  }
+  .origin {
+    display: flex;
+  }
+  .production {
+    margin-left: 15px;
+  }
+  .brand-and-percentage {
+    display: flex;
+    justify-content: space-between;
+    .brand {
+      font-family: 'Bellota Text';
+      font-weight: bold;
+      font-size: 3vh;
+    }
   }
 }
 
@@ -57,15 +122,70 @@
 
 .bar-review {
   width: 50%;
-}
-
-.bar-review h4 {
-  color: #506D2F;
-  margin-bottom: 25px;
+  background-color: white;
+  padding: 20px 80px 0px 80px;
+  border-radius: 10px;
+  margin-right: 15px;
+  h4 {
+    color: #506D2F;
+    margin-bottom: 25px;
+    text-align: center;
+    padding-top: 20px;
+  }
+  p {
+    text-align: center;
+    margin: 0;
+  }
+  .btn-write-a-review {
+    color: #4A4A4A;
+    border: 1px solid #4A4A4A;
+    padding: 8px 24px;
+    border-radius: 50px;
+    font-weight: lighter;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+  }
+  .btn-ghost:hover {
+    opacity: 1;
+  }
+  .review-star-and-content {
+    display: flex;
+    .review-star {
+      width: 25%;
+    }
+    .review-content {
+      width: 70%;
+      text-align: left;
+    }
+  }
 }
 
 .whereto {
   width: 50%;
+  background-color: white;
+  padding: 20px 80px 0px 80px;
+  border-radius: 10px;
+  margin-left: 15px;
+  text-align: center;
+  h4 {
+    color: #506D2F;
+    margin-bottom: 25px;
+    padding-top: 20px;
+  }
+  h2 {
+    font-size: 20px;
+    font-family: 'Bellota Text';
+    font-weight: normal;
+    opacity: .7;
+    text-align: left;
+    margin-left: 10px;
+    margin-bottom: 0px;
+  }
+  p {
+    text-align: left;
+    margin-left: 10px;
+    margin-bottom: 0px;
+  }
   a {
     color: #7D5642;
   }
@@ -73,10 +193,18 @@
     color: #506D2F;
     text-decoration: none;
   }
-  text-align: center;
+  .shop-link {
+    display: flex;
+    .shop-name {
+      width: 25%;
+    }
+    .shop-address {
+      width: 70%;
+    }
+  }
+}
+.separation {
+  margin: 25px 0px 25px 0px;
 }
 
-.whereto h4 {
-  color: #506D2F;
-  margin-bottom: 25px;
-}
+
