@@ -1,32 +1,60 @@
 .footer {
-  background: #F3EBDD;
+  background: #2A2922;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 100px;
   padding: 0px 50px;
-  color: rgba(0,0,0,0.3);
+  color: #F3EBDD;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
 }
 
 .footer-links {
+  width: 140px;
   display: flex;
   align-items: center;
+  color: #F3EBDD;
+  justify-content: space-around;
 }
 
 .footer-links a {
-  color: black;
-  opacity: 0.15;
+  color: #F3EBDD;
+  opacity: 0.5;
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
+  .fab {
+    margin: 0;
+  }
 }
 
 .footer-links a:hover {
   opacity: 1;
+  color: #F3EBDD;
+}
+
+.footer-quote {
+  width: 600px;
+  p {
+    text-align: center;
+    margin: 0;
+    font-size: 12px;
+    span{
+      font-style: italic;
+      font-size: 11px;
+    }
+  }
+}
+
+.footer-dummy {
+  width: 140px;
 }
 
 .footer .fa-heart {
-  color: #D23333;
+  color: #F3EBDD;
 }
 
 .footer-brand img {

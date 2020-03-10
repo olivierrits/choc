@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_08_164019) do
+ActiveRecord::Schema.define(version: 2020_03_10_203612) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,6 +63,13 @@ ActiveRecord::Schema.define(version: 2020_03_08_164019) do
     t.index ["shop_id"], name: "index_opening_times_on_shop_id"
   end
 
+  create_table "quotes", force: :cascade do |t|
+    t.string "content"
+    t.string "source"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "shop_bars", force: :cascade do |t|
     t.bigint "shop_id"
     t.bigint "bar_id"
@@ -96,7 +103,7 @@ ActiveRecord::Schema.define(version: 2020_03_08_164019) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "favourite", default: false
-    t.integer "count", default: 1
+    t.integer "counter", default: 1
     t.index ["bar_id"], name: "index_tastes_on_bar_id"
     t.index ["user_id"], name: "index_tastes_on_user_id"
   end
@@ -121,7 +128,7 @@ ActiveRecord::Schema.define(version: 2020_03_08_164019) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "favourite", default: false
-    t.integer "count", default: 1
+    t.integer "counter", default: 1
     t.index ["shop_id"], name: "index_visits_on_shop_id"
     t.index ["user_id"], name: "index_visits_on_user_id"
   end
