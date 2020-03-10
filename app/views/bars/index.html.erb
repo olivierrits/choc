@@ -14,19 +14,26 @@
 <div class="container">
   <div class="bar-cards">
     <% @bars.each do |bar| %>
-      <%= link_to bar_path(bar) do %>
         <div class="card-bar">
-          <% if Taste.where(user: @user, bar: bar) != [] %>
-            <% if Taste.where(user: @user, bar: bar).last.favourite %>
-              <div class="favourite-true"></div>
+            <% if Taste.where(user: @user, bar: bar) != [] %>
+              <% if Taste.where(user: @user, bar: bar).last.favourite %>
+                <%= link_to bar_favourite_path(bar) do %>
+                  <div class="favourite-true"></div>
+                <% end %>
+              <% else %>
+                <%= link_to bar_favourite_path(bar) do %>
+                  <div class="favourite-false"></div>
+                <% end %>
+              <% end %>
             <% else %>
-               <div class="favourite-false"></div>
+              <%= link_to bar_favourite_path(bar) do %>
+                <div class="favourite-false"></div>
+              <% end %>
             <% end %>
-          <% else %>
-            <div class="favourite-false"></div>
-          <% end %>
           <div class="card-bar-name">
-            <h2><%=bar.name%></h2>
+            <%= link_to bar_path(bar) do %>
+              <h2><%=bar.name%></h2>
+            <% end %>
             <div class="card-bar-rating">
               <% if bar.bar_reviews.length == 0 %>
                 <p style="font-style: italic; color: gold;">no rating yet</p>
@@ -53,6 +60,10 @@
           </div>
         </div>
       <% end %>
-    <% end %>
   </div>
+  <% flash.each do |type, msg| %>
+  <div class="alert alert-info">
+    <%= msg %>
+  </div>
+<% end %>
 </div>
