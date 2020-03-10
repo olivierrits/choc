@@ -1,100 +1,61 @@
-<div class="shop-index-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1511381939415-e44015466834?ixlib=rb-1.2.1&auto=format&fit=crop&w=2038&q=80);">
-  <div class="banner-text-background">
-   <h1><%= @bar.name %></h1>
-  </div>
-</div>
 <div class="bars-show-page">
   <div class="containerinfo">
     <div class="beige-background"></div>
     <div class="white-background">
-      <div class="title">
-        <h2><%= @bar.name %></h2>
+      <h2 class="title"><%= @bar.name %></h2>
+      <div class="brand-and-percentage">
+        <p class="brand"><%= @bar.brand %></p>
       </div>
-      <div class="brand">
-        <p><%= @bar.brand %></p>
+      <p class="description"><%= @bar.description.downcase %></p>
+      <div class="beans">
+        <p>Type of beans : </p>
+        <p class="type-of-beans">
+          <% if @bar.beans = 0 %>
+            <%= "/" %>
+          <% else %>
+            <%= "@bar.beans.downcase.capitalize" %>
+          <% end %>
+        </p>
       </div>
+      <p class="ingredients">Ingredients : <%= @bar.ingredients.downcase.capitalize %></p>
       <div class="origin">
-        <p><%= @bar.origin %></p>
-        <p><%= @bar.production %></p>
+        <p><i class="far fa-compass"></i> <%= @bar.origin %></p>
+        <p class="production"><i class="fas fa-industry"></i> <%= @bar.production %></p>
+      </div>
+    </div>
+    <div class="band-background">
+      <div class="white-band">
+        <p class="percentage"><%= @bar.percentage %> %</p>
+        <p class="rating">Rating : <%= "*" * @rating %></p>
       </div>
     </div>
   </div>
 </div>
 
-<hr>
-
-<div class="bars-show-page">
-  <div class="containerinfo">
-    <div class="bars-picture">
-      <img src="https://lh3.googleusercontent.com/proxy/bYryA0Rz75FGo-bDQ1bxR5abQFPuZlebXJy-Ek0NDPNDenyBzQpM3YmTnzUVQRvMEksIBgmC1x-ce0qpIo-qA62YK-lwyD4OB81tz3WZkDj7mC1VybZiNIWO5b_ozeeuB5XLh9isH1nB6pUMOtHXMnBVrMk" alt="">
-      <%= @bar.description.downcase %>
-    </div>
-    <div class="bars-informations">
-      <table class="table table-striped">
-        <tr class="table-row">
-          <th scope="row"><p>Brand: </p></th>
-          <td class="columninfos"><h5><%= @bar.brand %></h5></td>
-        </tr>
-        <tr class="table-row">
-          <th scope="row"><p>Percentage: </p></th>
-          <td class="columninfos"><h5><%= "#{@bar.percentage} %"%></h5></td>
-        </tr>
-        <tr class="table-row">
-          <th scope="row"><p>Type of bean: </p></th>
-          <td class="columninfos">
-
-        <div class="container"></div>    <h5>
-              <% if @bar.beans = 0 %>
-                <%= "/" %>
-              <% else %>
-                <%= "@bar.beans.downcase.capitalize" %>
-              <% end %>
-            </h5>
-          </td>
-        </tr>
-        <tr class="table-row">
-          <th scope="row"><p>Origin: </p></th>
-          <td class="columninfos"><h5><%= @bar.origin %></h5></td>
-        </tr>
-        <tr class="table-row">
-          <th scope="row"><p>Country of production: </p></th>
-          <td class="columninfos"><h5><%= @bar.production %></h5></td>
-        </tr>
-        <tr class="table-row">
-          <th scope="row"><p>Rating: </p></th>
-          <td class="columninfos"><h5><%= "*" * @rating  %></h5></td>
-        </tr>
-        <tr class="table-row">
-          <th scope="row"><p>Ingredients: </p></th>
-          <td class="columninfos"><h5><%= @bar.ingredients.downcase.capitalize %></h5></td>
-        </tr>
-      </table>
-    </div>
-  </div>
-</div>
 <div class="container bar-review-and-find">
   <div class="bar-review">
     <h4><strong><%= @bar.name %> Reviews</strong></h4>
-    <%= link_to "Write a Review", new_bar_bar_review_path(@bar) %>
+    <p><%= link_to "Write a Review", new_bar_bar_review_path(@bar), class: "btn btn-write-a-review" %></p>
       <% if @bar_reviews.blank? %>
         <h3>There are no reviews for this chocolate bar yet, would you like to add the first one?</h3>
       <% else %>
       <% @bar_reviews.each do |bar_review| %>
-        <hr>
-        <p style="color: brown;"><%= "*" * bar_review.rating %></p>
-        <p><%= bar_review.content %></p>
+        <hr class="separation">
+        <div class="review-star-and-content">
+          <p class="review-star" style="color: brown;"><%= "*" * bar_review.rating %></p>
+          <p class="review-content"><%= bar_review.content %></p>
+        </div>
       <% end %>
     <% end %>
   </div>
   <div class="whereto">
     <h4><strong>Where can I find this chocolate bar?</strong></h4>
     <% @bar.shops.each do |shop| %>
+      <hr class="separation">
       <div class="card-product-infos">
-        <div class="singlecard">
-          <h2><%= link_to shop.name, shop_path(shop) %></h2>
-        </div>
-        <div class="singlecard">
-          <p><%= "#{shop.address.street} #{shop.address.number}, #{shop.address.postcode} #{shop.address.city}, #{shop.address.country}"%></p>
+        <div class="shop-link">
+          <h2 class="shop-name"><%= link_to shop.name, shop_path(shop) %></h2>
+          <p class="shop-address"><%= "#{shop.address.street} #{shop.address.number}, #{shop.address.postcode} #{shop.address.city}, #{shop.address.country}"%></p>
         </div>
       </div>
     <% end %>
