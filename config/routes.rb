@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   resources :bars, only: [ :index, :show ] do
+
     collection do
       get 'search'
     end
@@ -16,5 +17,7 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
+
+  get '/bars/:bar_id/favourite', to: 'bars#favourite', as: 'bar_favourite'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

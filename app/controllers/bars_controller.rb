@@ -36,4 +36,26 @@ class BarsController < ApplicationController
       @results = Bar.where(sql_query, search: "%#{@parameter}%")
     end
   end
+
+  def favourite
+    @bar = Bar.find(params[:bar_id])
+    if (user_signed_in?)
+      @user = current_user
+      if (Taste.where(user: @user, bar: @bar) == [])
+        @taste = Taste.new(bar: @bar, user: @user, favourite: true)
+        @taste.save!
+      else
+        @taste = Taste.where(user: @user, bar: @bar).last
+        @taste.favourite = (@taste.favourite == false)
+        @taste.save!
+      end
+    else
+      flash.alert = "You need to be signed in to add to favourites"
+    end
+    # redirect_to bars_path
+    respond_to do |format|
+      format.html { redirect_to bars_path }
+      format.js  # <-- will render `app/views/bars/favourite.js.erb`
+    end
+  end
 end
