@@ -23,9 +23,9 @@ CSV.foreach(filepath, csv_options) do |row|
   i += 1
   # Here, row is an array of columns
   #a = Shop.create(name: row[0])
-  a = Shop.create(name: Faker::Restaurant.name)
-  puts "a = #{a}"
   b = Address.create(street: row[1], number: row[2], postcode: row[3], city: row[4], country: row[5])
+  a = Shop.create(name: Faker::Restaurant.name, address: b)
+  puts "a = #{a}"
   a.address = b
   (1..7).each do |day|
     if (day == 1) || (day == 7)
@@ -123,7 +123,7 @@ Bar.all.each do |bar|
       b = rand(0..1)
       if b == 1
         taste.favourite = true
-        taste.count = rand(2..50)
+        taste.counter = rand(2..50)
       end
       taste.save!
     end
@@ -144,7 +144,7 @@ Shop.all.each do |shop|
       b = rand(0..1)
       if b == 1
         visit.favourite = true
-        visit.count = rand(2..50)
+        visit.counter = rand(2..50)
       end
       visit.save!
     end
@@ -173,3 +173,22 @@ Visit.all.each do |visit|
   shop_review.visit = visit
   shop_review.save!
 end
+
+# ==============================================================================
+
+puts "9. seeding the choc quotes database with random content"
+puts "======================================================="
+
+filepath = "db/Seeding_quotes.csv"
+
+csv_options = { col_sep: ';', headers: :first_row }
+CSV.foreach(filepath, csv_options) do |row|
+#  Here, row is an array of columns
+  quote = Quote.create({
+    content: row[0],
+    source: row[1]
+  })
+  quote.save!
+end
+
+

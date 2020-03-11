@@ -15,7 +15,7 @@ class BarsController < ApplicationController
       @taste.save!
     else
       @taste = Taste.where(user: @user, bar: @bar).last
-      @taste.count += 1
+      @taste.counter += 1
       @taste.save!
     end
     @rating = 0

@@ -3,7 +3,14 @@ class ShopsController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
-    @shops = Shop.all
+    @shops = Shop.geocoded
+    @markers = @shops.map do |shop|
+      {
+        lat: shop.latitude,
+        lng: shop.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { shop: shop })
+      }
+    end
   end
 
   def show
@@ -16,7 +23,7 @@ class ShopsController < ApplicationController
       @visit.save!
     else
       @visit = Visit.where(user: @user, shop: @shop).last
-      @visit.count += 1
+      @visit.counter += 1
       @visit.save!
     end
     @rating = 0
