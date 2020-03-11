@@ -9,6 +9,8 @@
 require 'csv'
 require 'faker'
 
+User.destroy_all
+
 # ==============================================================================
 
 puts "1. seeding the shops to the database"

@@ -7,36 +7,37 @@
 <div class="container">
   <div class="dashboard-container">
     <div class="dash-column-1">
-      <div class="fav-bars">
-        <h2>Your favourite chocolate bars!</h2>
-          <div class="dash-cards">
-            <% @tastes.each do |taste| %>
-              <%= link_to bar_path(taste.bar) do %>
-                <div class="card-bar">
-                  <div>
-                    <img src="https://media.gettyimages.com/photos/cocoa-beans-and-chocolate-bars-sit-on-display-at-the-auro-chocolate-picture-id1133456655" />
-                  </div>
-                  <div class="card-bar-infos">
-                    <h2><%=  taste.bar.name%></h2>
-                  </div>
-                  <div class="card-bar-infos">
-                    <p><%= "#{taste.bar.percentage} %"%></p>
-                  </div>
-                  <div class="card-bar-infos">
-                    <p><%= taste.bar.origin %></p>
-                  </div>
+
+      <div class="dash-fav-bars">
+        <h2>Your favourite bars!</h2>
+        <div class="dash-cards">
+          <% @tastes.each do |taste| %>
+            <%= link_to bar_path(taste.bar) do %>
+              <div class="dash-card-shop">
+                <div>
+                  <% random = rand(1..20) %>
+                  <div class="dash-card-bar-pict"><%= image_tag("logo_#{random}.png") %></div>                </div>
+                <div class="card-shop-infos">
+                  <h2><%= taste.bar.name %></h2>
+                  <p><%= taste.bar.brand %></p>
+                  <p><%= taste.bar.percentage %> %</p>
                 </div>
-              <% end %>
+              </div>
             <% end %>
-          </div>
+          <% end %>
+        </div>
       </div>
-      <div class="bar-reviews">
-        <h2>Reviews of bars you wrote</h2>
-        <div>
+
+      <hr>
+
+      <div class="dash-bar-review">
+        <h4>Reviews of bars you wrote</h4>
+        <div class="scroll-review">
           <% @bar_reviews.each do |bar_review| %>
-            <div class="review">
-              <p id="review-rating"><%= bar_review.rating %> </p>
-              <p id="review-content"><%= bar_review.content %> </p>
+            <hr class="separation">
+            <div class="review-star-and-content">
+              <p class="review-star" style="color: brown;"><%= "*" * bar_review.rating %></p>
+              <p class="review-content"><%= bar_review.content %></p>
             </div>
           <% end %>
         </div>
@@ -63,13 +64,17 @@
           <% end %>
         </div>
       </div>
-      <div class="shop-reviews">
-        <h2>Reviews of shops you wrote</h2>
-        <div>
+
+      <hr>
+
+      <div class="dash-shop-review">
+        <h4>Reviews of shops you wrote</h4>
+        <div class="scroll-review">
           <% @shop_reviews.each do |shop_review| %>
-            <div class="review">
-              <p id="review-rating"><%= shop_review.rating %> </p>
-              <p id="review-content"><%= shop_review.content %> </p>
+            <hr class="separation">
+            <div class="review-star-and-content">
+              <p class="review-star" style="color: brown;"><%= "*" * shop_review.rating %></p>
+              <p class="review-content"><%= shop_review.content %></p>
             </div>
           <% end %>
         </div>
