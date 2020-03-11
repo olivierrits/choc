@@ -4,19 +4,10 @@
   </div>
 </div>
 
-<div class="input-group">
-  <%= form_tag(search_bars_path, :method => "get", id: "search-form", remote: true) do %>
-    <%= text_field_tag :search, params[:search], placeholder: "Search" %>
-    <%= button_tag "Go!", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>
-  <% end %>
-</div>
-
 <div class="bar-index">
   <div class="bar-search">
     <%= render 'shared/search_bar' %>
   </div>
-
-
 
   <div class="bar-container">
   <div class="bar-cards">

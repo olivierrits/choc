@@ -34,6 +34,7 @@ class BarsController < ApplicationController
     @results = @results.where(beans: params[:beans]) if params[:beans]
     @results = @results.where(percentages_query) if params[:percentages]
     @results = @results.where(*search_query) if params[:search]
+    @results = rating_query if params[:ratings]
     respond_to do |format|
       format.js  # <-- will render `app/views/bars/search.js.erb`
     end
@@ -51,6 +52,10 @@ class BarsController < ApplicationController
     sql_query = "name ILIKE :search OR origin ILIKE :search OR brand ILIKE :search OR ingredients ILIKE :search OR production ILIKE :search"
     @parameter = params[:search].downcase
     [sql_query, search: "%#{@parameter}%"]
+  end
+
+  def rating_query
+     @results.joins(:bar_reviews).group("bars.id").having("ROUND(AVG(bar_reviews.rating)) IN (?)", params[:ratings])
   end
 
   def favourite
