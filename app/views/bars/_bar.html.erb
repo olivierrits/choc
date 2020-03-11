@@ -18,16 +18,11 @@
       <% if bar.bar_reviews.length == 0 %>
         <p style="font-style: italic; color: gold;">no rating yet</p>
       <% else %>
-        <% rating = 0 %>
-        <% bar.bar_reviews.each do |bar_review| %>
-          <% rating += bar_review.rating %>
-        <% end %>
-        <% rating /= bar.bar_reviews.length %>
          <p>
-          <% rating.times do %>
+          <% bar.average_rating.times do %>
             <i class="fas fa-star"></i>
           <% end %>
-          <% (5-rating).times do %>
+          <% (5-bar.average_rating).times do %>
             <span style="color: gray;"><i class="far fa-star"></i></span>
           <% end %>
         </p>

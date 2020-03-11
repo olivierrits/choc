@@ -55,6 +55,24 @@ i {
   flex-direction: column;
 }
 
+.dropdown-menu-right {
+  background: #7D5642;
+  color: #F3EBDD;
+  font-family: 'Dosis';
+  border-radius: 5px;
+}
+
+.dropdown-item {
+  color: #F3EBDD;
+}
+
+.dropdown-item:hover {
+  background: #F3EBDD;
+  color: #7D5642;
+  font-family: 'Dosis';
+  border-radius: 5px;
+}
+
 .choc {
   margin-bottom: -8px;
   color: white;
