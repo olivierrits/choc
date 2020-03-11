@@ -117,115 +117,47 @@ a:hover {
   box-sizing: border-box;
 }
 
-
-.search-container {
-  position: absolute;
+.choc-it-banner {
+  display: flex;
+  align: center;
+  z-index: 4;
   margin: auto;
-  top: 50px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 300px;
-  height: 100px;
-  .search {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 80px;
-    height: 80px;
-    background: #7D5642;
-    border-radius: 50%;
-    transition: all 1s;
-    z-index: 4;
-    &:hover {
-      cursor: pointer;
-    }
-    &:before {
-      content: "";
-      position: absolute;
-      margin: auto;
-      top: 22px;
-      right: 0;
-      bottom: 0;
-      left: 22px;
-      width: 12px;
-      height: 2px;
-      background: white;
-      transform: rotate(45deg);
-      transition: all .5s;
-    }
-    &:after {
-      content: "";
-      position: absolute;
-      margin: auto;
-      top: -5px;
-      right: 0;
-      bottom: 0;
-      left: -5px;
-      width: 25px;
-      height: 25px;
-      border-radius: 50%;
-      border: 2px solid white;
-      transition: all .5s;
-    }
+  width: 120px;
+  height: 120px;
+}
+
+.input-choc-it-banner {
+  width: 240px;
+  height: 50px;
+  outline: none;
+  border: none;
+  color: white;
+  background: var(--color-brown);
+  padding: 0 40px 0 10px;
+  border-radius: 30px;
+  z-index: 3;
+  font-weight: bolder;
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+  position: absolute;
+  right: 730px;
+  bottom: 300px;
+  &:hover {
+    cursor: default;
   }
-  input {
-    font-family: Dosis;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 50px;
-    height: 50px;
-    outline: none;
-    border: none;
-    // border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    background: #F3EBDD;
-    color: #2A2922;
-    padding: 0 80px 0 20px;
-    border-radius: 30px;
-    transition: all 1s;
-    opacity: 0;
-    z-index: 5;
-    font-weight: bolder;
-    letter-spacing: 0.1em;
+}
+
+.avatar-choc-it-banner {
+  margin-top: 20px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: #7D5642 5px solid;
+  z-index: 9;
+  a {
     &:hover {
       cursor: pointer;
-    }
-    &:focus {
-      width: 300px;
-      opacity: 1;
-      cursor: text;
-    }
-    &:focus ~ .search {
-      right: -250px;
-      background: #7D5642;
-      z-index: 6;
-      &::before {
-        top: 0;
-        left: 0;
-        width: 25px;
-      }
-      &::after {
-        top: 0;
-        left: 0;
-        width: 25px;
-        height: 2px;
-        border: none;
-        background: white;
-        border-radius: 0%;
-        transform: rotate(-45deg);
-      }
-    }
-    &::placeholder {
-      color: #2A2922;
-      opacity: 0.5;
-      font-weight: bolder;
     }
   }
 }

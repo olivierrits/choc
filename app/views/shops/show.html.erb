@@ -5,6 +5,8 @@
       <div style="color: white;"><%= "*" * @rating %></div>
     </div>
     <p><%= @shop.full_address %></p>
+    <p>Tel : +32 477 34 98 78</p>
+    <p><i class="fas fa-check-circle" style="color: #2A2922;"></i> Open now</p>
   </div>
 </div>
 <div class="container">
@@ -15,7 +17,7 @@
         <p><%= @shop.description %></p>
       </div>
       <div class="chocolate-offering">
-          <h3>Chocolate Oferring</h3>
+          <h3>Chocolate Offering</h3>
           <% @shop.bars.each do |bar| %>
             <div class="card-trip">
               <img src="https://mediad.publicbroadcasting.net/p/shared/npr/styles/x_large/nprshared/201805/171939372.jpg" >
@@ -45,13 +47,8 @@
     </div>
     <div class="shop-column-2">
       <div class="shop-informations">
-        <div class="shop-infos">
-          <h3><%= @shop.name %></h3>
-          <p><%= @shop.full_address %></p>
-          <p>Tel : +32 477 34 98 78</p>
-        </div>
         <div class="opening-hours">
-          <h3>Opening times</h3>
+          <h3>Opening times:</h3>
           <% @opening_times.each do |key, val| %>
             <div class="day-container">
               <div class="days">

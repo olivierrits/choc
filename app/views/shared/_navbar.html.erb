@@ -1,4 +1,4 @@
-@<div class="navbars">
+<div class="navbars">
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to "/", class: "navbar-brand" do %>
     <div class="logo">
@@ -26,11 +26,10 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <li class="nav-item active">
-          <%= link_to "Home", "/", class: "nav-link" %>
-        </li>
         <li class="nav-item">
-          <%= link_to "Messages", "#", class: "nav-link" %>
+          <%= link_to "/blog", class: "nav-link" do %>
+          <i class="fas fa-book-open fa-2x" style="color: #7D5642;"></i>
+          <% end %>
         </li>
         <li class="nav-item dropdown">
           <%= image_tag "https://avatars3.githubusercontent.com/u/58650604?v=4", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
