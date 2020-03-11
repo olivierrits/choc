@@ -1,7 +1,7 @@
 class BarReviewsController < ApplicationController
-  before_action :set_bar_review, only: :show
+  # before_action :set_bar_review, only: :show
   before_action :set_bar
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
 
   def new
     @bar_review = BarReview.new
@@ -9,14 +9,12 @@ class BarReviewsController < ApplicationController
 
   def create
     @bar_review = BarReview.new(bar_review_params)
-    taste = Taste.where(user: current_user, bar: @bar)
+    taste = Taste.where(user: current_user, bar: @bar).last
     @bar_review.taste = @taste
-    @bar_review.user_id = current_user.id
-    @bar_review.bar_id = @bar.id
     if @bar_review.save
       redirect_to bar_path(@bar)
     else
-      render 'bars/show'
+      render :new
     end
   end
 

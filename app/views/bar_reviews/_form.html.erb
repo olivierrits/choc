@@ -4,15 +4,13 @@
       <h1>How was your experience with this chocolate bar?</h1>
       <p>Please leave a comment and click "Submit your review". </p>
     </div>
-    <div class="form-inputs">
       <%= simple_form_for [@bar, @bar_review] do |f| %>
         <%= f.label :rating %>
         <%= f.select :rating, options_for_select([["Please select one", ""], 5, 4, 3, 2, 1]) %>
         <%= f.input :content, placeholder:"Please enter your comment here" %>
         <div class="form-actions">
-        <%= link_to 'Submit your review', bar_path(@bar) %>
+        <%= f.submit 'Submit your review' %>
         </div>
       <% end %>
-    </div>
   </div>
 </div>
