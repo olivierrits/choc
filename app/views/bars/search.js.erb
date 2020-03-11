@@ -1,0 +1,15 @@
+
+createElementFromHTML = (htmlString) => {
+  const div = document.createElement('div');
+  div.innerHTML = htmlString.trim();
+  return div.firstChild;
+}
+
+const barCardsContainer = document.querySelector('.bar-cards')
+barCardsContainer.innerHTML = ''
+let barCard
+
+<% @results.each do |bar| %>
+  barCard = createElementFromHTML(`<%= render 'bar', bar: bar, user: current_user  %>`)
+  barCardsContainer.appendChild(barCard)
+<% end %>

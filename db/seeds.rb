@@ -24,7 +24,6 @@ CSV.foreach(filepath, csv_options) do |row|
   # Here, row is an array of columns
   #a = Shop.create(name: row[0])
   a = Shop.create(name: Faker::Restaurant.name)
-  puts "a = #{a}"
   b = Address.create(street: row[1], number: row[2], postcode: row[3], city: row[4], country: row[5])
   a.address = b
   (1..7).each do |day|

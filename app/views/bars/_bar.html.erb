@@ -1,0 +1,49 @@
+<div class="card-bar">
+  <%= link_to bar_favourite_path(bar), remote: true do %>
+    <% if Taste.where(user: @user, bar: bar) != [] %>
+      <% if Taste.where(user: @user, bar: bar).last.favourite %>
+        <div class="favourite-true" id="bar-<%= bar.id %>"></div>
+      <% else %>
+        <div class="favourite-false" id="bar-<%= bar.id %>"></div>
+      <% end %>
+    <% else %>
+      <div class="favourite-false" id="bar-<%= bar.id %>"></div>
+    <% end %>
+  <% end %>
+  <div class="card-bar-name">
+    <%= link_to bar_path(bar) do %>
+      <div class="card-bar-name-h2"><h2><%=bar.name%></h2></div>
+    <% end %>
+    <div class="card-bar-rating">
+      <% if bar.bar_reviews.length == 0 %>
+        <p style="font-style: italic; color: gold;">no rating yet</p>
+      <% else %>
+        <% rating = 0 %>
+        <% bar.bar_reviews.each do |bar_review| %>
+          <% rating += bar_review.rating %>
+        <% end %>
+        <% rating /= bar.bar_reviews.length %>
+         <p>
+          <% rating.times do %>
+            <i class="fas fa-star"></i>
+          <% end %>
+          <% (5-rating).times do %>
+            <span style="color: gray;"><i class="far fa-star"></i></span>
+          <% end %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+  <div class="card-bar-info">
+    <div class="card-bar-grid">
+      <div class="card-bar-item card-bar-item-bean-logo"><%= image_tag 'bar-logo-bean.png' %></div>
+      <div class="card-bar-item card-bar-item-bean-content"><%= "#{bar.beans}"%></div>
+      <div class="card-bar-item card-bar-item-perc-logo"><%= image_tag 'bar-logo-perc.png' %></i></div>
+      <div class="card-bar-item card-bar-item-perc-content"><%= "#{bar.percentage} %"%></div>
+      <div class="card-bar-item card-bar-item-origin-logo"><%= image_tag 'bar-logo-world.png' %></i></div>
+      <div class="card-bar-item card-bar-item-origin-content"><%= "#{bar.origin}"%></div>
+    </div>
+    <% random = rand(1..20) %>
+    <div class="card-bar-pict"><%= image_tag("logo_#{random}.png") %></div>
+  </div>
+</div>
