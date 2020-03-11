@@ -1,7 +1,7 @@
 class ShopReviewsController < ApplicationController
-  before_action :set_shop_review, only: :show
+  # before_action :set_shop_review, only: :show
   before_action :set_shop
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
 
   def new
     @shop_review = ShopReview.new
@@ -9,14 +9,12 @@ class ShopReviewsController < ApplicationController
 
   def create
     @shop_review = ShopReview.new(shop_review_params)
-    visit = Visit.where(user: current_user, shop: @shop)
+    @visit = Visit.where(user: current_user, shop: @shop).last
     @shop_review.visit = @visit
-    @shop_review.user_id = current_user.id
-    @shop_review.shop_id = @shop.id
     if @shop_review.save
       redirect_to shop_path(@shop)
     else
-      render 'shops/show'
+      render :new
     end
   end
 

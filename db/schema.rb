@@ -95,6 +95,8 @@ ActiveRecord::Schema.define(version: 2020_03_10_203612) do
     t.string "website"
     t.text "description"
     t.string "phone_number"
+    t.float "latitude"
+    t.float "longitude"
   end
 
   create_table "tastes", force: :cascade do |t|
