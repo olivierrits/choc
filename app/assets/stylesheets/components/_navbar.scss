@@ -1,6 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: #F3EBDD;
+  background: #2A2922;
+  color: #F3EBDD;
+  opacity: .95;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -19,11 +21,17 @@
 }
 
 .nav-link {
-  color: #2A2922;
+  background: #2A2922;
+  color: #F3EBDD;
+}
+.nav-link:hover {
+  background: #2A2922;
+  color: white;
 }
 
 a.nav-link:active {
   background: #2A2922;
+  color: #F3EBDD;
 }
 
 i {
@@ -49,6 +57,7 @@ i {
 
 .choc {
   margin-bottom: -8px;
+  color: white;
 }
 
 .show > .customButton:focus{
@@ -61,4 +70,11 @@ i {
 .customButton{
   box-shadow:none !important;
   border: none !important;
+}
+
+.navbar-light .navbar-nav .customButton.white {
+  color: #F3EBDD;
+  &:hover {
+    color: white;
+  }
 }
