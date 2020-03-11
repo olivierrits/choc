@@ -1,9 +1,12 @@
-<style>.selected{ background-color: red; }</style>
+
+<div class="bar-search-input">
+  <input type="text" id="bar-search-query" name="search" placeholder="Search..." autocomplete="off">
+</div>
+<h5>Percentage</h5>
 <div class="bar-search-perc">
-  <h5>Percentage</h5>
-  <div data-filter-name="percentages" data-filter-value="70-100" class="search-item search-item-perc" id="dark-choc">70% - 100% (Dark Chocolate)</div>
-  <div data-filter-name="percentages" data-filter-value="25-70" class="search-item search-item-perc" id="milk-choc">25% - 70% (Milk Chocolate)</div>
-  <div data-filter-name="percentages" data-filter-value="0-25" class="search-item search-item-perc" id="white-choc"> < 25% (White Chocolate)</div>
+  <div data-filter-name="percentages" data-filter-value="70-100" class="search-item search-item-perc" id="dark-choc">70% - 100% (Dark)</div>
+  <div data-filter-name="percentages" data-filter-value="25-70" class="search-item search-item-perc" id="milk-choc">25% - 70% (Milk)</div>
+  <div data-filter-name="percentages" data-filter-value="0-25" class="search-item search-item-perc" id="white-choc"> < 25% (White)</div>
 </div>
 <h5>Bean-type</h5>
 <div class="bar-search-bean">
@@ -32,9 +35,9 @@
 <div class="bar-search-rating">
   <% rating = 0 %>
   <% 5.times do %>
-    <div class="search-item search-item-rating" id=<%= "rating-#{rating}" %>>
+    <div data-filter-name="ratings" data-filter-value="<%= (5-rating) %>" class="search-item search-item-rating" id=<%= "rating-#{rating}" %>>
       <% (5-rating).times do %>
-        <i class="fas fa-star"  style="color: #7D5642;"></i>
+        <i class="fas fa-star"  style="color: gold"></i>
       <% end %>
       <% rating.times do %>
         <span style="color: gray;"><i class="far fa-star"></i></span>
@@ -44,7 +47,6 @@
   <% end %>
 </div>
 
-<h5>Foodpairing</h5>
 
 <script>
   let query = {
@@ -52,6 +54,7 @@
     percentages: [],
     beans: [],
     origins: [],
+    ratings: []
   }
 
 
@@ -72,6 +75,7 @@
     if (query.percentages.length > 0) array.push(arrayToStringParams('percentages', query.percentages))
     if (query.beans.length > 0) array.push(arrayToStringParams('beans', query.beans))
     if (query.origins.length > 0) array.push(arrayToStringParams('origins', query.origins))
+    if (query.ratings.length > 0) array.push(arrayToStringParams('ratings', query.ratings))
     return '?' + array.join('&')
   }
 
@@ -101,6 +105,12 @@
       })
     })
   })
+
+document.getElementById("bar-search-query").addEventListener('blur', (event) => {
+  query.search = event.target.value
+  performQuery()
+});
+
 
   // input.addEventListenter('eds', e => {
   //   YOUR LOGIC TO MODIFY SEARCH
