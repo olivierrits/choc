@@ -1,5 +1,6 @@
 class BarsController < ApplicationController
   skip_before_action :authenticate_user!
+  skip_before_action :verify_authenticity_token, only: [:search]
 
   def index
     @bars = Bar.all
@@ -28,13 +29,28 @@ class BarsController < ApplicationController
   end
 
   def search
-    if params[:search].blank?
-      redirect_to(bars_path, alert: "Empty field!") and return
-    else
-      sql_query = "name ILIKE :search OR origin ILIKE :search OR brand ILIKE :search OR ingredients ILIKE :search OR production ILIKE :search"
-      @parameter = params[:search].downcase
-      @results = Bar.where(sql_query, search: "%#{@parameter}%")
+    @results = Bar.all
+    @results = @results.where(origin: params[:origins]) if params[:origins]
+    @results = @results.where(beans: params[:beans]) if params[:beans]
+    @results = @results.where(percentages_query) if params[:percentages]
+    @results = @results.where(*search_query) if params[:search]
+    respond_to do |format|
+      format.js  # <-- will render `app/views/bars/search.js.erb`
     end
+  end
+
+  def percentages_query
+    query = []
+    query << "(percentage >= 0 AND percentage < 25)" if params[:percentages].include?("0-25")
+    query << "(percentage >= 25 AND percentage < 70)" if params[:percentages].include?("25-70")
+    query << "(percentage >= 70 AND percentage <= 100)" if params[:percentages].include?("70-100")
+    query.join(' OR ')
+  end
+
+  def search_query
+    sql_query = "name ILIKE :search OR origin ILIKE :search OR brand ILIKE :search OR ingredients ILIKE :search OR production ILIKE :search"
+    @parameter = params[:search].downcase
+    [sql_query, search: "%#{@parameter}%"]
   end
 
   def favourite

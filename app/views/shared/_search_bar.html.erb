@@ -1,0 +1,109 @@
+<style>.selected{ background-color: red; }</style>
+<div class="bar-search-perc">
+  <h5>Percentage</h5>
+  <div data-filter-name="percentages" data-filter-value="70-100" class="search-item search-item-perc" id="dark-choc">70% - 100% (Dark Chocolate)</div>
+  <div data-filter-name="percentages" data-filter-value="25-70" class="search-item search-item-perc" id="milk-choc">25% - 70% (Milk Chocolate)</div>
+  <div data-filter-name="percentages" data-filter-value="0-25" class="search-item search-item-perc" id="white-choc"> < 25% (White Chocolate)</div>
+</div>
+<h5>Bean-type</h5>
+<div class="bar-search-bean">
+  <div data-filter-name="beans" data-filter-value="Criollo" class="search-item search-item-bean" id="criollo">Criollo</div>
+  <div data-filter-name="beans" data-filter-value="Forastero" class="search-item search-item-bean" id="forastero">Forastero</div>
+  <div data-filter-name="beans" data-filter-value="Trinitario" class="search-item search-item-bean" id="trinitario">Trinitario</div>
+  <div data-filter-name="beans" data-filter-value="Nacional" class="search-item search-item-bean" id="nacional">Nacional</div>
+  <div data-filter-name="beans" data-filter-value="Blend" class="search-item search-item-bean" id="nacional">Blend</div>
+</div>
+<h5>Origin</h5>
+<div class="bar-search-origin">
+  <div data-filter-name="origins" data-filter-value="Peru" class="search-item search-item-origin" id="peru">Peru</div>
+  <div data-filter-name="origins" data-filter-value="Venezuela" class="search-item search-item-origin" id="venezuela">Venezuela</div>
+  <div data-filter-name="origins" data-filter-value="Trinidad" class="search-item search-item-origin" id="trinidad">Trinidad</div>
+  <div data-filter-name="origins" data-filter-value="Ecuador" class="search-item search-item-origin" id="ecuador">Ecuador</div>
+  <div data-filter-name="origins" data-filter-value="Dominican Republic" class="search-item search-item-origin" id="dom-rep">Dom. Rep.</div>
+  <div data-filter-name="origins" data-filter-value="Vietnam" class="search-item search-item-origin" id="vietnam">Vietnam</div>
+  <div data-filter-name="origins" data-filter-value="Guatemala" class="search-item search-item-origin" id="guatemala">Guatemala</div>
+  <div data-filter-name="origins" data-filter-value="Belize" class="search-item search-item-origin" id="belize">Belize</div>
+  <div data-filter-name="origins" data-filter-value="Bolivia" class="search-item search-item-origin" id="bolivia">Bolivia</div>
+  <div data-filter-name="origins" data-filter-value="Madagascar" class="search-item search-item-origin" id="madagascar">Madagascar</div>
+  <div data-filter-name="origins" data-filter-value="Tanzania" class="search-item search-item-origin" id="tanzania">Tanzania</div>
+</div>
+
+<h5>Rating</h5>
+<div class="bar-search-rating">
+  <% rating = 0 %>
+  <% 5.times do %>
+    <div class="search-item search-item-rating" id=<%= "rating-#{rating}" %>>
+      <% (5-rating).times do %>
+        <i class="fas fa-star"  style="color: #7D5642;"></i>
+      <% end %>
+      <% rating.times do %>
+        <span style="color: gray;"><i class="far fa-star"></i></span>
+      <% end %>
+    </div>
+    <% rating += 1 %>
+  <% end %>
+</div>
+
+<h5>Foodpairing</h5>
+
+<script>
+  let query = {
+    search: "",
+    percentages: [],
+    beans: [],
+    origins: [],
+  }
+
+
+  const addOrremoveElFromArray = (el, array) => {
+    const index = array.indexOf(el)
+    index === -1 ? array.push(el) : array.splice(index, 1)
+  }
+
+  const arrayToStringParams = (paramName, array) => {
+    return array.map(item => {
+      return `${paramName}[]=${item}`
+    }).join('&')
+  }
+
+  const queryToParams = () => {
+    let array = []
+    if (query.search) array.push(`search=${query.search}`)
+    if (query.percentages.length > 0) array.push(arrayToStringParams('percentages', query.percentages))
+    if (query.beans.length > 0) array.push(arrayToStringParams('beans', query.beans))
+    if (query.origins.length > 0) array.push(arrayToStringParams('origins', query.origins))
+    return '?' + array.join('&')
+  }
+
+  const performQuery = () => {
+    return fetch(`/bars/search${queryToParams()}`, {
+        headers: {
+          'Content-Type': 'text/javascript',
+          'Accept': 'text/javascript',
+          'X-CSRF-Token': csrf
+        }
+      }).then((response) => {
+        return response.text();
+      }).then(data => {
+        eval(data)
+      })
+  }
+
+  const csrf = document.querySelector('meta[name="csrf-token"]').content
+
+  document.querySelectorAll('div[data-filter-name]').forEach(el => {
+    el.addEventListener('click', (e) => {
+      const filterName = el.dataset.filterName
+      const filterValue = el.dataset.filterValue
+      addOrremoveElFromArray(filterValue, query[filterName])
+      performQuery().then(() => {
+        el.classList.toggle('selected')
+      })
+    })
+  })
+
+  // input.addEventListenter('eds', e => {
+  //   YOUR LOGIC TO MODIFY SEARCH
+  //   performQuery()
+  // })
+</script>

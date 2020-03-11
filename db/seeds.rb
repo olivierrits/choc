@@ -27,8 +27,6 @@ CSV.foreach(filepath, csv_options) do |row|
   #a = Shop.create(name: row[0])
   b = Address.create(street: row[1], number: row[2], postcode: row[3], city: row[4], country: row[5])
   a = Shop.create(name: Faker::Restaurant.name, address: b)
-  puts "a = #{a}"
-  a.address = b
   (1..7).each do |day|
     if (day == 1) || (day == 7)
       a.opening_times << OpeningTime.new(day: day, open: false)
