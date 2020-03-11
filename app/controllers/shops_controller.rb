@@ -23,7 +23,7 @@ class ShopsController < ApplicationController
       @visit.save!
     else
       @visit = Visit.where(user: @user, shop: @shop).last
-      @visit.count += 1
+      @visit.counter += 1
       @visit.save!
     end
     @rating = 0

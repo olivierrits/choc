@@ -123,7 +123,7 @@ Bar.all.each do |bar|
       b = rand(0..1)
       if b == 1
         taste.favourite = true
-        taste.count = rand(2..50)
+        taste.counter = rand(2..50)
       end
       taste.save!
     end
@@ -144,7 +144,7 @@ Shop.all.each do |shop|
       b = rand(0..1)
       if b == 1
         visit.favourite = true
-        visit.count = rand(2..50)
+        visit.counter = rand(2..50)
       end
       visit.save!
     end
@@ -173,3 +173,22 @@ Visit.all.each do |visit|
   shop_review.visit = visit
   shop_review.save!
 end
+
+# ==============================================================================
+
+puts "9. seeding the choc quotes database with random content"
+puts "======================================================="
+
+filepath = "db/Seeding_quotes.csv"
+
+csv_options = { col_sep: ';', headers: :first_row }
+CSV.foreach(filepath, csv_options) do |row|
+#  Here, row is an array of columns
+  quote = Quote.create({
+    content: row[0],
+    source: row[1]
+  })
+  quote.save!
+end
+
+
