@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2020_03_10_203612) do
 
   # These are extensions that must be enabled in order to support this database
@@ -95,6 +96,8 @@ ActiveRecord::Schema.define(version: 2020_03_10_203612) do
     t.string "website"
     t.text "description"
     t.string "phone_number"
+    t.float "latitude"
+    t.float "longitude"
   end
 
   create_table "tastes", force: :cascade do |t|

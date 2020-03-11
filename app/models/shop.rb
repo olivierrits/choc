@@ -1,4 +1,7 @@
 class Shop < ApplicationRecord
+
+  geocoded_by :address
+  after_validation :geocode
   has_one :address
   has_many :opening_times
   has_many :visits
@@ -9,7 +12,6 @@ class Shop < ApplicationRecord
   validates :name, presence: true
 
   def full_address
-    "#{address.street}, #{address.number}, #{address.postcode}, #{address.city}, #{address.country}"
+    address.to_s
   end
-
 end
