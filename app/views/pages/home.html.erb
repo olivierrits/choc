@@ -1,12 +1,13 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1573710661345-610f790e1218?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);">
-  <div class="container">
+  <div class="container" style="width: 800px !important;">
     <h1>Discover amazing chocolate experiences</h1>
     <p>We can guide you to the perfect chocolate bar for you</p>
   </div>
   <div class="choc-it-banner">
     <% x = rand(1..15) %>
+    <div class="input-choc-it-banner"><p>Choc It! <i class="fas fa-long-arrow-alt-right"></p></i></div>
     <%= link_to image_tag("i-choc_#{x}.jpg", class: "avatar-choc-it-banner"), "/shops" %>
-    <!-- <div class="input-choc-it-banner">Start tasting here<i class="fas fa-long-arrow-alt-right"></i></div> -->
+    <div class="input-choc-it-banner"></div>
   </div>
 </div>
 
