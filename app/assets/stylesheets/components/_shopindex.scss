@@ -7,12 +7,13 @@
   .shop-description {
     width: 95%;
     background-color: white;
-    padding: 10px;
+    padding: 40px;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     border-radius: 5px;
   }
   .shop-description h3 {
-    font-size: 18px;
+    font-family: 'Bellota Text';
+    font-size: 24px;
     font-weight: bold;
     margin: 0;
   }
@@ -82,3 +83,54 @@
     margin-top: 8px;
   }
 }
+
+.chocolate-offering {
+  h3 {
+    font-family: 'Bellota Text';
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 30px;
+  }
+}
+
+.card-trip {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 10px 50px 15px 0px;
+}
+
+.card-trip > img {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-trip h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-trip p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-trip .card-trip-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-trip-infos .card-trip-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+
