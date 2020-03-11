@@ -2,7 +2,7 @@
   <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
     <%= link_to "/", class: "navbar-brand" do %>
       <div class="logo">
-        <img src="https://img.icons8.com/plasticine/100/000000/chocolate-bar.png"/>        
+        <img src="https://img.icons8.com/plasticine/100/000000/chocolate-bar.png"/>
         <p class="choc">CHOC</p>
       </div>
     <% end %>
@@ -26,8 +26,8 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item">
-          <%= link_to "/blog", class: "nav-link" do %>
-          <i class="fas fa-book-open fa-2x" style="color: #7D5642;"></i>
+          <%= link_to "/blog", class: "nav-link", style: "margin-right: 30px;" do %>
+          <i class="fas fa-book-open fa-2x" style="color: var(--color-light);"></i>
           <% end %>
         </li>
         <li class="nav-item dropdown">
