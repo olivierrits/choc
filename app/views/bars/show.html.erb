@@ -16,11 +16,11 @@
           <% if @bar.beans = 0 %>
             <%= "/" %>
           <% else %>
-            <%= "@bar.beans.downcase.capitalize" %>
+            <%= "@bar.beans&.downcase&.capitalize" %>
           <% end %>
         </p>
       </div>
-      <p class="ingredients">Ingredients : <%= @bar.ingredients.downcase.capitalize %></p>
+      <p class="ingredients">Ingredients : <%= @bar.ingredients&.downcase&.capitalize %></p>
       <div class="origin">
         <p><i class="far fa-compass"></i> <%= @bar.origin %></p>
         <p class="production"><i class="fas fa-industry"></i> <%= @bar.production %></p>
