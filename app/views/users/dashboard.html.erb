@@ -3,7 +3,7 @@
     <div class="dash-column-1">
 
       <div class="dash-fav-bars">
-        <h2>Your favourite bars!</h2>
+        <h2><strong>Your favourite chocolate bars!</strong></h2>
         <div class="dash-cards">
           <% @tastes.each do |taste| %>
             <%= link_to bar_path(taste.bar) do %>
@@ -26,7 +26,7 @@
       <hr>
 
       <div class="dash-bar-review">
-        <h4>Reviews of bars you wrote</h4>
+        <h4><strong>Reviews of bars you wrote</strong></h4>
         <div class="scroll-review">
           <% @bar_reviews.each do |bar_review| %>
             <hr class="separation">
@@ -40,7 +40,7 @@
     </div>
     <div class="dash-column-2">
       <div class="fav-shops">
-        <h2>Your favourite chocolate shops!</h2>
+        <h2><strong>Your favourite chocolate shops!</strong></h2>
         <div class="dash-cards">
           <% @visits.each do |visit| %>
             <%= link_to shop_path(visit.shop) do %>
@@ -63,7 +63,7 @@
       <hr>
 
       <div class="dash-shop-review">
-        <h4>Reviews of shops you wrote</h4>
+        <h4><strong>Reviews of shops you wrote</strong></h4>
         <div class="scroll-review">
           <% @shop_reviews.each do |shop_review| %>
             <hr class="separation">
