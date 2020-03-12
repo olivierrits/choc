@@ -9,7 +9,7 @@ class BarReviewsController < ApplicationController
 
   def create
     @bar_review = BarReview.new(bar_review_params)
-    taste = Taste.where(user: current_user, bar: @bar).last
+    @taste = Taste.where(user: current_user, bar: @bar).last
     @bar_review.taste = @taste
     if @bar_review.save
       redirect_to bar_path(@bar)
