@@ -10,6 +10,11 @@
   background: #7D5642;
 }
 
-.shop-name-map {
-  color: #506D2F;
+.shop-name-map a {
+  color: #506D2F !important;
+}
+
+.shop-name-map a:hover {
+  text-decoration: none;
+  color: #7D5642;
 }
