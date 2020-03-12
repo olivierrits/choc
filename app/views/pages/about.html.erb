@@ -1,2 +1,22 @@
-<h1>Pages#about</h1>
-<p>Find me in app/views/pages/about.html.erb</p>
+<div style="padding: 20px;">
+  <h1>About Us</h1>
+  <p>Sorry, you can't reach our yet via social, working on it though, keep an eye on our website!</p>
+  <h2>Why choc?</h2>
+  It's linked to cities!
+  <br>
+  <h3>Berlin</h3>
+  <p>We've always been chocolate lovers. Real good chocolate is an acquired taste. Initially starting of with plain milk chocolate from the big brands like Côte d'Or, Galler, etc. We first started moving up the cacao percentage chain towards the darker and purer forms of chocolate. In the spring of 2018 we went on a City Trip in Berlin. Thta was our first pivot. Stumbling upon this lovely shop <a href="https://www.winterfeldt-schokoladen.de/" target="_blank">Winterfeldt Schokoladen</a>, for the first time we discovered all new kinds of pure chocolate bars, high quality bars! e wouldn't say it's a life-changer, but a taste-changer? Yes definitely. Suddenly the good old chocolate we used to carelessly take in seemd plain an tasteless.</p>
+  There is more to come, have some patience and relax, explore all our <a href="/bars">chocolate bars</a> in the meantime!
+  <h3>Antwerp / Monteverde / Ghent / Brussels</h3>
+  <h2>What's our goal?</h2>
+  <p>Tons of good chocolate and world domination of course, what else?</p>
+  <h2>Choc-quotes!</h2>
+  <ul>
+    <% Quote.all.each do |quote| %>
+      <li>
+        <%= "#{quote.content} - " %>
+        <span style="font-style: italic;"><%= "#{quote.source}" %></span>
+      </li>
+    <% end %>
+  </ul>
+</div>
