@@ -6,16 +6,16 @@
 
 <div class="shop-index">
   <div class="container cards">
-    <% @shops.each do |shop| %>
-      <%= link_to shop_path(shop) do %>
-        <div class="card-shop">
+    <% @shops.each_with_index do |shop, index| %>
+      <%= link_to shop_path(shop), class: "card-shop" do %>
+        <!-- <div class="card-shop"> -->
           <div class="shoppicture">
             <%= image_tag "chocshop#{rand(1..10)}.jpg" %>
           </div>
           <div class="card-shop-infos">
-            <div style="display:flex; align-items: center;">
+            <div style="display:flex; align-items: center; justify-content: space-between;">
               <div><h2><%= shop.name %></h2></div>
-              <div style="color: brown; margin-left: 30px;">
+              <div class="stars-holder" style="color: brown; margin-left: 30px;">
                 <% if shop.shop_reviews.length == 0 %>
                   <p style="font-style: italic; color: white;">no rating yet</p>
                 <% else %>
@@ -34,10 +34,19 @@
                 <% end %>
               </div>
             </div>
-            <p><i class="fas fa-map-marker-alt" style="color: #2A2922;"></i><%=" #{shop.address.street} #{shop.address.number}, #{shop.address.postcode} #{shop.address.city}, #{shop.address.country}"%></p>
-            <p><i class="fas fa-check-circle" style="color: #2A2922;"></i> Open now</p>
+            <div class="shop-details">
+              <p>
+                <i class="fas fa-map-marker-alt" style="color: #2A2922;"></i>
+                <span><%=" #{shop.address.street} #{shop.address.number}, #{shop.address.postcode} #{shop.address.city}, #{shop.address.country}"%></span>
+              </p>
+              <% if index%3 == 0 %>
+                <span class="openeness"><i class="fas fa-check-circle" style="color: orange;"></i> Closing soon</span>
+              <% else %>
+                <span class="openeness"><i class="fas fa-times-circle" style="color: #ff4448;"></i> Closed</span>
+              <% end %>
+            </div>
           </div>
-        </div>
+        <!-- </div> -->
       <% end %>
     <% end %>
   </div>

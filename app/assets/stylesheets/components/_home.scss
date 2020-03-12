@@ -2,7 +2,7 @@
   color: #4A4A4A;
   border: 1px solid #4A4A4A;
   padding: 8px 24px;
-  border-radius: 50px;
+  border-radius: 5px;
   font-weight: lighter;
   opacity: 0.8;
   transition: opacity 0.3s ease;
@@ -23,6 +23,13 @@
   justify-content: space-evenly;
   font-size: 20px;
   height: 80px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  nav{
+    width: 40vw;
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 .arguments {
