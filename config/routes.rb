@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+  get 'errors/not_found'
+  get 'errors/internal_server_error'
   get 'about', to: 'pages#about', as: :about
   get 'blog', to: 'pages#blog', as: :blog
   get 'dashboard', to: 'users#dashboard', as: 'user_dashboard'
+  match "/404", :to => "errors#not_found", :via => :all
+  match "/500", :to => "errors#internal_server_error", :via => :all
   devise_for :users
   root to: 'pages#home'
   resources :bars, only: [ :index, :show ] do
@@ -21,3 +25,8 @@ Rails.application.routes.draw do
   get '/bars/:bar_id/favourite', to: 'bars#favourite', as: 'bar_favourite'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
+
+
+
+  # get "/404", :to => "errors#not_found"
+  # get "/500", :to => "errors#internal_error"
