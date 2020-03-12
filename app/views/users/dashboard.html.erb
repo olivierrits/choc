@@ -4,10 +4,10 @@
 
       <div class="dash-fav-bars">
         <h2><strong>Your favourite chocolate bars!</strong></h2>
-        <div class="dash-cards">
+        <div class="dash-cards" style="cursor: all-scroll;">
           <% @tastes.each do |taste| %>
             <%= link_to bar_path(taste.bar) do %>
-              <div class="dash-card-shop">
+              <div class="dash-card-shop" style="cursor: all-scroll;">
                 <div>
                   <% random = rand(1..20) %>
                   <div class="dash-card-bar-pict"><%= image_tag("logo_#{random}.png") %></div>
@@ -27,7 +27,7 @@
 
       <div class="dash-bar-review">
         <h4><strong>Reviews of bars you wrote</strong></h4>
-        <div class="scroll-review">
+        <div class="scroll-review" style="cursor: all-scroll;">
           <% @bar_reviews.each do |bar_review| %>
             <hr class="separation">
             <div class="review-star-and-content">
@@ -39,12 +39,12 @@
       </div>
     </div>
     <div class="dash-column-2">
-      <div class="fav-shops">
+      <div class="fav-shops" style="cursor: all-scroll;">
         <h2><strong>Your favourite chocolate shops!</strong></h2>
-        <div class="dash-cards">
+        <div class="dash-cards" style="cursor: all-scroll;">
           <% @visits.each do |visit| %>
             <%= link_to shop_path(visit.shop) do %>
-              <div class="card-shop">
+              <div class="card-shop" style="cursor: all-scroll;">
                 <div class="shoppicture">
                   <%= image_tag "chocshop#{rand(1..10)}.jpg" %>
                 </div>
@@ -64,7 +64,7 @@
 
       <div class="dash-shop-review">
         <h4><strong>Reviews of shops you wrote</strong></h4>
-        <div class="scroll-review">
+        <div class="scroll-review" style="cursor: all-scroll;">
           <% @shop_reviews.each do |shop_review| %>
             <hr class="separation">
             <div class="review-star-and-content">
