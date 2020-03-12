@@ -19,16 +19,26 @@
 
 .nav {
   justify-content: space-between;
-  background: #282820;
+
+  background: var(--color-dark);
   font-family: Dosis;
   justify-content: flex-start;
-  margin-left: 7px;
+  margin-left: 10px;
 }
 
 .nav-link {
   background: #2A2922;
   color: #F3EBDD;
 }
+
+.color-w {
+  color: #F3EBDD !important;
+}
+
+color-w:hover {
+  color: white;
+}
+
 .nav-link:hover {
   background: #2A2922;
   color: white;
@@ -66,6 +76,11 @@ i {
 .logo {
   display: flex;
   flex-direction: column;
+  margin-right: 30px;
+
+  img {
+    width: 80px !important;
+  }
 }
 
 .dropdown-menu-right {

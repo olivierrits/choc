@@ -2,8 +2,7 @@
   <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
     <%= link_to "/", class: "navbar-brand" do %>
       <div class="logo">
-        <img src="https://img.icons8.com/plasticine/100/000000/chocolate-bar.png"/>
-        <p class="choc">CHOC</p>
+        <%= image_tag 'choc-final-logo.png' %>
       </div>
     <% end %>
 
@@ -40,10 +39,10 @@
         </li>
       <% else %>
         <li class="nav-item">
-          <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>
+          <%= link_to "Sign up", new_user_registration_path, class: "nav-link color-w" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          <%= link_to "Login", new_user_session_path, class: "nav-link color-w" %>
         </li>
       <% end %>
     </ul>

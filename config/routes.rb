@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  get 'choc_its/new', to: 'choc_its#new'
   get 'errors/not_found'
   get 'errors/internal_server_error'
   get 'about', to: 'pages#about', as: :about
   get 'blog', to: 'pages#blog', as: :blog
+  get 'pages/chocit', to: 'choc_its#new', as: :chocit
   get 'dashboard', to: 'users#dashboard', as: 'user_dashboard'
   match "/404", :to => "errors#not_found", :via => :all
   match "/500", :to => "errors#internal_server_error", :via => :all
