@@ -1,0 +1,37 @@
+.choc-container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+
+}
+
+.choc-grid {
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr 2fr 16fr;
+  background-color: var(--color-light);
+  padding: 5px;
+  grid-gap: 5px;
+  border: 1px;
+}
+
+.grid-item {
+  text-align: center;
+  border: 1px solid var(--color-brown);
+  ul {
+    list-style-type: square;
+    li {
+      display: block !important;
+    }
+  }
+  img {
+    width: 50px;
+  }
+}
+
+.grid-description {
+  font-size: 11px;
+  font-style: italic;
+  p {
+    text-align: left;
+  }
+}
