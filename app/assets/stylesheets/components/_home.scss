@@ -4,19 +4,65 @@
   padding: 8px 24px;
   border-radius: 50px;
   font-weight: lighter;
-  opacity: 0.6;
+  opacity: 0.8;
   transition: opacity 0.3s ease;
 }
 
 .btn-ghost:hover {
   opacity: 1;
+  text-decoration: none;
+  background-color: #2A2922;
+  color: #F3EBDD;
 }
 
 .home-links {
   background-size: cover;
   display: flex;
-  justify-content: space-around;
-  font-weight: 32px;
-  font-size: 30px;
-  margin-top: 30px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 20px;
+  height: 80px;
 }
+
+.arguments {
+  height: 170px;
+  margin: 0px 100px 60px 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 50px;
+  .count-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      font-size: 18px;
+      color: #2A2922;
+      opacity: .9;
+      font-family: 'Bellota Text';
+      text-align: center;
+      margin: 0px;
+      padding-top: 10px;
+    }
+  }
+  .count-shop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      font-size: 18px;
+      color: #2A2922;
+      opacity: .9;
+      font-family: 'Bellota Text';
+      text-align: center;
+      margin: 0px;
+      padding-top: 10px;
+    }
+    .chocstore {
+      max-height: 64px;
+    }
+  }
+}
+
+
