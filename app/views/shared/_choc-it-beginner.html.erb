@@ -1,0 +1,140 @@
+<div class="choc-container">
+  <h3>How to taste Chocolate</h3>
+  <div class="choc-grid choc-grid-beginner">
+
+    <div class="grid-item grid-sense">
+      <div class="grid-item-content">
+        <h7>Appearance</h7>
+        <br>
+        <%= image_tag 'tasting-eye.png' %>
+      </div>
+    </div>
+    <div class="grid-item grid-description" style="grid-area: 1 / 2 / span 1 / span 4">
+      <p>
+        Pay attention to color, the intensity (strong or weak) and the hue (shade of red/mahogany, yellow, grey, violet…)
+        Put the chocolate on a well lit white paper or tablecloth to look at its appearance.
+        All chocolate should have a glossy shine to its surface, and be free of any cracks, smudges or pale streaks of unmixed cocoa butter.
+        Look-out for tiny bubbles that can be found in the corners and edges of the chocolate,
+        indicating that not enough air was tapped out of the chocolate before it set.
+      </p>
+    </div>
+
+    <div class="grid-item grid-touch">
+      <div class="grid-item-content">
+        <h7>Sound</h7>
+        <br>
+        <%= image_tag 'tasting-ear.png' %>
+      </div>
+    </div>
+    <div class="grid-item grid-description" style="grid-area: 2 / 2 / span 1 / span 4">
+      <p>
+        Close your eyes to concentrate! Bend the chocolate to feel the resistance, and thus hardness.
+        Just before breaking the chocolate you feel for his resistance (bends or breaks).
+        When it breaks you LISTEN to the sound or snap (clear or dull).
+        With your eyes still closed, bring the chocolate close to your ear and snap it.
+      </p>
+    </div>
+
+    <div class="grid-item grid-touch">
+      <div class="grid-item-content">
+        <h7>Touch</h7>
+        <br>
+        <%= image_tag 'tasting-hand.png' %>
+      </div>
+    </div>
+    <div class="grid-item grid-description" style="grid-area: 3 / 2 / span 1 / span 4">
+      <p style="text-align: left">
+        Rub the chocolate between both fingers to assess its finger-sensitivity (soft or hard).
+        Press between your fingers for the melting rate (slow or fast).
+      </p>
+    </div>
+
+    <div class="grid-item grid-touch">
+      <div class="grid-item-content">
+        <h7>Smell</h7>
+        <br>
+        <%= image_tag 'tasting-nose.png' %>
+      </div>
+    </div>
+    <div class="grid-item grid-description" style="grid-area: 4 / 2 / span 1 / span 4">
+      <p style="text-align: left">
+        Take the chocolate in one hand and rub the chocolate.
+        Bring it to your nose and cup. Then sniff three times.
+        Try to discover the bouquet of aromatic notes and the complexity (low, medium or high) & also the intensity (strong or weak) of it.
+        <br><br>
+        In-between chocolates, smell your own body perfume to neutralize the nose.
+      </p>
+    </div>
+
+    <div class="grid-item grid-touch" style="grid-area: 5 / 1 / span 3 / span 1;">
+      <div class="grid-item-content">
+        <h7>Taste</h7>
+        <br>
+        <%= image_tag 'tasting-mouth.png' %>
+      </div>
+    </div>
+    <div class="grid-item grid-description" style="grid-area: 5 / 2 / span 3 / span 2;">
+      <p style="text-align: left">
+        Pinch your nose: bite and let melt, discover the basic tastes.
+        Release your nose and take a deep breath: focus on the aromatic notes.
+        Move the chocolate against your palate, chew: explore the mouthfeel.
+        When TASTING you will discover the basic notes, aromatic notes & mouthfeel of the chocolate.
+        <br><br>
+        In-between chocolates, drink water to neutralize your palate.
+      </p>
+    </div>
+
+    <div class="grid-item grid-touch" style="grid-area: 5 / 4 / span 1 / span 1;">
+      <div class="grid-item-content">
+        <h7>Mouth Feel</h7>
+      </div>
+    </div>
+
+    <div class="grid-item grid-touch" style="grid-area: 6 / 4 / span 1 / span 1;">
+      <div class="grid-item-content">
+        <h7>Taste</h7>
+      </div>
+    </div>
+
+    <div class="grid-item grid-touch" style="grid-area: 7 / 4 / span 1 / span 1;">
+      <div class="grid-item-content">
+        <h7>Flavour</h7>
+      </div>
+    </div>
+
+    <div class="grid-item grid-touch" style="grid-area: 5 / 5 / span 1 / span 1;">
+      <% array = ["hard", "soft", "melting", "coarse", "fine", "creamy","cool", "warm"] %>
+      <div class="grid-item-content grid-options">
+        <% array.each do |aspect| %>
+          <div class="grid-button grid-mouth-feel"><%= aspect %></div>
+        <% end %>
+          <div style="grid-area: 1 / 5 / span 1 / span 1; background-color: var(--color-light);"></div>
+          <div style="grid-area: 1 / 6 / span 1 / span 1; background-color: var(--color-light);"></div>
+      </div>
+    </div>
+
+
+    <div class="grid-item grid-touch" style="grid-area: 6 / 5 / span 1 / span 1;">
+      <% array = ["sweet", "sour", "bitter", "salty", "umami"] %>
+      <div class="grid-item-content grid-options">
+        <% array.each do |aspect| %>
+          <div class="grid-button grid-mouth-feel"><%= aspect %></div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="grid-item grid-touch" style="grid-area: 7 / 5 / span 1 / span 1;">
+      <% array = ["floral", "fruity", "herby", "spicy", "nutty", "roasted", "buttery", "earthy"] %>
+      <div class="grid-item-content grid-options">
+        <% array.each do |aspect| %>
+          <div class="grid-button grid-mouth-feel"><%= aspect %></div>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+
+</script>
