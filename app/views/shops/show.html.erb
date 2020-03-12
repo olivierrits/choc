@@ -21,13 +21,16 @@
 
           <% @shop.bars.each do |bar| %>
             <div class="card-trip">
-              <img src="https://mediad.publicbroadcasting.net/p/shared/npr/styles/x_large/nprshared/201805/171939372.jpg" >
+              <div>
+                <% random = rand(1..20) %>
+                <div class="dash-card-bar-pict"><%= image_tag("logo_#{random}.png") %></div>
+              </div>
               <div class="card-trip-infos">
                 <h2><%= link_to bar.name, bar_path(bar) %></h2>
                 <p><%= bar.origin %></p>
               </div>
               <div >
-                <h2 class="card-trip-pricing"><%= "#{bar.percentage} %"%></h2>
+                <h2 class="percentage-test"><%= "#{bar.percentage} %"%></h2>
               </div>
             </div>
           <% end %>

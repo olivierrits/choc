@@ -106,9 +106,11 @@
     })
   })
 
-document.getElementById("bar-search-query").addEventListener('blur', (event) => {
-  query.search = event.target.value
-  performQuery()
+document.getElementById("bar-search-query").addEventListener('keypress', (event) => {
+  if (event.key == "Enter") {
+    query.search = event.target.value
+    performQuery()
+  }
 });
 
 
