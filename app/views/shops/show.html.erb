@@ -31,19 +31,6 @@
             </div>
           <% end %>
       </div>
-      <div class="shop-reviews">
-        <h4><strong><%= @shop.name %> Reviews</strong></h4>
-        <%= link_to "Write a Review", new_shop_shop_review_path(@shop) %>
-          <% if @shop_reviews.blank? %>
-          <h3>There are no reviews for this shop yet, would you like to add the first one?</h3>
-        <% else %>
-        <% @shop_reviews.each do |shop_review| %>
-          <hr>
-          <p style="color: brown;"><%= "*" * shop_review.rating %></p>
-          <p><%= shop_review.content %></p>
-          <% end %>
-        <% end %>
-      </div>
     </div>
     <div class="shop-column-2">
       <div class="shop-informations">
@@ -77,8 +64,18 @@
           <% end %>
         </div>
       </div>
-      <div class="shop-map">
-        <img src="https://raw.githubusercontent.com/lewagon/layouts-demo/gh-pages/images/mapbox.png">
+      <div class="shop-reviews">
+        <h4><strong><%= @shop.name %> Reviews</strong></h4>
+        <%= link_to "Write a Review", new_shop_shop_review_path(@shop) %>
+          <% if @shop_reviews.blank? %>
+          <h3>There are no reviews for this shop yet, would you like to add the first one?</h3>
+        <% else %>
+        <% @shop_reviews.each do |shop_review| %>
+          <hr>
+          <p style="color: brown;"><%= "*" * shop_review.rating %></p>
+          <p><%= shop_review.content %></p>
+          <% end %>
+        <% end %>
       </div>
     </div>
   </div>

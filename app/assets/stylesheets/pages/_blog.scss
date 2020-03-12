@@ -1,15 +1,9 @@
 .header {
-  background-size: cover;
-  background-position: center;
-  display: flex;
   justify-content: center;
-  align-items: center;
   font-size: 24px;
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin-bottom: 25px;
+  margin-top: 40px;
 }
 
 
@@ -17,6 +11,7 @@
   color: #506D2F;
   font-family: Dosis;
   font-size: 50px;
+  text-align: center;
 }
 
 .container-blog {
@@ -25,6 +20,8 @@
   grid-gap: 1rem;
   margin-left: 20px;
   margin-right: 20px;
+  padding-bottom: 40px;
+  padding-top: 20px;
 }
 
 .tile {

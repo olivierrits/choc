@@ -1,8 +1,15 @@
 .mapboxgl-popup {
   max-width: 200px;
+  background: #7D5642;
+  border-radius: 5px;
 }
 
 .mapboxgl-popup-content {
   text-align: center;
   font-family: 'Dosis';
+  background: #7D5642;
+}
+
+.shop-name-map {
+  color: #506D2F;
 }
