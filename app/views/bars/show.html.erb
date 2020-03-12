@@ -9,7 +9,7 @@
       <div class="brand-and-percentage">
         <p class="brand"><%= @bar.brand %></p>
       </div>
-      <p class="description"><%= @bar.description.downcase %></p>
+      <p class="description"><%= @bar.description&.downcase %></p>
       <div class="beans">
         <p>Type of beans : </p>
         <p class="type-of-beans">
