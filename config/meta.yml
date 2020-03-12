@@ -1,0 +1,5 @@
+meta_product_name: "Choc!"
+meta_title: "Choc - Discover, taste and review great chocolate!"
+meta_description: "With a database of over 2200 chocolate bars, we help anyone to dsicover and keep trace of thei chcolate experience. Search for bars based on type of cacao bean, origin, cacao percentage, etc."
+meta_image: "choc_1.jpg" # should exist in `app/assets/images/`
+twitter_account: "@test_twitter_account"   # required for Twitter Cards
