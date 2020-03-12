@@ -64,30 +64,39 @@
 .cards {
   display: grid;
   grid-gap: 16px;
+  a:hover{
+    box-shadow: none;
+  }
 }
 
 .card-shop {
   border-radius: 5px;
-  height: 125px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   margin: 16px;
   background: #7D5642;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  &:hover {
+    box-shadow: 0 0 0 -10px ;
+  }
+}
+
+.shoppicture{
+  padding: 16px;
 }
 
 .card-shop img {
-  height: 80%;
-  width: 100px;
+  width: 150px;
   object-fit: cover;
-  padding-left: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 
 .card-shop h2 {
-  font-size: 22px;
+  font-size: 14px;
   font-weight: bold;
   margin: 0;
   text-align: center;
@@ -95,13 +104,18 @@
 }
 
 .card-shop p {
-  font-size: 12px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
-  margin-top: 8px;
   text-align: center;
   color: #F3EBDD;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  i{
+    margin-right: 5px !important;
+  }
 }
 
 .card-shop-address {
@@ -111,6 +125,8 @@
 
 .card-shop .card-shop-infos {
   padding: 16px;
+  height: 100%;
+  position: relative;
   a {
     color: #7D5642;
   }
@@ -118,6 +134,41 @@
     color: #506D2F;
     text-decoration: none;
   }
+}
+
+.card-shop .shop-details {
+  margin: 10px auto;
+  display: flex;
+  height: 40%;
+  justify-content: space-between;
+  p{
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    span{
+      text-align: start;
+    }
+  }
+}
+
+
+.openeness{
+  display: block;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  color: white;
+}
+
+
+.card-shop-infos:first-child  {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.stars-holder {
+  display: flex;
+  align-items: flex-start;
 }
 
 .bar-index {

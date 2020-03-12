@@ -1,0 +1,95 @@
+<style>
+  .full404 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  color: #eee;
+  text-align: center;
+}
+
+.link-not-found {
+  color: #F3EBDD;
+  font-size: 1em;
+  font-family: 'Dosis';
+}
+
+.link-not-found:hover {
+  font-size: 20px;
+  color: #F3EBDD;
+  text-decoration: none;
+}
+
+.error {
+  position: relative;
+  display: table;
+  margin: auto;
+  font-size: 10em;
+  font-family: "Saira Semi Condensed", sans-serif;
+  font-weight: 100;
+  transform: rotateY(-5deg);
+  animation: grow 1s linear infinite;
+  z-index: 100000;
+  margin-top: 50px;
+}
+
+.bordererror {
+  height: 2px;
+  width: 1px;
+  background: #888;
+  margin: auto;
+  animation: wide 1s ease infinite;
+}
+
+.h4-not-found {
+  margin-bottom: 40px;
+  font-family: 'Dosis';
+}
+
+.h3-not-found {
+  margin-top: 40px;
+  font-family: 'Dosis';
+}
+
+@keyframes grow {
+  0% {
+    color: #eee;
+    transform: rotate(-5deg);
+    border-bottom: none;
+  }
+  50% {
+    color: #888;
+    transform: rotate(5deg);
+    border-bottom: 1px solid #fff;
+  }
+  100% {
+    color: #eee;
+    transform: rotate(-5deg);
+  }
+}
+
+@keyframes wide {
+  0% {
+    width: 1px;
+  }
+  50% {
+    width: 300px;
+  }
+  100% {
+    width: 1px;
+  }
+}
+</style>
+
+<div class="full404" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(https://sa.kapamilya.com/absnews/abscbnnews/media/ancx/food-n-drink/2018/12/chocolatebanner.jpg);">
+  <span class="error">500</span>
+  <div class="bordererror"></div>
+  <h3 class="h3-not-found">Something went wrong!</h3>
+  <h4 class="h4-not-found">But, please, don't blame it on chocolate!</h4>
+  <a class="link-not-found" href="/">Click here to get back home safely</a>
+</div>
