@@ -33,10 +33,12 @@
     <%= render 'shared/flashes' %>
     <div style="width: 100%; height: 88px;"></div>
     <%= yield %>
+    <div style="height:100px;"></div>
     <%= render 'shared/footer' %>
     <%= javascript_include_tag 'application' %>
 
     <%= javascript_pack_tag 'application' %>
     <%= render 'shared/choc_it' if request.env['PATH_INFO'] != "/"%>
   </body>
+
 </html>
