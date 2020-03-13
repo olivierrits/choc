@@ -70,8 +70,10 @@
   }
 }
 
-.grid-mouth-feel {
-
+.grid-button-selected {
+  background-color: var(--color-green);
+  color: var(--color-light);
+  opacity: 1;
 }
 
 .grid-advanced-img {
@@ -92,6 +94,7 @@
   width: 100%;
   margin: 0;
   border: 1px solid var(--color-brown);
+  z-index: 2;
 }
 
 /* Style the buttons that are used to open the tab content */
