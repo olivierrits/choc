@@ -39,11 +39,7 @@
                 <i class="fas fa-map-marker-alt" style="color: #2A2922;"></i>
                 <span><%=" #{shop.address.street} #{shop.address.number}, #{shop.address.postcode} #{shop.address.city}, #{shop.address.country}"%></span>
               </p>
-              <% if index%3 == 0 %>
-                <span class="openeness"><i class="fas fa-check-circle" style="color: orange;"></i> Closing soon</span>
-              <% else %>
-                <span class="openeness"><i class="fas fa-times-circle" style="color: #ff4448;"></i> Closed</span>
-              <% end %>
+              <span class="openeness"><i class="<%= shop.status_class %>"></i> <%= shop.status_to_s  %></span>
             </div>
           </div>
         <!-- </div> -->

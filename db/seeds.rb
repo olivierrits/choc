@@ -25,16 +25,17 @@ CSV.foreach(filepath, csv_options) do |row|
   i += 1
   # Here, row is an array of columns
   #a = Shop.create(name: row[0])
+  evening_closing_hours = ["19:00", "19:30", "20:00", "20:30", "21:00"]
   b = Address.create(street: row[1], number: row[2], postcode: row[3], city: row[4], country: row[5])
   a = Shop.create(name: Faker::Restaurant.name, address: b)
   (1..7).each do |day|
     if (day == 1) || (day == 7)
       a.opening_times << OpeningTime.new(day: day, open: false)
     elsif (day == 2)
-      a.opening_times << OpeningTime.new(day: day, open: true, opening_hour: ActiveSupport::TimeZone["Brussels"].parse("14:30"), closing_hour: ActiveSupport::TimeZone["Brussels"].parse("19:00"))
+      a.opening_times << OpeningTime.new(day: day, open: true, opening_hour: ActiveSupport::TimeZone["Brussels"].parse("14:30"), closing_hour: ActiveSupport::TimeZone["Brussels"].parse(evening_closing_hours.sample))
     else
       a.opening_times << OpeningTime.new(day: day, open: true, opening_hour: ActiveSupport::TimeZone["Brussels"].parse("9:30"), closing_hour: ActiveSupport::TimeZone["Brussels"].parse("13:00"))
-      a.opening_times << OpeningTime.new(day: day, open: true, opening_hour: ActiveSupport::TimeZone["Brussels"].parse("14:30"), closing_hour: ActiveSupport::TimeZone["Brussels"].parse("19:00"))
+      a.opening_times << OpeningTime.new(day: day, open: true, opening_hour: ActiveSupport::TimeZone["Brussels"].parse("14:30"), closing_hour: ActiveSupport::TimeZone["Brussels"].parse(evening_closing_hours.sample))
     end
   end
   a.website = Faker::TvShows::SiliconValley.url
