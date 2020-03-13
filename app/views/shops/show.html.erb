@@ -6,7 +6,7 @@
     </div>
     <p><%= @shop.full_address %></p>
     <p>Tel : +32 477 34 98 78</p>
-    <p><i class="fas fa-check-circle" style="color: #2A2922;"></i> Open now</p>
+    <p><i class="<%= @shop.status_class %>"></i> <%= @shop.status_to_s %></p>
   </div>
 </div>
 <div class="container">
