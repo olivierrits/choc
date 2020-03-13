@@ -1,0 +1,28 @@
+.new_bar_review {
+  padding: 30px;
+  border-radius: 5px;
+  background: rgba(243, 235, 221, 0.2784313725490196);
+  label{
+    text-shadow: 0px 0px 0px;
+  }
+}
+
+.submit-review{
+  padding: 8px;
+  background: transparent;
+  border: 1px solid #2a2922;
+  border-radius: 5px;
+  color: #2a2922;
+  transition: all 0.1s ease-out;
+  &:hover{
+    box-shadow: 0 0 37px -14px black;
+    color: white;
+    background-color: #34322b;
+  }
+}
+
+#bar_review_rating{
+  background: transparent;
+  border: 1px solid;
+  margin-left: 10px;
+}

@@ -9,7 +9,7 @@
         <%= f.select :rating, options_for_select([["Please select one", ""], 5, 4, 3, 2, 1]) %>
         <%= f.input :content, placeholder:"Please enter your comment here" %>
         <div class="form-actions">
-        <%= f.submit 'Submit your review for this bar' %>
+        <%= f.submit 'Submit your review for this bar', class: "submit-review" %>
         </div>
       <% end %>
   </div>
