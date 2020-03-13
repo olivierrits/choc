@@ -1,2 +1,13 @@
-<h2 class="shop-name-map"><%= link_to shop.name, shop_path(shop) %></h2>
-<p><%= shop.address %></p>
+<%= link_to shop_path(shop), class: "shop-name-map" do %>
+  <h3><%= shop.name %></h3>
+  <div class="info-window-details">
+    <%#= image_tag("images/chocolate.png") %>
+    <p><%= shop.bars.count %> available bars</p>
+  </div>
+  <% if shop.shop_reviews.length > 3 %>
+  <div class="top-rated">
+    <i class="fas fa-crown"></i>
+    <p>Top rated choc shop</p>
+  </div>
+  <% end %>
+<% end %>
