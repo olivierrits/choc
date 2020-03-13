@@ -17,6 +17,8 @@ class Shop < ApplicationRecord
 
   def status
     @status ||= get_status
+  rescue
+    "open"
   end
 
   def status_to_s
