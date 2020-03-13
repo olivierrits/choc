@@ -2,3 +2,73 @@
   <h3>How to taste Chocolate</h3>
   <%= image_tag 'wheel-of-flavour.png', class: "grid-advanced-img" %>
 </div>
+
+<!-- <script>
+  let enterEventCount = 0;
+  let leaveEventCount = 0;
+  const wheel = document.getElementsByClassName('grid-advanced-img')[0];
+  console.log(wheel);
+
+  function sleep(milliseconds) {
+    const date = Date.now();
+    let currentDate = null;
+    do {
+      currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
+  }
+
+  let yes;
+  let angle;
+  function handler(e) {
+    e = e || window.event;
+    yes = e;
+    let mouseX = yes.clientX;
+    let mouseY = yes.clientY;
+    console.log(`${mouseX}, ${mouseY}`);
+    let mouseMoveX = yes.movementX;
+    let mouseMoveY = yes.movementY;
+    console.log(`${mouseMoveX}, ${mouseMoveY}`);
+    console.log(e);
+    angle = Math.atan(mouseX/mouseY);
+    console.log(`angle is ${angle}`)
+  }
+
+  wheel.addEventListener('mousemove', e => {
+    handler(e);
+  });
+
+  handler();
+
+  wheel.addEventListener('mousedown', e => {
+    let i;
+    let angle = 5;
+    let fullAngle = 5;
+    let down = 0.05;
+    let rest = 50; // in milliseconds
+    let count = 100;
+    for (i = 0; i < count; i++) {
+      wheel.style.transform = `rotate(${fullAngle})`;
+      sleep(rest);
+      console.log(`i = ${i}`);
+      console.log(`angle = ${angle}`);
+      console.log(`fullAngle = ${fullAngle}`);
+      console.log(`rotate(${fullAngle})`);
+      angle = angle - down;
+      fullAngle = fullAngle + angle;
+    }
+  });
+
+  // wheel.addEventListener('mouseenter', e => {
+  //   wheel.style.transform = "rotate(7deg)";
+  //   enterEventCount++;
+  //   console.log('This is mouseenter event ' + enterEventCount + '.');
+  // });
+
+  // wheel.addEventListener('mouseleave', e => {
+  //   wheel.style.transform = "rotate(0deg)";
+  //   leaveEventCount++;
+  //   console.log('This is mouseleave event ' + leaveEventCount + '.');
+  // });
+
+</script>
+ -->

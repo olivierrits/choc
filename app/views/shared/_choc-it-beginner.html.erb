@@ -136,5 +136,10 @@
 </div>
 
 <script>
-
+  console.log("Hello!!!!!!!!!")
+  document.querySelectorAll("div.grid-button").forEach(el => {
+    el.addEventListener('click', (e) => {
+      el.classList.toggle('grid-button-selected');
+    })
+  })
 </script>
