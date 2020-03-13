@@ -1,20 +1,41 @@
 .mapboxgl-popup {
   max-width: 200px;
-  background: #7D5642;
+  background: transparent;
   border-radius: 5px;
+}
+
+.mapboxgl-popup-tip{
+  background: #7d5641;
 }
 
 .mapboxgl-popup-content {
   text-align: center;
   font-family: 'Dosis';
-  background: #7D5642;
+  background: #7d5641 !important;
+  color: #F3EBDD !important;
+  &:hover{
+    background: #2d1306 !important;
+  }
 }
 
-.shop-name-map a {
-  color: #506D2F !important;
-}
-
-.shop-name-map a:hover {
+.shop-name-map {
   text-decoration: none;
-  color: #7D5642;
+  color: white !important;
+  h3{
+    color: #f3ebdd;
+  }
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+
+
+.info-window-details p {
+  font-size: 18px;
+  margin-top: 17px;
+}
+
+.top-rated{
+  color: wheat;
 }
